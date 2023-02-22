@@ -1,0 +1,12 @@
+.css-3su884-MuiPaper-root{
+    position: absolute;
+    width: 100vw;
+}
+.footer-main{
+   height: 180px;
+}
+@media screen and (max-width: 480px) {
+    .footer-main{
+        height: 70%;
+    }
+  }
