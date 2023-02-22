@@ -15,6 +15,7 @@ const PhoneOTPPage = (props) => {
   const handleOTPSubmit = async (event) => {
     event.preventDefault();
     // TODO: handle OTP verification logic
+    //
     if(!otp || otp==""){
         return ;
     } else {
