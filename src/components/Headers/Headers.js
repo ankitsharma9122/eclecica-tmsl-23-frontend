@@ -33,9 +33,9 @@ const navItems = [
     url: "",
   },
   {
-    item: "upcoming Events",
+    item: "Events",
     icon: <UpcomingIcon />,
-    url: "upcomingevents",
+    url: "events",
   },
   {
     item: "subclub",
@@ -55,7 +55,7 @@ const navItems = [
   {
     item: "Teams",
     icon: <EmojiPeopleIcon />,
-    url: "teams",
+    url: "eclecticateams",
   },
   {
     item: "contact us",
@@ -103,7 +103,7 @@ export default function DrawerAppBar() {
       <div style={{ display: "flex",flexDirection:"column",alignContent:"flex-start", justifyContent: "space-between" }}>
       <List>
         {navItems.map((idx) => (
-          <ListItem key={idx?.item} disablePadding>
+          <ListItem key={idx?.item} disablePadding style={{marginTop:"10px"}}>
             <ListItemButton
               onClick={() => {
                 window.history.pushState(null, null, `/${idx?.url}`);
@@ -117,9 +117,6 @@ export default function DrawerAppBar() {
           </ListItem>
         ))}
       </List>
-      <ListItemButton style={{position:"absolute",bottom:"15px" }}>
-      <LogoutIcon style={{minWidth: "39px"}}/> <ListItemText primary="Logout" />
-      </ListItemButton>
       </div>
     </Box>
   );

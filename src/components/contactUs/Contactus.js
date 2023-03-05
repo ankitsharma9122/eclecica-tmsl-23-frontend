@@ -80,7 +80,6 @@ const Contactus = () => {
   };
   return (
     <div style={styles.root}>
-
       <Grid item xs={12} sm={10} md={8}>
         <Box style={styles.form}>
           <Typography variant="h4" align="center" gutterBottom>
@@ -129,14 +128,13 @@ const Contactus = () => {
           Get in Touch
         </Typography>
         <Divider variant="middle" style={{backgroundColor:"white"}} />
-        {/* <Divider style={{color:"white",width:"2px"}}/> */}
         <Typography variant="body1" align="center" style={{ marginTop: 16,color:"white" }}>
         Eclectica - The official literary committee of Techno Main Salt Lake.
         </Typography>
         <div style={styles.phone}>
           <PhoneIcon style={styles.phoneIcon} />
           <Typography variant="body1" style={styles.phoneNum}>
-            123-456-7890
+            8809731829
           </Typography>
         </div>
         <div style={styles.phone}>
@@ -152,11 +150,11 @@ const Contactus = () => {
           </Typography>
         </div>
         <div style={{display:"flex",justifyContent:"row",alighnItem:"center",flexWrap:"wrap",height:"100%",width:"100%",marginTop:"20px"}} >
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.078405559547!2d88.42484061476061!3d22.576170685180983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02751a9d9c9e85%3A0x7fe665c781b10383!2sTechno%20Main%20Salt%20Lake!5e0!3m2!1sen!2sin!4v1676697527323!5m2!1sen!2sin" style={ {height:"300px" ,border:"0"}} allowfullscreen="" ></iframe>
-          <div>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.078405559547!2d88.42484061476061!3d22.576170685180983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02751a9d9c9e85%3A0x7fe665c781b10383!2sTechno%20Main%20Salt%20Lake!5e0!3m2!1sen!2sin!4v1676697527323!5m2!1sen!2sin" style={ {height:"300px" ,border:"0",width:"50%"}} allowfullscreen="" ></iframe>
+          <div style={{width:"50%"}}>
           <h3 style={{color:"white", display:"flex",justifyContent:"center",alignItems:"center"}}>Follow us on </h3>
           <Divider variant="middle" style={{backgroundColor:"white"}} />
-           <div style={{marginTop:"20px"}}>
+           <div style={{marginTop:"20px",display:"flex"}}>
             <IconButton style={{ ...iconStyles, ...linkedInStyles }}>
               <WhatsAppIcon style={{color:"white"}}/>
             </IconButton>

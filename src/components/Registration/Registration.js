@@ -6,12 +6,11 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
-  Grid,
   IconButton,
   Typography,
   Button,
+  CardMedia,
 } from "@mui/material";
-// import CloseIcon from "@material-ui/icons/Close";
 import blog_1 from "../images/blog_1.jpeg"
 
 const subEventClubs = [
@@ -52,8 +51,44 @@ const closeButtonStyle = {
   top: "8px",
   right: "8px",
 };
-
+const styles = {
+  root: {
+    minWidth: 300,
+    margin: '1rem',
+    borderRadius: '8px',
+    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.12)',
+    transition: 'transform 0.2s ease',
+    '&:hover': {
+      transform: 'scale(1.05)',
+      boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+    },
+  },
+  media: {
+    height: 250,
+    objectFit: 'cover',
+    borderRadius: '8px 8px 0 0',
+    transition: 'transform 0.2s ease',
+    '&:hover': {
+      transform: 'scale(1.1)',
+    },
+  },
+  content: {
+    padding: '1rem',
+  },
+  name: {
+    fontWeight: 'bold',
+    marginBottom: '0.5rem',
+  },
+  role: {
+    color: '#9B9B9B',
+    marginBottom: '0.5rem',
+  },
+  description: {
+    fontSize: '14px',
+  },
+};
 const Registration = () => {
+
   const [selectedClub, setSelectedClub] = useState(null);
 
   const handleClubClick = (club) => {
@@ -65,24 +100,22 @@ const Registration = () => {
   };
 
   return (
-    <div style={{marginTop:"80px"}}>
-<Grid container spacing={2}>
-  {subEventClubs.map((club) => (
-    <Grid item xs={12} sm={6} md={4} key={club.id}>
-      <Card onClick={() => handleClubClick(club)}>
+  <div  style={{display:"flex",flexDirection:"row",flexWrap:"wrap",marginTop:"80px",justifyContent:"center"}}>
+     {subEventClubs.map((club) => (
+      <Card style={styles.root} onClick={() => handleClubClick(club)}>
+        <CardMedia
+        style={styles.media}
+        image={club.image}
+       />
         <CardHeader title={club.name} />
         <CardContent>
           <Typography variant="body2" color="textSecondary">
             {club.head}
           </Typography>
         </CardContent>
-        <img src={club.image} alt={club.name} />
         <Button onClick={() => handleClubClick(club)}>Click to know more</Button>
       </Card>
-    </Grid>
-  ))}
-</Grid>
-
+     ))}    
       <Dialog open={!!selectedClub} onClose={handleDialogClose}>
         {selectedClub && (
           <>

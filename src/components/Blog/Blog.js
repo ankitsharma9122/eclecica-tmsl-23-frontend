@@ -1,14 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CardBlog from './CardBlog';
 import blog_1 from "../images/blog_1.jpeg";
 import {  Button } from '@mui/material';
 import blog_2 from "../images/blog_2.jpeg";
-import Signup from '../Login/Signup';
-import Login from '../Login/Login';
-import Teams from '../Teams/Teamshelper';
-import Registration from '../Registration/Registration';
-import Footer from '../Footer/Footer';
-
+import PublishBlogDialog from './PublishBlogDialog';
 const blogPosts = [
   {
     title: 'First Blog Post',
@@ -56,10 +51,18 @@ const blogPosts = [
 ];
 
 const Blog=()=>{
-  console.log("Ankit blog")
+ 
+  const [blogPopup,setBlogPopUp]=useState(false);
+  const publishButtonhandler=()=>{
+    if(sessionStorage.getItem("Jwt-access-token")){
+      setBlogPopUp(true);
+    } else {
+      window.history.pushState(null, null, `/auth`)
+    }
+  }
   return (
   <div style={{marginTop:"80px" }}>
-  <Button variant="contained" color="primary" style={{ float:"right",right:"35px"}} onClick={()=>( window.history.pushState(null, null, `/auth`))}>
+  <Button variant="contained" color="primary" style={{ float:"right",right:"35px"}} onClick={publishButtonhandler}>
    + publish Blog
   </Button>
     <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",justifyContent:"center",width:"100%"}}>
@@ -74,6 +77,7 @@ const Blog=()=>{
         />
       ))}
     </div>
+     {blogPopup && <PublishBlogDialog open={blogPopup} blogPopup={blogPopup} setBlogPopUp={setBlogPopUp}/>}
     </div>
   );
 }

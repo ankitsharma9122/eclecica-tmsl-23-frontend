@@ -10,24 +10,23 @@ import { SignalCellular4BarTwoTone } from '@mui/icons-material';
 import { async } from '@firebase/util';
 import PhoneOTPPage from './PhoneOTPPage';
 
+
 const Signup = (props) => {
 
   const [singupData,setSignUpData]=useState({
     name:"",
     mobile:"",
-    password:"",
   });
   const _currentUser  = getAuth().currentUser;
   console.log(_currentUser,"currentUser")
   const [currentUser,setCurrentUser]=useState();
   const [otpPage,setOtpPage]=useState(0);
   const [confirmObj,setConfirmObj]=useState(null);
-  console.log("ankit090",singupData?.mobile)
   const [Error,setError]=useState(false);
   const [disabledSubmit,setDisableSubmit]=useState(false);
-  
+
   const checkhandler=async()=>{
-    if(!singupData?.name || !singupData?.mobile || !singupData?.password){
+    if(!singupData?.name || !singupData?.mobile){
       setError(true);
       return ;
     }
@@ -41,13 +40,6 @@ const Signup = (props) => {
         console.log("error in captch",err);
         setDisableSubmit(false);
       }
-    //   createUserWithEmailAndPassword(auth,singupData?.email,singupData?.password).then((res)=>{
-    //     console.log(res,"user created success!");
-    //     setDisableSubmit(false);
-    //   }).catch((err)=>{
-    //     setDisableSubmit(false);
-    //     console.log("Error in creating user",err?.errors?.message)
-    // })
     }
   }
   const setupRecaptch=async(number)=>{
@@ -108,7 +100,8 @@ const Signup = (props) => {
   useEffect(()=>{
     const unsubscribe=auth.onAuthStateChanged(user=>{
       setCurrentUser(user);
-      // sessionStorage.setItem("Jwt-access-token",user?.accessToken);
+      sessionStorage.setItem("Jwt-access-token",user?.accessToken);
+      console.log("ankit909",user);
       // sessionStorage.setItem("user",user?.email);
     })
     return unsubscribe;
@@ -116,7 +109,10 @@ const Signup = (props) => {
 
   return (
     <>
-    {!confirmObj ? (<div style={styles.root}>
+    {!confirmObj ? (
+    <>
+    <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}><h3 style={{textAlign:"center"}}> For publishing a Blog you need to verify to Eclectica </h3></div>
+    <div style={styles.root}>
       <Grid item xs={12} sm={10} md={8}>
         <Box style={styles.form}>
           <Typography variant="h4" align="center" gutterBottom>
@@ -138,15 +134,8 @@ const Signup = (props) => {
               variant="outlined"
               onChange={(e)=>(setSignUpData((pre)=>({...pre,mobile: e.target.value})),setError(false))}
             />
-            <TextField
-              label="Password"
-              fullWidth
-              margin="normal"
-              variant="outlined"
-              onChange={(e)=>(setSignUpData((pre)=>({...pre,password: e.target.value})),setError(false))}
-            />
             {Error && <h5 style={{color:"red"}}>Please fill all the details</h5>}
-            <div id="recaptcha-container" style={{margin:"10px", alignItems:"center"}}/>
+            <div id="recaptcha-container" style={{width:"100%"}}/>
             <Button
               variant="contained"
               color="primary"
@@ -156,12 +145,13 @@ const Signup = (props) => {
             >
               Send Otp
             </Button>
-           
+
           </form>
-          <h4 style={{margin:"10px"}}>Already have an account?<Link onClick={()=>{props?.settabValue(1)}}> Login</Link></h4>
         </Box>
         </Grid>
-    </div>) : <PhoneOTPPage confirmObj={confirmObj}/>}
+    </div>
+    </>
+    ) : <PhoneOTPPage confirmObj={confirmObj}/>}
     </>
 
   );

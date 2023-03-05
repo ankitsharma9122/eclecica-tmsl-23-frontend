@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import UpcomingEventhelper from "./UpcomingEventhelper";
 
-import { Typography,Divider } from '@mui/material';
+import { Typography} from '@mui/material';
 import blog_1 from "../images/blog_1.jpeg"
 const events = [
   {
@@ -53,15 +53,13 @@ const UpcomingEvent = () => {
   return (
     <div style={{display:"flex",flexDirection:"column",flexWrap:"wrap",marginTop:"80px",justifyContent:"center"}}>
       
-      <Typography variant="h5"style={{textAlign:"center"}}>-: Register in upcoming Events :-</Typography>
-      {/* <Divider variant="middle" style={{backgroundColor:"black"}} /> */}
+      <Typography variant="h5"style={{ fontFamily: 'Arial, sans-serif',fontWeight: 'bold',fontSize: '30px',color: '#333333',textAlign: 'center',marginBottom: '24px',}}><span style={{ textDecoration: 'underline'}}>Register in upcoming Event's</span></Typography>
       <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",justifyContent:"center"}}>
       {events.map(event => (
         (currentDate<event?.Eventdate && <UpcomingEventhelper  event={event} />)
        ))}
       </div>
-      <Typography variant="h5"style={{textAlign:"center"}}>-: View Result of Past Events :-</Typography>
-      {/* <Divider variant="middle" style={{backgroundColor:"black"}} /> */}
+      <Typography variant="h5"style={{ fontFamily: 'Arial, sans-serif',fontWeight: 'bold',fontSize: '30px',color: '#333333',textAlign: 'center', marginBottom: '24px',}}><span style={{ textDecoration: 'underline'}}> View Result of Past Event's</span></Typography>
       <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",justifyContent:"center" }}>
       {events.map(event => (
         (currentDate>event?.Eventdate && <UpcomingEventhelper  event={event} />)

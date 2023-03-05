@@ -8,7 +8,6 @@ import {
     RouterProvider,
   } from "react-router-dom";
 import UpcomingEvent from "../upcomings/UpcomingEvent";
-// import Teams from "../Teams/Teamshelper";
 import Teams from "../Teams/Teams";
 import Auth from "../Login/Auth";
 
@@ -35,7 +34,7 @@ const router = createBrowserRouter([
         element: <Teams/>,
       },
       {
-        path: "/upcomingevents",
+        path: "/events",
         element: <UpcomingEvent/>,
       },
       {

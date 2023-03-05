@@ -105,7 +105,6 @@ const Login = (props) => {
               Login
             </Button>
           </form>
-          <h4 style={{margin:"10px"}}>Don't have an account?<Link onClick={()=>{props?.settabValue(0)}}>Sign-up</Link></h4>
         </Box>
         </Grid>
     </div>
