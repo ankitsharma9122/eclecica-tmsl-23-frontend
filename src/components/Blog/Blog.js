@@ -56,6 +56,7 @@ const Blog=()=>{
   const publishButtonhandler=()=>{
     if(sessionStorage.getItem("Jwt-access-token")){
       setBlogPopUp(true);
+      return ;
     } else {
       window.history.pushState(null, null, `/auth`)
     }
@@ -84,46 +85,3 @@ const Blog=()=>{
 
 export default Blog;
 
-{/* <Signup/>
-<Login/>
-<UpcomingEvents
-  title="Upcoming Event"
-  date="Saturday, March 12th"
-  time="2:00 PM"
-  location="123 Main St, Anytown USA"
-  image={blogPosts[0].image}
-/>
- <UpcomingEvents
-  title="Upcoming Event"
-  date="Saturday, March 12th"
-  time="2:00 PM"
-  location="123 Main St, Anytown USA"
-  image={blogPosts[1].image}
-/>
- <UpcomingEvents
-  title="Upcoming Event"
-  date="Saturday, March 12th"
-  time="2:00 PM"
-  location="123 Main St, Anytown USA"
-  image={blogPosts[2].image}
-/>
- <Teams
-  name="Jane Doe"
-  role="Dance Instructor"
-  description="Jane has been a dance instructor for over 10 years, and specializes in contemporary and modern dance styles. She is passionate about helping students find their own unique style and express themselves through dance."
-  image={blogPosts[0].image}
-/>
- <Teams
-  name="Jane Doe"
-  role="Dance Instructor"
-  description="Jane has been a dance instructor for over 10 years, and specializes in contemporary and modern dance styles. She is passionate about helping students find their own unique style and express themselves through dance."
-  image={blogPosts[0].image}
-/>
- <Teams
-  name="Jane Doe"
-  role="Dance Instructor"
-  description="Jane has been a dance instructor for over 10 years, and specializes in contemporary and modern dance styles. She is passionate about helping students find their own unique style and express themselves through dance."
-  image={blogPosts[0].image}
-/>
-<Registration/>
-<Footer/> */}
