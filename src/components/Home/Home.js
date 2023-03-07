@@ -31,7 +31,7 @@ const Home = () => {
     <div
       style={{
         marginBottom: theme.spacing(2),
-        height: isMobile ? 300 : 450,
+        // height: isMobile ? 300 : 450,
         width:"100wv"
       }}
     >
@@ -98,6 +98,7 @@ const Home = () => {
           </div>
         ))}
       </Carousel>
+      <h1 style={{ display:"flex",justifyContent:"center",alignItems:"center" ,color :"white"}}> will be live very soon.</h1>
     </div>
   );
 };

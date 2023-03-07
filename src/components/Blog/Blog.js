@@ -4,6 +4,7 @@ import blog_1 from "../images/blog_1.jpeg";
 import {  Button } from '@mui/material';
 import blog_2 from "../images/blog_2.jpeg";
 import PublishBlogDialog from './PublishBlogDialog';
+import { useNavigate } from 'react-router-dom';
 const blogPosts = [
   {
     title: 'First Blog Post',
@@ -53,13 +54,15 @@ const blogPosts = [
 const Blog=()=>{
  
   const [blogPopup,setBlogPopUp]=useState(false);
+  const navigate=useNavigate();
   const publishButtonhandler=()=>{
     if(sessionStorage.getItem("Jwt-access-token")){
       setBlogPopUp(true);
       return ;
     } else {
-      window.history.pushState(null, null, `/auth`)
-    }
+      navigate("/auth")
+      // window.history.pushState(null, null, `/auth`)
+    } 
   }
   return (
   <div style={{marginTop:"80px" }}>

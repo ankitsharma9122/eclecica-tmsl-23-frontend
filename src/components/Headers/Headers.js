@@ -23,7 +23,7 @@ import eclectica_23_img from "../images/eclectica_23_img.jpg";
 import { ListItemIcon } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import LogoutIcon from '@mui/icons-material/Logout';
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 const navItems = [
@@ -40,7 +40,7 @@ const navItems = [
   {
     item: "subclub",
     icon: <AppRegistrationIcon />,
-    url: "registration",
+    url: "sub-club",
   },
   {
     item: "Blog",
@@ -65,6 +65,7 @@ const navItems = [
 ];
 
 export default function DrawerAppBar() {
+  const navigate=useNavigate();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -72,7 +73,7 @@ export default function DrawerAppBar() {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center"}}>
       <div
         style={{
           display: "flex",
@@ -94,25 +95,26 @@ export default function DrawerAppBar() {
         <Typography
           variant="h6"
           sx={{ my: 2 }}
-          style={{ fontFamily: "system-ui", fontWeight: "600" }}
+          style={{ fontFamily:"serif", fontWeight: "600", color:"white" }}
         >
           Eclectica'23
         </Typography>
       </div>
-      <Divider />
+      <Divider style={{fontWeight: "600",color:"white"}}/>
       <div style={{ display: "flex",flexDirection:"column",alignContent:"flex-start", justifyContent: "space-between" }}>
       <List>
         {navItems.map((idx) => (
           <ListItem key={idx?.item} disablePadding style={{marginTop:"10px"}}>
             <ListItemButton
               onClick={() => {
-                window.history.pushState(null, null, `/${idx?.url}`);
+                navigate( `/${idx?.url}`)
+                // window.history.pushState(null, null, `/${idx?.url}`);
               }}
             >
-              <ListItemIcon style={{ minWidth: "39px" }}>
+              <ListItemIcon style={{ minWidth: "39px",color:"white" }}>
                 {idx?.icon}
               </ListItemIcon>
-              <ListItemText primary={idx?.item} />
+              <ListItemText style={{color:"white"}} primary={idx?.item} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -163,7 +165,8 @@ export default function DrawerAppBar() {
                     key={item?.item}
                     sx={{ color: "#fff", marginRight: "5px" }}
                     onClick={() => {
-                      window.history.pushState(null, null, `/${item?.url}`);
+                      navigate(`/${item?.url}`)
+                      // window.history.pushState(null, null, `/${item?.url}`);
                     }}
                   >
                     {item?.item}
@@ -187,7 +190,9 @@ export default function DrawerAppBar() {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: "#343139"  ,
             },
+           
           }}
         >
           {drawer}

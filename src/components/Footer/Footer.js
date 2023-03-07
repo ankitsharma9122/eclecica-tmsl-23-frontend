@@ -33,7 +33,7 @@ function Footer() {
   };
 
   return (
-    <Paper elevation={3} style={{backgroundColor:"	rgb(140, 140, 140)",width:"100%",padding:"20px"}} className="footer-main">
+    <Paper elevation={3} style={{backgroundColor:"rgb(25 25 25)",width:"100%",padding:"20px"}} className="footer-main">
       <Grid container spacing={10} justifyContent="space-between">
         <Grid item xs={12} sm={4}>
           <h3 style={{color:"white"}}>About Us</h3>

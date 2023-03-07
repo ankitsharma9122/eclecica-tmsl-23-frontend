@@ -1,0 +1,14 @@
+
+
+@media screen and (max-width: 480px) {
+    .contact-us-map-section{
+        flex-direction: column !important;
+    }
+    .contact-us-map{
+        width: 100% !important;
+    }
+    .social-icons{
+        width: 100% !important;
+        margin-top: 20px;
+    }
+}

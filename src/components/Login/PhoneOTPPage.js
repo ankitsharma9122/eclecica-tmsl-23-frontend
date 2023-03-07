@@ -5,12 +5,15 @@ import { auth } from "../../Firebase";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 import { useMediaQuery } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import './phoneOTPPage.css';
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
 const PhoneOTPPage = (props) => {
   const [open, setOpen] = useState(true);
+  const navigate=useNavigate();
   const handleClosesnackbar = (event, reason) => {
     if (reason === "clickaway") {
       return;
@@ -29,7 +32,8 @@ const PhoneOTPPage = (props) => {
       return;
     } else {
       await (props?.confirmObj).confirm(otp);
-      window.history.pushState(null, null, "/blogs");
+      navigate("/blogs")
+      // window.history.pushState(null, null, "/blogs");
     }
   };
   const handleChange = (otp) => {
@@ -46,7 +50,7 @@ const PhoneOTPPage = (props) => {
       }}
     >
 
-      <Typography variant="h5" style={{marginBottom:"10px"}}>Enter the Verification Code</Typography>
+      <Typography variant="h5" style={{marginBottom:"10px",color:"white"}}>We've sent the code to your phone</Typography>
 
       <OTPInput
         value={otp}
@@ -78,6 +82,7 @@ const PhoneOTPPage = (props) => {
         open={open}
         autoHideDuration={6000}
         onClose={handleClosesnackbar}
+        className="snakbar-otp"
         sx={{
           display: "flex",
           flexDirection: "row",

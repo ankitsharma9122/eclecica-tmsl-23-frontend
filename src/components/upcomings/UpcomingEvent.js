@@ -53,13 +53,13 @@ const UpcomingEvent = () => {
   return (
     <div style={{display:"flex",flexDirection:"column",flexWrap:"wrap",marginTop:"80px",justifyContent:"center"}}>
       
-      <Typography variant="h5"style={{ fontFamily: 'Arial, sans-serif',fontWeight: 'bold',fontSize: '30px',color: '#333333',textAlign: 'center',marginBottom: '24px',}}><span style={{ textDecoration: 'underline'}}>Register in upcoming Event's</span></Typography>
+      <Typography variant="h5"style={{ fontFamily: 'Arial, sans-serif',fontWeight: 'bold',fontSize: '30px',color: 'white',textAlign: 'center',marginBottom: '24px', float:"left"}}>Register in upcoming Event's</Typography>
       <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",justifyContent:"center"}}>
       {events.map(event => (
         (currentDate<event?.Eventdate && <UpcomingEventhelper  event={event} />)
        ))}
       </div>
-      <Typography variant="h5"style={{ fontFamily: 'Arial, sans-serif',fontWeight: 'bold',fontSize: '30px',color: '#333333',textAlign: 'center', marginBottom: '24px',}}><span style={{ textDecoration: 'underline'}}> View Result of Past Event's</span></Typography>
+      <Typography variant="h5"style={{ fontFamily: 'Arial, sans-serif',fontWeight: 'bold',fontSize: '30px',color: 'white',textAlign: 'center', marginBottom: '24px',}}>View Result of Past Event's</Typography>
       <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",justifyContent:"center" }}>
       {events.map(event => (
         (currentDate>event?.Eventdate && <UpcomingEventhelper  event={event} />)

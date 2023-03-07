@@ -8,6 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
+import './Contactus.css';
 
 const Contactus = () => {
   const styles = {
@@ -19,7 +20,8 @@ const Contactus = () => {
       flexWrap:'wrap',
       padding: 32,
       marginTop:80,
-      gap:"10px"
+      gap:"10px",
+
     },
     form: {
       maxWidth: 600,
@@ -27,6 +29,7 @@ const Contactus = () => {
       padding: 16,
       boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
       borderRadius: 4,
+      backgroundColor: "white",
     },
     button: {
       marginTop: 16,
@@ -149,10 +152,10 @@ const Contactus = () => {
           Techno Main Salt Lake EM 4/5 , Salt Lake Sector 5, Kolkata, 700091
           </Typography>
         </div>
-        <div style={{display:"flex",justifyContent:"row",alighnItem:"center",flexWrap:"wrap",height:"100%",width:"100%",marginTop:"20px"}} >
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.078405559547!2d88.42484061476061!3d22.576170685180983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02751a9d9c9e85%3A0x7fe665c781b10383!2sTechno%20Main%20Salt%20Lake!5e0!3m2!1sen!2sin!4v1676697527323!5m2!1sen!2sin" style={ {height:"300px" ,border:"0",width:"50%"}} allowfullscreen="" ></iframe>
-          <div style={{width:"50%"}}>
-          <h3 style={{color:"white", display:"flex",justifyContent:"center",alignItems:"center"}}>Follow us on </h3>
+        <div style={{display:"flex",justifyContent:"row",alighnItem:"center",flexWrap:"wrap",height:"100%",width:"100%",marginTop:"20px"}} className="contact-us-map-section">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.078405559547!2d88.42484061476061!3d22.576170685180983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02751a9d9c9e85%3A0x7fe665c781b10383!2sTechno%20Main%20Salt%20Lake!5e0!3m2!1sen!2sin!4v1676697527323!5m2!1sen!2sin" style={ {height:"300px" ,border:"0",width:"50%"}} allowfullscreen="" className="contact-us-map"></iframe>
+          <div style={{width:"50%"}} className="social-icons">
+          <h3 style={{color:"white", display:"flex",justifyContent:"center",alignItems:"center",marginTop:"20px"}}>Follow us on </h3>
           <Divider variant="middle" style={{backgroundColor:"white"}} />
            <div style={{marginTop:"20px",display:"flex"}}>
             <IconButton style={{ ...iconStyles, ...linkedInStyles }}>

@@ -69,6 +69,7 @@ const Signup = (props) => {
       padding: 16,
       boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
       borderRadius: 4,
+      backgroundColor:'white',
     },
     button: {
       marginTop: 16,
@@ -100,7 +101,7 @@ const Signup = (props) => {
   useEffect(()=>{
     const unsubscribe=auth.onAuthStateChanged(user=>{
       setCurrentUser(user);
-      sessionStorage.setItem("Jwt-access-token",user?.accessToken);
+      // sessionStorage.setItem("Jwt-access-token",user?.accessToken);
       console.log("ankit909",user);
       // sessionStorage.setItem("user",user?.email);
     })
@@ -111,7 +112,7 @@ const Signup = (props) => {
     <>
     {!confirmObj ? (
     <>
-    <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}><h3 style={{textAlign:"center"}}> For publishing a Blog you need to verify to Eclectica </h3></div>
+    <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}><h3 style={{textAlign:"center",color:"white"}}> For publishing a Blog you need to verify to Eclectica </h3></div>
     <div style={styles.root}>
       <Grid item xs={12} sm={10} md={8}>
         <Box style={styles.form}>
