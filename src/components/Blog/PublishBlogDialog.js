@@ -20,7 +20,14 @@ const PublishBlogDialog = ({ open, blogPopup,setBlogPopUp}) => {
   const [image, setImage] = useState(null);
   const [content, setContent] = useState("");
   const [email, setEmail] = useState("");
-
+  const [UserInput,setUserInput]=useState({
+    name:"",
+    department:"",
+    image:"",
+    content:"",
+    email:"",
+    title:"",
+  })
   const handleImageUpload = (event) => {
     setImage(event.target.files[0]);
   };
@@ -76,6 +83,9 @@ const PublishBlogDialog = ({ open, blogPopup,setBlogPopUp}) => {
               />
             </Grid>
             <Grid item xs={12}>
+            <DialogContentText>
+             Upload your cover image for the Blog
+           </DialogContentText>
               <input
                 accept="image/*"
                 id="image"

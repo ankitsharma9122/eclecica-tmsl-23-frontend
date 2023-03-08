@@ -6,6 +6,7 @@
 }
 body {
    background-color: black;
+   background-size: cover;
    /* background-color: #cae2c4; */
   background-image: url("../src/components/images/backImg.jpg");
   /* background-image: url("https://livewallpaperhd.com/wp-content/uploads/2017/05/A-Black-Background-Website.jpg"); */

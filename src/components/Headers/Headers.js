@@ -100,7 +100,7 @@ export default function DrawerAppBar() {
           Eclectica'23
         </Typography>
       </div>
-      <Divider style={{fontWeight: "600",color:"white"}}/>
+      <Divider style={{fontWeight: "600",backgroundColor:"white"}}/>
       <div style={{ display: "flex",flexDirection:"column",alignContent:"flex-start", justifyContent: "space-between" }}>
       <List>
         {navItems.map((idx) => (
@@ -111,7 +111,7 @@ export default function DrawerAppBar() {
                 // window.history.pushState(null, null, `/${idx?.url}`);
               }}
             >
-              <ListItemIcon style={{ minWidth: "39px",color:"white" }}>
+              <ListItemIcon style={{ minWidth: "39px",color:"white"}}>
                 {idx?.icon}
               </ListItemIcon>
               <ListItemText style={{color:"white"}} primary={idx?.item} />

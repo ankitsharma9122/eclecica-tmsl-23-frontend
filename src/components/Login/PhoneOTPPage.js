@@ -18,23 +18,26 @@ const PhoneOTPPage = (props) => {
     if (reason === "clickaway") {
       return;
     }
-
     setOpen(false);
   };
   const [otp, setOtp] = useState("");
   const isMobileScreen = useMediaQuery("(max-width:600px)");
-
+  console.log("ankit898",otp)
   const handleOTPSubmit = async (event) => {
-    event.preventDefault();
-    // TODO: handle OTP verification logic
-    //
-    if (!otp || otp == "") {
-      return;
-    } else {
-      await (props?.confirmObj).confirm(otp);
-      navigate("/blogs")
-      // window.history.pushState(null, null, "/blogs");
-    }
+    console.log("ankit898calling")
+      try{
+        await (props?.confirmObj).confirm(otp);
+        if(props?.singupData?.mobile && props?.singupData?.mobile==="8809731829"){
+          sessionStorage.setItem("blog-token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic3JhYmFzdGkgYmFuZXJqZWUiLCJyb2xlIjoiY29udmVub3IiLCJ0b2tlbiI6IjI0LTA3LTIwMDEifQ.r2YYukXUKmYIfwspVm_ceUA31mb4IIO1otO7TK_lIZ8");
+          sessionStorage.setItem("phone",props?.singupData?.mobile)
+        } else{
+          sessionStorage.setItem("blog-token","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiY29uc3VtZXIgdG1zbCIsInJvbGUiOiJ1c2VyIiwidG9rZW4iOiIwNy00LTIwMDEifQ.REaOJ1FQfye7rB7OcIiyC8-3mv4GEMmG8Iu-dJnZv0U");
+          sessionStorage.setItem("phone",props?.singupData?.mobile)
+        }
+        navigate("/blogs");
+      }catch(err){
+        console.log("otp is not correct!",err);
+      }
   };
   const handleChange = (otp) => {
     setOtp(otp);

@@ -9,6 +9,7 @@ import PhoneInput from 'react-phone-number-input';
 import { SignalCellular4BarTwoTone } from '@mui/icons-material';
 import { async } from '@firebase/util';
 import PhoneOTPPage from './PhoneOTPPage';
+import './Signup.css';
 
 
 const Signup = (props) => {
@@ -17,18 +18,30 @@ const Signup = (props) => {
     name:"",
     mobile:"",
   });
+
   const _currentUser  = getAuth().currentUser;
   console.log(_currentUser,"currentUser")
   const [currentUser,setCurrentUser]=useState();
   const [otpPage,setOtpPage]=useState(0);
+  const [errorText,setErrorText]=useState("");
   const [confirmObj,setConfirmObj]=useState(null);
   const [Error,setError]=useState(false);
   const [disabledSubmit,setDisableSubmit]=useState(false);
 
+  const validateMobile=(number)=>{
+        // it need to be change (Todo//)
+        if(number.length==10)
+        return false;
+        return true;
+  }
   const checkhandler=async()=>{
     if(!singupData?.name || !singupData?.mobile){
       setError(true);
+      setError("Please fill all the details");
       return ;
+    } else if(validateMobile(singupData?.mobile)){
+      setError(true);
+      setError("Please Enter a valid number without country code!");
     }
     else {
       setDisableSubmit(true);
@@ -101,9 +114,7 @@ const Signup = (props) => {
   useEffect(()=>{
     const unsubscribe=auth.onAuthStateChanged(user=>{
       setCurrentUser(user);
-      // sessionStorage.setItem("Jwt-access-token",user?.accessToken);
       console.log("ankit909",user);
-      // sessionStorage.setItem("user",user?.email);
     })
     return unsubscribe;
   },[])
@@ -119,7 +130,7 @@ const Signup = (props) => {
           <Typography variant="h4" align="center" gutterBottom>
             Sign-up to Eclectica
           </Typography>
-          <Divider />
+          <Divider style={{backgroundColor:"white"}}/>
           <form>
             <TextField
               label="Name"
@@ -135,8 +146,8 @@ const Signup = (props) => {
               variant="outlined"
               onChange={(e)=>(setSignUpData((pre)=>({...pre,mobile: e.target.value})),setError(false))}
             />
-            {Error && <h5 style={{color:"red"}}>Please fill all the details</h5>}
-            <div id="recaptcha-container" style={{width:"100%"}}/>
+            {Error && <h5 style={{color:"red"}}>{errorText}</h5>}
+            <div id="recaptcha-container" style={{width: "min-content",position: "relative"}}></div>
             <Button
               variant="contained"
               color="primary"
@@ -152,7 +163,7 @@ const Signup = (props) => {
         </Grid>
     </div>
     </>
-    ) : <PhoneOTPPage confirmObj={confirmObj}/>}
+    ) : <PhoneOTPPage confirmObj={confirmObj} singupData={singupData}/>}
     </>
 
   );
