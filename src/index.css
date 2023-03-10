@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: serif;
 }
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root{
+  background-color: #263441 !important ;
+}
 body {
    background-color: black;
    background-size: cover;
