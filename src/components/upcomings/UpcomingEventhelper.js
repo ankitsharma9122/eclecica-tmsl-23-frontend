@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardActions, CardMedia, Typography, Button } from '@mui/material';
 import { Margin } from '@mui/icons-material';
 import "./UpcomingEventhelper.css"
+import sample from "../images/sample.pdf";
 
 const UpcomingEventhelper = ({ event }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -76,9 +77,9 @@ const UpcomingEventhelper = ({ event }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        {currentDate>event?.Eventdate ?<Button variant="contained" color="primary">
+        {currentDate>event?.Eventdate ?<a href={sample} download="sample" target='_blank' style={{cursor:"pointer",textDecoration:"none"}}><Button variant="contained" color="primary">
           View Result
-        </Button> :<Button variant="contained" color="primary">
+        </Button></a> :<Button variant="contained" color="primary">
           Register
         </Button>}
         

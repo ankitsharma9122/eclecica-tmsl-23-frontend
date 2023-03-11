@@ -2,6 +2,7 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import blog_1 from '../images/blog_1.jpeg';
+import ReactPlayer from 'react-player/lazy'
 
 function srcset(image, size, rows = 5, cols = 5) {
 
@@ -32,9 +33,6 @@ export default function Gallery() {
         </ImageListItem>
       ))}
     </ImageList>
-    <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",justifyContent:"center"}}>
-    <iframe className="iframe-video" width="560" height="400" src="https://www.youtube.com/embed/5VDrDnV9BV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
-    </div>
         <ImageList
     //   sx={{marginTop:"80px"}}
       variant="quilted"

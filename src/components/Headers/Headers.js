@@ -67,6 +67,7 @@ const navItems = [
 export default function DrawerAppBar() {
   const navigate=useNavigate();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [indexMenu,setIndexMenu]=React.useState(0);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -80,6 +81,7 @@ export default function DrawerAppBar() {
           flexDirection: "row",
           alignItems: "center",
           marginLeft: "10px",
+          maxHeight:"56px",
         }}
       >
         <img
@@ -93,9 +95,9 @@ export default function DrawerAppBar() {
           alt="images loading"
         ></img>
         <Typography
-          variant="h6"
+        variant="h6"
           sx={{ my: 2 }}
-          style={{ fontFamily:"serif", fontWeight: "600", color:"white" }}
+          style={{ fontFamily:"cursive", fontWeight: "400", color:"white" }}
         >
           Eclectica'23
         </Typography>
@@ -132,7 +134,7 @@ export default function DrawerAppBar() {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: -2, display: { sm: "none" } }}
           >
             <MenuIcon style={{ height: "35px", width: "50px" }} />
           </IconButton>
@@ -156,17 +158,17 @@ export default function DrawerAppBar() {
                   marginRight: "6px",
                 }}
               ></img>
-              <Typography variant="h6">Eclectica'23</Typography>
+              <Typography variant="h6" style={{fontFamily:"cursive"}}>Eclectica'23</Typography>
             </div>
             <div style={{ position: "absolute", right: "10px",display: "flex", justifyContent:"center",alignItems:"center" }}>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
-                {navItems.map((item) => (
+                {navItems.map((item,idx) => (
                   <Button
                     key={item?.item}
-                    sx={{ color: "#fff", marginRight: "5px" }}
+                    sx={{ color: "#fff", marginRight: "5px",borderBottom: indexMenu === idx ? "2px solid #fff" : "none",borderRadius: "0px" }}
                     onClick={() => {
                       navigate(`/${item?.url}`)
-                      // window.history.pushState(null, null, `/${item?.url}`);
+                      setIndexMenu(idx);
                     }}
                   >
                     {item?.item}

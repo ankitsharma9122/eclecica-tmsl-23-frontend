@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import { useTheme } from "@mui/material/styles";
-import { useMediaQuery, Button } from "@mui/material";
+import { useMediaQuery, Button, Typography } from "@mui/material";
 import blog_1 from "../images/blog_1.jpeg";
 import blog_2 from "../images/blog_2.jpeg";
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import "./Home.css"
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import "./Home.css";
+import ReactPlayer from "react-player/lazy";
+import trailer from "../images/trailer.mp4";
 
-const images = [
-  blog_1,
-  blog_2,
-  blog_1,
-];
+const images = [blog_1, blog_2, blog_1];
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -32,7 +30,7 @@ const Home = () => {
       style={{
         marginBottom: theme.spacing(2),
         // height: isMobile ? 300 : 450,
-        width:"100wv"
+        width: "100wv",
       }}
     >
       <Carousel
@@ -48,7 +46,7 @@ const Home = () => {
             onClick={next}
             disabled={active === images.length - 1}
           >
-            <ChevronLeftIcon/>
+            <ChevronLeftIcon />
           </Button>
         )}
         prev={(prev, active) => (
@@ -57,7 +55,7 @@ const Home = () => {
             onClick={prev}
             disabled={active === 0}
           >
-            <ChevronRightIcon/>
+            <ChevronRightIcon />
           </Button>
         )}
       >
@@ -66,7 +64,11 @@ const Home = () => {
             <img
               src={image}
               alt={`Image ${index + 1}`}
-              style={{ height: isMobile ? 300 : 450, objectFit: "cover",width:"100%" }}
+              style={{
+                height: isMobile ? 300 : 450,
+                objectFit: "cover",
+                width: "100%",
+              }}
             />
             <div
               style={{
@@ -98,7 +100,57 @@ const Home = () => {
           </div>
         ))}
       </Carousel>
-      <h1 style={{ display:"flex",justifyContent:"center",alignItems:"center" ,color :"white"}}> will be live very soon.</h1>
+      {/* <h1 style={{ display:"flex",justifyContent:"center",alignItems:"center" ,color :"white"}}> will be live very soon.</h1> */}
+      <h1
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "white",
+          margin: "10px",
+        }}
+      >
+        {" "}
+        “Only the very weak-minded refuse to be influenced by literature and
+        poetry.”
+      </h1>
+      <div
+        className="about-us-div-parent"
+      >
+        <div
+          className="about-us-div-parent-child"
+        >
+          <h1 style={{ color: "white" }}>About us</h1>
+          <div style={{ color: "white" }}>
+            just for use in the Virtual Mechanics tutorials. More text. And more
+            text. And more text. And more text. And more text. And more text.
+            And more text. And more text. And more text. And more text. And more
+            text. Boring, zzzzz. And more text. And more text. And more text.
+            And more text. And more text. And more text. And more text. And more
+            text. And more text. And more text. And more text. And more text.
+            And more text. And more text. And more text. And more text. Even
+            more. Continued on page 2 .
+          </div>
+        </div>
+        <div
+          className="about-us-div-video"
+        >
+          <ReactPlayer url={trailer} controls light={blog_1} width="100%" height="100%"/>
+        </div>
+      </div>
+      <h1
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "white",
+          margin: "10px",
+        }}
+      >
+        {" "}
+        “Our Past Guests”
+      </h1>
+      <div></div>
     </div>
   );
 };

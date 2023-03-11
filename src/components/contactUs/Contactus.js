@@ -86,7 +86,7 @@ const Contactus = () => {
       <Grid item xs={12} sm={10} md={8}>
         <Box style={styles.form}>
           <Typography variant="h4" align="center" gutterBottom>
-            Contact Us
+            Drop a Message
           </Typography>
           <Divider />
           <form>

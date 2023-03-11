@@ -1,3 +1,37 @@
 .css-1m9128y{
     display: none;
 }
+.about-us-div-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.about-us-div-parent-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+.about-us-div-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 47%;
+    height: 350px;
+}
+@media screen and (max-width: 480px) {
+    .about-us-div-parent{
+        flex-direction: column;
+    }
+    .about-us-div-parent-child{
+        width: 86%;
+        margin: 3%;
+    }
+    .about-us-div-video{
+    width: 330px;
+        height: 200px !important;
+    }
+  }

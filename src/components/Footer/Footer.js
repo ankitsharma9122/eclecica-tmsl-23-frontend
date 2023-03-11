@@ -60,7 +60,7 @@ function Footer() {
         <Grid item xs={12} sm={4}>
           <h3 style={{color:"white"}}>Contact Us</h3>
           <p style={{color:"rgb(242, 242, 242)", marginTop: '1rem' }}>Techno main salt ,Kolkata</p>
-          <p style={{color:"rgb(242, 242, 242)"}}>Phone: 8340472660</p>
+          <p style={{color:"rgb(242, 242, 242)"}}>Phone: 8809731829</p>
           <p style={{color:"rgb(242, 242, 242)"}}>Email: Eclecticatmsl@gmail.com</p>
         </Grid>
       </Grid>

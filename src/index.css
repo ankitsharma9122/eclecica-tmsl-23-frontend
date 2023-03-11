@@ -4,16 +4,10 @@
   box-sizing: border-box;
   font-family: serif;
 }
-.css-11b3ww9-MuiPaper-root-MuiAppBar-root{
-  background-color: #263441 !important ;
-}
 body {
-   background-color: black;
-   background-size: cover;
-   /* background-color: #cae2c4; */
-  background-image: url("../src/components/images/backImg.jpg");
-  /* background-image: url("https://livewallpaperhd.com/wp-content/uploads/2017/05/A-Black-Background-Website.jpg"); */
   width: 100%;
   height: 100%;
-}
+  background-image: url("../src/components/images/bgImg.gif");
+  background-size: cover;
+  background-repeat: none;}
 
