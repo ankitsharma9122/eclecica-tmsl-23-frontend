@@ -1,6 +1,7 @@
 .css-3su884-MuiPaper-root{
     position: absolute;
     width: 100vw;
+    height: fit-content;
 }
 .footer-main{
    height: 180px;

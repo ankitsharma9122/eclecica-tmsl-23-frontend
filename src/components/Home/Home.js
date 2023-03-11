@@ -100,7 +100,6 @@ const Home = () => {
           </div>
         ))}
       </Carousel>
-      {/* <h1 style={{ display:"flex",justifyContent:"center",alignItems:"center" ,color :"white"}}> will be live very soon.</h1> */}
       <h1
         style={{
           display: "flex",
