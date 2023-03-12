@@ -123,7 +123,7 @@ const Home = () => {
           className="about-us-div-parent-child"
         >
           <h1 style={{ color: "#f79e02", textAlign: "center" }}>About us</h1>
-          <div style={{ color: "white", textAlign: "center" }} className="about-us-content-div">
+          <div style={{ color: "white", textAlign: "center" }} className="about-us-content-div-2">
             just for use in the Virtual Mechanics tutorials. More text. And more
             text. And more text. And more text. And more text. And more text.
             And more text. And more text. And more text. And more text. And more

@@ -29,8 +29,8 @@
         flex-direction: column;
     }
     .about-us-div-parent-child{
-        width: 86%;
-        margin: 3%;
+        width: 100%;
+        margin: 20px !important;
     }
     .about-us-div-video{
     width: 330px;
@@ -40,6 +40,10 @@
         font-size: 20px;
     }
     .about-us-content-div{
+        font-size: 15px !important;
+    }
+    .about-us-content-div-2{
+        padding: 10px;
         font-size: 15px !important;
     }
   }
