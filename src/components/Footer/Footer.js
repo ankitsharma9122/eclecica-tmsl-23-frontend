@@ -75,9 +75,11 @@ function Footer() {
               marginTop: "1rem",
             }}
           >
+            <a href="https://api.whatsapp.com/send?phone=8809731829">
             <IconButton style={{ ...iconStyles, ...linkedInStyles }}>
               <WhatsAppIcon style={{ color: "white" }} />
             </IconButton>
+            </a>
             <IconButton style={{ ...iconStyles, ...instagramStyles }}>
               <InstagramIcon style={{ color: "white" }} />
             </IconButton>
@@ -91,25 +93,31 @@ function Footer() {
         </Grid>
         <Grid item xs={12} sm={4}>
           <h3 style={{ color: "white" }}>Contact Us</h3>
+          <a href="https://goo.gl/maps/mCyi8Cxfk7Bc8GPr6" target="_blank" style={{textDecoration:"none"}}>
           <div style={{display:"flex",flexDirection:"row",alignItems:"center",margin:"10px",marginLeft:"0px"}}>
           <RoomIcon style={{ marginRight: "0.5rem",marginTop:"0px",color:"white" }} />
           <p style={{ color: "rgb(242, 242, 242)" }}>
             Techno main salt, Kolkata
           </p>
           </div>
-
+          </a>
+          <a href="tel:+496170961709" style={{textDecoration:"none"}}>
           <div style={{display:"flex",flexDirection:"row",alignItems:"center",margin:"10px",marginLeft:"0px"}}>
             <PhoneIcon style={{ marginRight: "0.5rem",marginTop:"0px",color:"white" }} />
             <p style={{ color: "rgb(242, 242, 242)" }}>
             8809731829
             </p>
+          
             </div>
+            </a>
+            <a href = "mailto: eclecticatmsl@gmail.com" style={{textDecoration:"none"}}>
             <div style={{display:"flex",flexDirection:"row",alignItems:"center",margin:"10px",marginLeft:"0px"}}>
             <EmailIcon style={{ marginRight: "0.5rem",marginTop:"0px",color:"white" }} />
             <p style={{ color: "rgb(242, 242, 242)" }}>
-            Eclecticatmsl@gmail.com
-          </p>
+            eclecticatmsl@gmail.com
+          </p> 
           </div>
+          </a>
         </Grid>
       </Grid>
     </Paper>

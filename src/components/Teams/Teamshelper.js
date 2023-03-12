@@ -1,9 +1,10 @@
 import React from 'react';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import "./Teams.css";
 
 const styles = {
   root: {
-    maxWidth: 300,
+    minWidth: 300,
     margin: '1rem',
     borderRadius: '8px',
     boxShadow: '0 2px 8px rgba(0, 0, 0, 0.12)',
@@ -28,9 +29,10 @@ const styles = {
   name: {
     fontWeight: 'bold',
     marginBottom: '0.5rem',
+    color:"rgb(247, 158, 2)"
   },
   role: {
-    color: '#9B9B9B',
+    color: 'white',
     marginBottom: '0.5rem',
   },
   description: {
@@ -46,6 +48,7 @@ const Teamshelper = ({ name, role, description, image }) => {
         image={image}
         title={name}
       />
+      <div className="team-dev-card-main">
       <CardContent style={styles.content}>
         <Typography style={styles.name} gutterBottom variant="h5" component="h2">
           {name}
@@ -53,10 +56,8 @@ const Teamshelper = ({ name, role, description, image }) => {
         <Typography style={styles.role} variant="body2" color="textSecondary" component="p">
           {role}
         </Typography>
-        <Typography style={styles.description} variant="body2" color="textSecondary" component="p">
-          {description}
-        </Typography>
       </CardContent>
+      </div>
     </Card>
   );
 };
