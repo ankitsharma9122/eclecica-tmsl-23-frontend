@@ -1,5 +1,14 @@
 
-
+.contact-us{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bgImg.gif");
+    background-size: cover;
+    background-repeat: none;
+}
+.drop-ms-typo{
+    color: rgb(247, 76, 2);
+}
 @media screen and (max-width: 480px) {
     .contact-us-map-section{
         flex-direction: column !important;

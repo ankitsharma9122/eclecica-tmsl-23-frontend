@@ -71,19 +71,22 @@ const UpcomingEventhelper = ({ event }) => {
           {event.title}
         </Typography>
       </div>
-      <CardContent>
-        <Typography variant="body2" component="p">
+      <CardContent className="Events-card-div">
+        <Typography variant="body2" component="p" style={{color:"white"}}>
           {event.description}
         </Typography>
-      </CardContent>
-      <CardActions>
-        {currentDate>event?.Eventdate ?<a href={sample} download="sample" target='_blank' style={{cursor:"pointer",textDecoration:"none"}}><Button variant="contained" color="primary">
+ 
+      {/* <CardActions> */}
+        {currentDate>event?.Eventdate && <a href={sample} download="sample" target='_blank' style={{cursor:"pointer",textDecoration:"none"}}><Button variant="contained" color="primary" className="click-to-know-button">
           View Result
-        </Button></a> :<Button variant="contained" color="primary">
-          Register
-        </Button>}
+        </Button></a> 
+        // :<Button variant="contained" color="primary">
+        //   Register
+        // </Button>
+        }
         
-      </CardActions>
+      {/* </CardActions> */}
+      </CardContent>
     </Card>
   );
 };

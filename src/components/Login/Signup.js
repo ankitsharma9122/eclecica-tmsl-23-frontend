@@ -85,7 +85,7 @@ const Signup = (props) => {
       backgroundColor:'white',
     },
     button: {
-      marginTop: 16,
+      marginTop: "10px",
       width:"100%"
     },
     getInTouch: {
@@ -123,11 +123,11 @@ const Signup = (props) => {
     <>
     {!confirmObj ? (
     <>
-    <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}><h3 style={{textAlign:"center",color:"white"}}> For publishing a Blog you need to verify to Eclectica </h3></div>
+    <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}><h3 style={{textAlign:"center",color:"rgb(247, 158, 2)"}}> For publishing a Blog you need to verify to Eclectica </h3></div>
     <div style={styles.root}>
       <Grid item xs={12} sm={10} md={8}>
         <Box style={styles.form}>
-          <Typography variant="h4" align="center" gutterBottom>
+          <Typography variant="h4" align="center" gutterBottom style={{color:"rgb(255, 89, 0)"}}>
             Sign-up to Eclectica
           </Typography>
           <Divider style={{backgroundColor:"white"}}/>
@@ -154,6 +154,7 @@ const Signup = (props) => {
               style={styles.button}
               onClick={checkhandler}
               disabled={disabledSubmit}
+              className="click-to-know-button-otp"
             >
               Send Otp
             </Button>

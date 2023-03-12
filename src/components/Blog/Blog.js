@@ -48,7 +48,7 @@ const Blog=()=>{
 
   return (
   <div style={{marginTop:"80px" }}>
-  <Button variant="contained" color="primary" style={{ float:"right",right:"35px"}} onClick={publishButtonhandler}>
+  <Button variant="contained" color="primary" style={{ float:"right",right:"35px"}} onClick={publishButtonhandler}  className="click-to-know-button">
    + publish Blog
   </Button>
     <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",justifyContent:"center",width:"100%"}}>

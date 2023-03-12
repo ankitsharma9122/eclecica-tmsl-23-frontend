@@ -111,7 +111,7 @@ const OurpastGuest = () => {
               />
               </div>
               <div style={{ padding: 5,borderTop:"solid",borderBottom:"solid",borderColor:"white",}} className="typo-desciption">
-                <Typography variant="h5" style={{color:"white",fontFamily:"serif",letterSpacing:"1px"}}>{member.name}</Typography>
+                <Typography variant="h5" style={{color:"rgb(255, 89, 0)",fontFamily:"serif",letterSpacing:"1px"}}>{member.name}</Typography>
               </div>
             </div>
             <div

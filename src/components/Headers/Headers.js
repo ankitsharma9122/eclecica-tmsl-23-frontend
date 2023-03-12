@@ -97,7 +97,7 @@ export default function DrawerAppBar() {
         <Typography
         variant="h6"
           sx={{ my: 2 }}
-          style={{ fontFamily:"cursive", fontWeight: "400", color:"white" }}
+          style={{ fontFamily:"serif", fontWeight: "400", color:"white" }}
         >
           Eclectica'23
         </Typography>
@@ -158,7 +158,7 @@ export default function DrawerAppBar() {
                   marginRight: "6px",
                 }}
               ></img>
-              <Typography variant="h6" style={{fontFamily:"cursive"}}>Eclectica'23</Typography>
+              <Typography variant="h6" style={{fontFamily:"serif"}}>Eclectica'23</Typography>
             </div>
             <div style={{ position: "absolute", right: "10px",display: "flex", justifyContent:"center",alignItems:"center" }}>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>

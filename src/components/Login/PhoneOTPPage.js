@@ -77,6 +77,7 @@ const PhoneOTPPage = (props) => {
         color="primary"
         style={{ margin: "2rem 0" ,cursor:"pointer"}}
         onClick={handleOTPSubmit}
+        className="click-to-know-button"
       >
         Verify Otp
       </Button>

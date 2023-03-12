@@ -106,7 +106,7 @@ const Home = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          color: "#f2e783",
+          color: "rgb(255, 89, 0)",
           margin: "10px",
           textAlign: "center"
         }}

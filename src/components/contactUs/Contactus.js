@@ -84,8 +84,8 @@ const Contactus = () => {
   return (
     <div style={styles.root}>
       <Grid item xs={12} sm={10} md={8}>
-        <Box style={styles.form}>
-          <Typography variant="h4" align="center" gutterBottom>
+        <Box style={styles.form} >
+          <Typography variant="h4" align="center" gutterBottom className="drop-ms-typo">
             Drop a Message
           </Typography>
           <Divider />
@@ -120,13 +120,14 @@ const Contactus = () => {
               variant="contained"
               color="primary"
               style={styles.button}
+              className="click-to-know-button"
             >
               Send Message
             </Button>
           </form>
         </Box>
       </Grid>
-      <div style={styles.getInTouch}>
+      <div style={styles.getInTouch} className="contact-us">
         <Typography  variant="h4" align="center" gutterBottom style={{color:"white"}}>
           Get in Touch
         </Typography>
