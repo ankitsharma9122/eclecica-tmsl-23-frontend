@@ -9,6 +9,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import "./Home.css";
 import ReactPlayer from "react-player/lazy";
 import trailer from "../images/trailer.mp4";
+import OurpastGuest from "./OurpastGuest";
 
 const images = [blog_1, blog_2, blog_1];
 
@@ -105,9 +106,11 @@ const Home = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          color: "white",
+          color: "#f2e783",
           margin: "10px",
+          textAlign: "center"
         }}
+        className="div-quates"
       >
         {" "}
         “Only the very weak-minded refuse to be influenced by literature and
@@ -119,8 +122,8 @@ const Home = () => {
         <div
           className="about-us-div-parent-child"
         >
-          <h1 style={{ color: "white" }}>About us</h1>
-          <div style={{ color: "white" }}>
+          <h1 style={{ color: "#f79e02", textAlign: "center" }}>About us</h1>
+          <div style={{ color: "white", textAlign: "center" }} className="about-us-content-div">
             just for use in the Virtual Mechanics tutorials. More text. And more
             text. And more text. And more text. And more text. And more text.
             And more text. And more text. And more text. And more text. And more
@@ -137,18 +140,25 @@ const Home = () => {
           <ReactPlayer url={trailer} controls light={blog_1} width="100%" height="100%"/>
         </div>
       </div>
+      <div style={{          display: "flex",
+          flexDirection:"column",
+          justifyContent: "center",
+          alignItems: "center",}}>
       <h1
         style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          color: "white",
-          margin: "10px",
+          marginTop:"10px",
+          color: "#f79e02",
+          margin: "auto",
+          textAlign: "center"
         }}
       >
-        {" "}
-        “Our Past Guests”
+        Our Past Event Guests
       </h1>
+      <div style={{color:"white",fontSize:"20px", display: "flex",
+          justifyContent: "center",
+          alignItems: "center", textAlign: "center",margin:"10px"}} className="about-us-content-div">These guests brought their unique perspectives and expertise to our events, and their presence contributed to the success of the events. We are grateful for their support and participation, and we hope to have them as our guests again in the future.</div>
+      <OurpastGuest/>
+      </div>
       <div></div>
     </div>
   );

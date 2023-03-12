@@ -6,13 +6,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    margin-top: 20px;
 }
 .about-us-div-parent-child{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
+    margin: 5%;
 }
 .about-us-div-video{
     display: flex;
@@ -33,5 +35,11 @@
     .about-us-div-video{
     width: 330px;
         height: 200px !important;
+    }
+    .div-quates{
+        font-size: 20px;
+    }
+    .about-us-content-div{
+        font-size: 15px !important;
     }
   }

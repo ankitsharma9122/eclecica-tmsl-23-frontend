@@ -24,7 +24,7 @@ export default function Gallery() {
   return (
     <div style={{marginTop:"80px"}}>
     <div style={{margin:"10px"}}>
-    <h1 style={{color:"white"}}>Eclectica Gallery</h1>
+    <h1 style={{color:"rgb(247, 158, 2)"}}>Eclectica Gallery</h1>
     <div style={{color:"white"}}>Welcome to our gallery! Here, we proudly showcase the creative talents of our club members, as well as other emerging writers and artists in the community.Whether you are a seasoned writer, a budding artist, or simply someone who appreciates the beauty and power of words, we hope that you will find something to love in our gallery. So take your time, explore our collection.</div>
     </div>
     <ImageList

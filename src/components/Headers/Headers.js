@@ -175,7 +175,7 @@ export default function DrawerAppBar() {
                   </Button>
                 ))}
               </Box>
-              <AccountCircleIcon style={{alignItems:"center" ,cursor:"pointer"}} sx={{ display: { xs: "none" ,sm: "block"} }}/>
+              {/* <AccountCircleIcon style={{alignItems:"center" ,cursor:"pointer"}} sx={{ display: { xs: "none" ,sm: "block"} }}/> */}
             </div>
           </div>
         </Toolbar>
