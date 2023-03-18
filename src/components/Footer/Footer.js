@@ -3,8 +3,7 @@ import { Grid, Paper, IconButton } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import { positions } from "@mui/system";
+import FacebookIcon from '@mui/icons-material/Facebook';
 import RoomIcon from "@mui/icons-material/Room";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -52,8 +51,8 @@ function Footer() {
         <Grid item xs={12} sm={4}>
           <h3 style={{ color: "white" }}>Eclectica</h3>
           <p style={{ color: "rgb(242, 242, 242)", marginTop: "1rem" }}>
-            Eclectica - The literary committee of Techno Main Salt Lake The
-            official Literary Committee of Techno Main Salt lake, Kolkata
+            Eclectica - The 
+            official Literary Committee of Techno Main Salt lake Kolkata,is a student-governed organization dedicated to building a healthy community receptive to works of literature.
           </p>
         </Grid>
         <Grid item xs={12} sm={4}>
@@ -75,20 +74,27 @@ function Footer() {
               marginTop: "1rem",
             }}
           >
-            <a href="https://api.whatsapp.com/send?phone=8809731829">
+            <a href="https://api.whatsapp.com/send?phone=7718651718">
             <IconButton style={{ ...iconStyles, ...linkedInStyles }}>
               <WhatsAppIcon style={{ color: "white" }} />
             </IconButton>
             </a>
+            <a href="https://www.facebook.com/eclecticaTMSL/">
+            <IconButton style={{ ...iconStyles, ...whatsAppStyles }}>
+              <FacebookIcon style={{ color: "white" }} />
+            </IconButton>
+            </a>
+            <a href="https://www.instagram.com/eclecticatmsl/">
             <IconButton style={{ ...iconStyles, ...instagramStyles }}>
               <InstagramIcon style={{ color: "white" }} />
             </IconButton>
+            </a>
+            <a href="https://www.linkedin.com/in/eclectica-tmsl-342b31185/">
             <IconButton style={{ ...iconStyles, ...whatsAppStyles }}>
               <LinkedInIcon style={{ color: "white" }} />
             </IconButton>
-            <IconButton style={{ ...iconStyles, ...whatsAppStyles }}>
-              <TwitterIcon style={{ color: "white" }} />
-            </IconButton>
+            </a> 
+
           </div>
         </Grid>
         <Grid item xs={12} sm={4}>
@@ -101,11 +107,11 @@ function Footer() {
           </p>
           </div>
           </a>
-          <a href="tel:+496170961709" style={{textDecoration:"none"}}>
+          <a href="tel:7718651718" style={{textDecoration:"none"}}>
           <div style={{display:"flex",flexDirection:"row",alignItems:"center",margin:"10px",marginLeft:"0px"}}>
             <PhoneIcon style={{ marginRight: "0.5rem",marginTop:"0px",color:"white" }} />
             <p style={{ color: "rgb(242, 242, 242)" }}>
-            8809731829
+            7718651718
             </p>
           
             </div>

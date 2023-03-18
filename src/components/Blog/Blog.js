@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Blog=()=>{
   const [blogPosts,setblogPosts]=useState([]);
+  const [pendingBlogs,setPendingBlogs]=useState([]);
   const [blogPopup,setBlogPopUp]=useState(false);
   const [userType,setUserType]=useState("user");
   const navigate=useNavigate();
@@ -30,14 +31,14 @@ const Blog=()=>{
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/get-blog",  { Method: 'GET',
-        Headers: {
-          accept: 'application/json',
-          'Content-Type': 'application/json'
-        },
-      }
-      );
-        const data = await response.json();
+      const response = await fetch("https://puce-kind-newt.cyclic.app/get-blog",  { Method: 'GET',
+      Headers: {
+        accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+    }
+    );
+      const data = await response.json();
         setblogPosts(data);
       } catch (error) {
         console.error("Error fetching blog posts:", error);
@@ -45,13 +46,44 @@ const Blog=()=>{
     };
     fetchData();
   }, []);
+  const fetchpendingApprovals=async()=>{
+      try {
+      const response = await fetch("https://puce-kind-newt.cyclic.app/get-blog-pendings",  { Method: 'GET',
+      Headers: {
+        accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+    }
+    );
+      const data = await response.json();
+        setPendingBlogs(data);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+      }
+    };
 
   return (
   <div style={{marginTop:"80px" }}>
+  {(sessionStorage.getItem("blog-token")=="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic3JhYmFzdGkgYmFuZXJqZWUiLCJyb2xlIjoiY29udmVub3IiLCJ0b2tlbiI6IjI0LTA3LTIwMDEifQ.r2YYukXUKmYIfwspVm_ceUA31mb4IIO1otO7TK_lIZ8" && sessionStorage.getItem("phone")==="8809731829") ?
+    <Button variant="contained" color="primary" style={{ float:"right",right:"35px"}} onClick={fetchpendingApprovals}  className="click-to-know-button">
+      View pending Approvals
+    </Button>
+  :
   <Button variant="contained" color="primary" style={{ float:"right",right:"35px"}} onClick={publishButtonhandler}  className="click-to-know-button">
-   + publish Blog
-  </Button>
+      + publish Blog
+     </Button>
+  }
     <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",justifyContent:"center",width:"100%"}}>
+    {(sessionStorage.getItem("blog-token")=="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic3JhYmFzdGkgYmFuZXJqZWUiLCJyb2xlIjoiY29udmVub3IiLCJ0b2tlbiI6IjI0LTA3LTIwMDEifQ.r2YYukXUKmYIfwspVm_ceUA31mb4IIO1otO7TK_lIZ8" && sessionStorage.getItem("phone")==="8809731829") && pendingBlogs.length>0 && pendingBlogs.map((id,idx) => (
+        <CardBlog
+          key={pendingBlogs[idx]?._id}
+          title={pendingBlogs[idx]?.title}
+          author={pendingBlogs[idx]?.name}
+          image={blog_1}
+          content={pendingBlogs[idx]?.content}
+          isAdmin={true}
+        />
+      ))}
       {blogPosts.length>0 && blogPosts.map((id,idx) => (
         <CardBlog
           key={blogPosts[idx]?._id}

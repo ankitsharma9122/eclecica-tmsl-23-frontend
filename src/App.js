@@ -15,7 +15,6 @@ import Auth from './components/Login/Auth';
 function App() {
   return (
     <>
-  
     <BrowserRouter>
     <Headers/>
       <Routes>
