@@ -18,7 +18,6 @@ import { Button } from "@mui/material";
 const CardBlog = ({ title, author, image, content, pending, id,email,department }) => {
   console.log("ankit676", id);
   const [open, setOpen] = useState(false);
-  const [blogPopup,setBlogPopUp]=useState(false);
   const [editByAdmin, setEditByAdmin] = useState(false);
 
   const handleClickOpen = () => {
@@ -61,11 +60,12 @@ const CardBlog = ({ title, author, image, content, pending, id,email,department 
             component="p"
             className="text-content"
           >
+           <h3 style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",color:"black",marginBottom:"5px",fontSize:"20px",fontFamily:"serif"}}>{title}</h3>
             {content}
           </Typography>
         </CardContent>
         <CardHeader
-          subheader={`by ${author}`}
+          subheader={`By ${author} (${department})`}
           action={
             sessionStorage.getItem("blog-token") ==
               "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic3JhYmFzdGkgYmFuZXJqZWUiLCJyb2xlIjoiY29udmVub3IiLCJ0b2tlbiI6IjI0LTA3LTIwMDEifQ.r2YYukXUKmYIfwspVm_ceUA31mb4IIO1otO7TK_lIZ8" &&
