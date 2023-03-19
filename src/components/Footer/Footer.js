@@ -107,11 +107,11 @@ function Footer() {
           </p>
           </div>
           </a>
-          <a href="tel:7718651718" style={{textDecoration:"none"}}>
+          <a href="tel:8809731829" style={{textDecoration:"none"}}>
           <div style={{display:"flex",flexDirection:"row",alignItems:"center",margin:"10px",marginLeft:"0px"}}>
             <PhoneIcon style={{ marginRight: "0.5rem",marginTop:"0px",color:"white" }} />
             <p style={{ color: "rgb(242, 242, 242)" }}>
-            7718651718
+            8809731829
             </p>
           
             </div>
