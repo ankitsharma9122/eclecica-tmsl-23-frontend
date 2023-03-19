@@ -24,6 +24,7 @@ import { ListItemIcon } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const drawerWidth = 240;
 const navItems = [
@@ -73,6 +74,16 @@ export default function DrawerAppBar() {
     setMobileOpen((prevState) => !prevState);
   };
 
+  // route cross check after refresh
+  useEffect(()=>{
+   var href=window.location.href.split("/")[3];
+   for(let i=0;i<navItems.length;i++){
+     if(navItems[i]?.url===href){
+      setIndexMenu(i);
+      break;
+     }
+   }
+  },[])
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center"}}>
       <div

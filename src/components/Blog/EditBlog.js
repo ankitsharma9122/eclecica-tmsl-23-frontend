@@ -17,15 +17,16 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
 import blog_1 from '../images/blog_1.jpeg';
 
-const PublishBlogDialog = ({ open, blogPopup, setBlogPopUp,setblogPostSucess }) => {
-  const [UserInput, setUserInput] = useState({
-    name: "",
-    department: "",
-    image: "",
-    title:"",
-    content: "",
-    email: "",
-  });
+const EditBlog = ({ open,editByAdmin, setEditByAdmin,title, author, image, content, pending, id,email,department }) => {
+    const [UserInput, setUserInput] = useState({
+        name: author,
+        department: department,
+        image: image,
+        title: title,
+        content: content,
+        email: email,
+        approved: "pending"
+      });
   const wordCount = UserInput?.content.trim().split(/\s+/).length;
   const [blogErrorEmail, setBlogErrorEmail] = useState(false);
   const [contentErrorLimitError, setcontentErrorLimit] = useState(false);
@@ -36,21 +37,14 @@ const PublishBlogDialog = ({ open, blogPopup, setBlogPopUp,setblogPostSucess }) 
   const handleImageUpload = (event) => {
     setUserInput((pre)=>({...pre,image:event.target.files[0]}))
   };
-
-  console.log("error90",formError)
   useEffect(()=>{
     if (
       UserInput.name !== "" &&
        UserInput.title !== "" &&
-      UserInput.department !== "" &&
-      UserInput.image !== ""
+      UserInput.department !== "" 
     ) {
       setformError(false);
     }
-    // if(!!sessionStorage.getItem("blog-token") || !!sessionStorage.getItem("phone")){
-    //   navigate("/auth");
-    //   return ;
-    // }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const isMailValid = emailRegex.test(UserInput?.email);
     if (isMailValid) {
@@ -59,14 +53,13 @@ const PublishBlogDialog = ({ open, blogPopup, setBlogPopUp,setblogPostSucess }) 
     if (wordCount >= 80 || wordCount <= 100) {
       setcontentErrorLimit(false);
     }
-  },[UserInput])
+  },[title, author, image, content, pending, id, email, department])
 
-  const validateCallhandler = async () => {
+  const validateCallhandler = async (approve_type) => {
     console.log("ankit901",UserInput)
     if (
       UserInput.name == "" ||
       UserInput.department == "" ||
-      UserInput.image == "" ||
       UserInput.title==""
     ) {
       setformError(true);
@@ -86,54 +79,51 @@ const PublishBlogDialog = ({ open, blogPopup, setBlogPopUp,setblogPostSucess }) 
       setcontentErrorLimit(true);
       return;
     } 
-    await fetch("https://puce-kind-newt.cyclic.app/blog-post", {
-      method: "POST",
-      body: JSON.stringify({
-        name: UserInput?.name,
-        department: UserInput?.department,
-        email: UserInput?.email,
-        phoneNumber: sessionStorage.getItem("phone"),
-        image: blog_1,
-        content: UserInput?.content,
-        title: UserInput?.title,
-        token_req: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiY29uc3VtZXIgdG1zbCIsInJvbGUiOiJ1c2VyIiwidG9rZW4iOiIwNy00LTIwMDEifQ.REaOJ1FQfye7rB7OcIiyC8-3mv4GEMmG8Iu-dJnZv0U",
-        approved: "pending",
-        user: true,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then((json) => {
-        console.log(json)
-        setBlogPopUp(false);
-        setblogPostSucess(true);
-      })
-      .catch((err)=>{console.log("error while posting",err)});
+     await fetch(`https://puce-kind-newt.cyclic.app/change-by-admin/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: UserInput?.name,
+            department: UserInput?.department,
+            email: UserInput?.email,
+            image: blog_1,
+            id:id,
+            content: UserInput?.content,
+            title: UserInput?.title,
+            token_req: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiY29uc3VtZXIgdG1zbCIsInJvbGUiOiJ1c2VyIiwidG9rZW4iOiIwNy00LTIwMDEifQ.REaOJ1FQfye7rB7OcIiyC8-3mv4GEMmG8Iu-dJnZv0U",
+            approved: approve_type,
+            user: false,
+          }),
+       })
+        .then(response => response.json())
+        .then(data => {console.log(data)
+            setEditByAdmin(false);})
+        .catch(error => console.log(error));
   };
   return (
     <Dialog
       open={open}
-      onClose={!blogPopup}
+      onClose={!editByAdmin}
       aria-labelledby="form-dialog-title"
     >
       <DialogTitle disableTypography>
         <IconButton
           aria-label="close"
           onClick={() => {
-            setBlogPopUp(false);
+            setEditByAdmin(false);
           }}
           style={{ float: "right" }}
         >
           <HighlightOffIcon />
         </IconButton>
-        <h2>Publish Your Blog</h2>
+        <h2>Edit This Blog</h2>
       </DialogTitle>
       {/* <form> */}
         <DialogContent>
           <DialogContentText>
-            Please fill out the form below to publish your blog.
+            Edit Blog .
           </DialogContentText>
           <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -218,14 +208,17 @@ const PublishBlogDialog = ({ open, blogPopup, setBlogPopUp,setblogPostSucess }) 
         <DialogActions>
           <Button
             onClick={() => {
-              setBlogPopUp(false);
+                setEditByAdmin(false);
             }}
             color="primary"
           >
             Cancel
           </Button>
-          <Button type="submit" color="primary" onClick={validateCallhandler}>
-            Publish
+          <Button type="submit" color="primary" onClick={ validateCallhandler("pending")}>
+            save
+          </Button>
+          <Button type="submit" color="primary" onClick={ validateCallhandler("by_admin")}>
+            Save & publish
           </Button>
         </DialogActions>
       {/* </form> */}
@@ -233,4 +226,4 @@ const PublishBlogDialog = ({ open, blogPopup, setBlogPopUp,setblogPostSucess }) 
   );
 };
 
-export default PublishBlogDialog;
+export default EditBlog;

@@ -4,6 +4,11 @@ import blog_1 from "../images/blog_1.jpeg";
 import {  Button } from '@mui/material';
 import PublishBlogDialog from './PublishBlogDialog';
 import { useNavigate } from 'react-router-dom';
+import MuiAlert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+})
 
 
 const Blog=()=>{
@@ -11,6 +16,7 @@ const Blog=()=>{
   const [pendingBlogs,setPendingBlogs]=useState([]);
   const [blogPopup,setBlogPopUp]=useState(false);
   const [userType,setUserType]=useState("user");
+  const  [blogpostSucess,setblogPostSucess]=useState(false);
   const navigate=useNavigate();
   console.log("ankit019",sessionStorage.getItem("blog-token"));
   const publishButtonhandler=()=>{
@@ -46,6 +52,14 @@ const Blog=()=>{
     };
     fetchData();
   }, []);
+  
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setblogPostSucess(false);
+  };
+
   const fetchpendingApprovals=async()=>{
       try {
       const response = await fetch("https://puce-kind-newt.cyclic.app/get-blog-pendings",  { Method: 'GET',
@@ -80,8 +94,12 @@ const Blog=()=>{
           title={pendingBlogs[idx]?.title}
           author={pendingBlogs[idx]?.name}
           image={blog_1}
+          pending={true}
           content={pendingBlogs[idx]?.content}
           isAdmin={true}
+          id={pendingBlogs[idx]?._id}
+          department={pendingBlogs[idx]?.department}
+          email={pendingBlogs[idx]?.email}
         />
       ))}
       {blogPosts.length>0 && blogPosts.map((id,idx) => (
@@ -90,12 +108,21 @@ const Blog=()=>{
           title={blogPosts[idx]?.title}
           author={blogPosts[idx]?.name}
           image={blog_1}
+          pending={false}
           content={blogPosts[idx]?.content}
           isAdmin={true}
+          id={blogPosts[idx]?._id}
+          department={blogPosts[idx]?.department}
+          email={blogPosts[idx]?.email}
         />
       ))}
     </div>
-    {blogPopup && <PublishBlogDialog open={blogPopup} blogPopup={blogPopup} setBlogPopUp={setBlogPopUp}/>}
+    {blogPopup && <PublishBlogDialog open={blogPopup} blogPopup={blogPopup} setBlogPopUp={setBlogPopUp} setblogPostSucess={setblogPostSucess}/>}
+    {blogpostSucess && <Snackbar open={blogpostSucess} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+          Your Blog Request has been sent to Eclectica!
+        </Alert>
+      </Snackbar>}
     </div>
   );
 }
