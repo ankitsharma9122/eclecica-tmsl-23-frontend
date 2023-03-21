@@ -5,6 +5,7 @@ import {  Button } from '@mui/material';
 import PublishBlogDialog from './PublishBlogDialog';
 import { useNavigate } from 'react-router-dom';
 import MuiAlert from '@mui/material/Alert';
+import CircularProgress from '@mui/material/CircularProgress';
 import Snackbar from '@mui/material/Snackbar';
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -16,6 +17,7 @@ const Blog=()=>{
   const [pendingBlogs,setPendingBlogs]=useState([]);
   const [blogPopup,setBlogPopUp]=useState(false);
   const [userType,setUserType]=useState("user");
+  const [loading,setloading]=useState(false);
   const  [blogpostSucess,setblogPostSucess]=useState(false);
   const navigate=useNavigate();
   console.log("ankit019",sessionStorage.getItem("blog-token"));
@@ -36,6 +38,7 @@ const Blog=()=>{
 
   useEffect(() => {
     const fetchData = async () => {
+      setloading(true);
       try {
       const response = await fetch("https://puce-kind-newt.cyclic.app/get-blog",  { Method: 'GET',
       Headers: {
@@ -46,6 +49,7 @@ const Blog=()=>{
     );
       const data = await response.json();
         setblogPosts(data);
+        setloading(false);
       } catch (error) {
         console.error("Error fetching blog posts:", error);
       }
@@ -102,7 +106,7 @@ const Blog=()=>{
           email={pendingBlogs[idx]?.email}
         />
       ))}
-      {blogPosts.length>0 && blogPosts.map((id,idx) => (
+      {!loading && blogPosts.length>0 && blogPosts.map((id,idx) => (
         <CardBlog
           key={blogPosts[idx]?._id}
           title={blogPosts[idx]?.title}
@@ -116,6 +120,7 @@ const Blog=()=>{
           email={blogPosts[idx]?.email}
         />
       ))}
+      {loading && <><h3 style={{ color:"white",marginRight:"20px"}}>Fetching Blogs...</h3><CircularProgress style={{color:"rgb(255, 89, 0)"}}/></>}
     </div>
     {blogPopup && <PublishBlogDialog open={blogPopup} blogPopup={blogPopup} setBlogPopUp={setBlogPopUp} setblogPostSucess={setblogPostSucess}/>}
     {blogpostSucess && <Snackbar open={blogpostSucess} autoHideDuration={6000} onClose={handleClose}>
