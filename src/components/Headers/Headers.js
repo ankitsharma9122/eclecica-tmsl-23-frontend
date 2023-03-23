@@ -22,7 +22,8 @@ import ContactPageIcon from "@mui/icons-material/ContactPage";
 import eclectica_23_img from "../images/eclectica_23_img.jpg";
 import { ListItemIcon } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import NightlightIcon from '@mui/icons-material/Nightlight';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -66,33 +67,35 @@ const navItems = [
 ];
 
 export default function DrawerAppBar() {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [indexMenu,setIndexMenu]=React.useState(0);
-
+  const [indexMenu, setIndexMenu] = React.useState(0);
+  const [theme, setTheme] = React.useState(
+    sessionStorage.getItem("theme") ?? "dark"
+  );
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
   // route cross check after refresh
-  useEffect(()=>{
-   var href=window.location.href.split("/")[3];
-   for(let i=0;i<navItems.length;i++){
-     if(navItems[i]?.url===href){
-      setIndexMenu(i);
-      break;
-     }
-   }
-  },[])
+  useEffect(() => {
+    var href = window.location.href.split("/")[3];
+    for (let i = 0; i < navItems.length; i++) {
+      if (navItems[i]?.url === href) {
+        setIndexMenu(i);
+        break;
+      }
+    }
+  }, []);
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center"}}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <div
         style={{
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
           marginLeft: "10px",
-          maxHeight:"56px",
+          maxHeight: "56px",
         }}
       >
         <img
@@ -106,32 +109,79 @@ export default function DrawerAppBar() {
           alt="images loading"
         ></img>
         <Typography
-        variant="h6"
+          variant="h6"
           sx={{ my: 2 }}
-          style={{ fontFamily:"serif", fontWeight: "400", color:"white" }}
+          style={{ fontFamily: "serif", fontWeight: "400", color: "white" }}
         >
           Eclectica'23
         </Typography>
       </div>
-      <Divider style={{fontWeight: "600",backgroundColor:"white"}}/>
-      <div style={{ display: "flex",flexDirection:"column",alignContent:"flex-start", justifyContent: "space-between" }}>
-      <List>
-        {navItems.map((idx) => (
-          <ListItem key={idx?.item} disablePadding style={{marginTop:"10px"}}>
-            <ListItemButton
-              onClick={() => {
-                navigate( `/${idx?.url}`)
-                // window.history.pushState(null, null, `/${idx?.url}`);
-              }}
+      <Divider style={{ fontWeight: "600", backgroundColor: "white" }} />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignContent: "flex-start",
+          justifyContent: "space-between",
+        }}
+      >
+        <List>
+          {navItems.map((idx) => (
+            <ListItem
+              key={idx?.item}
+              disablePadding
+              style={{ marginTop: "10px" }}
             >
-              <ListItemIcon style={{ minWidth: "39px",color:"white"}}>
-                {idx?.icon}
-              </ListItemIcon>
-              <ListItemText style={{color:"white"}} primary={idx?.item} />
-            </ListItemButton>
+              <ListItemButton
+                onClick={() => {
+                  navigate(`/${idx?.url}`);
+                  // window.history.pushState(null, null, `/${idx?.url}`);
+                }}
+              >
+                <ListItemIcon style={{ minWidth: "39px", color: "white" }}>
+                  {idx?.icon}
+                </ListItemIcon>
+                <ListItemText style={{ color: "white" }} primary={idx?.item} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+          <ListItem disablePadding style={{ marginTop: "10px" }}>
+            {theme === "dark" ? (
+               <ListItemButton
+                  onClick={()=>{sessionStorage.setItem("theme","light")
+                  setTheme("light");
+                  document.querySelector('body').className = 'light-mode';
+                }}
+               >
+              <ListItemIcon  style={{ minWidth: "39px", color: "white" }}>
+                <LightModeIcon
+                
+                />
+                </ListItemIcon>
+                <ListItemText style={{ color: "white" }} primary="Light Mode" />
+                
+                </ListItemButton>
+              ) : (
+                <ListItemButton
+                  onClick={()=>{sessionStorage.setItem("theme","dark")
+                  setTheme("dark");
+                  const bodyClassList = document.body.classList;
+                  if (bodyClassList.contains('light-mode')) {
+                    bodyClassList.remove('light-mode');
+                  }
+                }}
+                >
+                <ListItemIcon style={{ minWidth: "39px", color: "white" }}>
+                <NightlightIcon 
+                />
+                </ListItemIcon>
+                <ListItemText style={{ color: "white" }} primary="Dark Mode" />
+            
+                </ListItemButton>
+              )}
+
           </ListItem>
-        ))}
-      </List>
+        </List>
       </div>
     </Box>
   );
@@ -169,16 +219,32 @@ export default function DrawerAppBar() {
                   marginRight: "6px",
                 }}
               ></img>
-              <Typography variant="h6" style={{fontFamily:"serif"}}>Eclectica'23</Typography>
+              <Typography variant="h6" style={{ fontFamily: "serif" }}>
+                Eclectica'23
+              </Typography>
             </div>
-            <div style={{ position: "absolute", right: "10px",display: "flex", justifyContent:"center",alignItems:"center" }}>
+            <div
+              style={{
+                position: "absolute",
+                right: "10px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
-                {navItems.map((item,idx) => (
+                {navItems.map((item, idx) => (
                   <Button
                     key={item?.item}
-                    sx={{ color: "#fff", marginRight: "5px",borderBottom: indexMenu === idx ? "2px solid #fff" : "none",borderRadius: "0px" }}
+                    sx={{
+                      color: "#fff",
+                      marginRight: "5px",
+                      borderBottom:
+                        indexMenu === idx ? "2px solid #fff" : "none",
+                      borderRadius: "0px",
+                    }}
                     onClick={() => {
-                      navigate(`/${item?.url}`)
+                      navigate(`/${item?.url}`);
                       setIndexMenu(idx);
                     }}
                   >
@@ -186,7 +252,28 @@ export default function DrawerAppBar() {
                   </Button>
                 ))}
               </Box>
-              {/* <AccountCircleIcon style={{alignItems:"center" ,cursor:"pointer"}} sx={{ display: { xs: "none" ,sm: "block"} }}/> */}
+              {theme === "dark" ? (
+                <LightModeIcon
+                  style={{ alignItems: "center", cursor: "pointer" }}
+                  sx={{ display: { xs: "none", sm: "block" } }}
+                  onClick={()=>{sessionStorage.setItem("theme","light")
+                  setTheme("light");
+                  document.querySelector('body').className = 'light-mode';
+                }}
+                />
+              ) : (
+                <NightlightIcon
+                  style={{ alignItems: "center", cursor: "pointer" }}
+                  sx={{ display: { xs: "none", sm: "block" } }}
+                  onClick={()=>{sessionStorage.setItem("theme","dark")
+                  setTheme("dark");
+                  const bodyClassList = document.body.classList;
+                if (bodyClassList.contains('light-mode')) {
+                  bodyClassList.remove('light-mode');
+                }
+                }}
+                />
+              )}
             </div>
           </div>
         </Toolbar>
@@ -203,9 +290,8 @@ export default function DrawerAppBar() {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
-              backgroundColor: "#343139"  ,
+              backgroundColor: "#343139",
             },
-           
           }}
         >
           {drawer}
