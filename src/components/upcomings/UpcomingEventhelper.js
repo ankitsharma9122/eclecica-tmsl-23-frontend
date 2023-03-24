@@ -73,7 +73,7 @@ const UpcomingEventhelper = ({ event,theme }) => {
       </div>
       <CardContent className="Events-card-div"
       >
-        <Typography variant="body2" component="p" style={{ color: "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px"}}>
+        <Typography variant="body2" component="p" style={{ color: "white"}}>
           {event.description}
         </Typography>
  
