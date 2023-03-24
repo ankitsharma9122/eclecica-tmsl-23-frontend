@@ -42,7 +42,7 @@ const teamMembers = [
   },
 ];
 
-const OurpastGuest = () => {
+const OurpastGuest = (props) => {
   const [activeMember, setActiveMember] = useState(null);
   const [isFlipping, setIsFlipping] = useState(false);
 
@@ -66,7 +66,7 @@ const OurpastGuest = () => {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
+  console.log("ankit09",props?.theme);
   return (
     <Grid container spacing={2}>
       {teamMembers.map((member, index) => (
@@ -77,7 +77,7 @@ const OurpastGuest = () => {
             sx={{
               cursor: 'pointer',
               border:"solid",
-              borderColor:"white",
+              borderColor:props?.theme=="light" ? "#c9c3c3" : "white",
               height: isMobile ? 200 : 300,
               width: isMobile ? 280 : "100%",
               maxWidth : isMobile ? 280 : 350,
@@ -110,7 +110,7 @@ const OurpastGuest = () => {
                 style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 0 }}
               />
               </div>
-              <div style={{ padding: 5,borderTop:"solid",borderBottom:"solid",borderColor:"white",}} className="typo-desciption">
+              <div style={{ padding: 5,borderTop:"solid",borderBottom:"solid",borderColor:props?.theme=="light" ? "#c9c3c3" : "white"}} className="typo-desciption">
                 <Typography variant="h5" style={{color:"rgb(255, 89, 0)",fontFamily:"serif",letterSpacing:"1px"}}>{member.name}</Typography>
               </div>
             </div>
@@ -127,9 +127,9 @@ const OurpastGuest = () => {
                 display:"flex",justifyContent:"center",alignItems:"center",
                 
               }}
-              className="descrption"
+               className={props?.theme=="light" ? "descrption-light" : "descrption"}
             >
-              <div style={{ padding: 5,color:"white" }}>
+              <div style={{ padding: 5, color:props?.theme=="light" ? "black" : "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px"}}>
                 <Typography variant="body1">{member.description}</Typography>
               </div>
             </div>

@@ -65,7 +65,7 @@ const CardBlog = ({ title, author, image, content, pending, id,email,department 
           </Typography>
         </CardContent>
         <CardHeader
-          subheader={`By ${author} (${department})`}
+          subheader={`By ${author} [ Dept of ${department}]`}
           action={
             sessionStorage.getItem("blog-token") ==
               "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic3JhYmFzdGkgYmFuZXJqZWUiLCJyb2xlIjoiY29udmVub3IiLCJ0b2tlbiI6IjI0LTA3LTIwMDEifQ.r2YYukXUKmYIfwspVm_ceUA31mb4IIO1otO7TK_lIZ8" &&

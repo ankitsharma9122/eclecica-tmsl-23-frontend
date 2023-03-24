@@ -57,7 +57,7 @@ const events = [
     Eventdate: new Date("1/01/2019"),
   },
 ];
-const UpcomingEvent = () => {
+const UpcomingEvent = (props) => {
   const [currentDate, setCurrentDate] = useState(new Date());
 
   return (
@@ -76,9 +76,10 @@ const UpcomingEvent = () => {
         (currentDate<event?.Eventdate && <UpcomingEventhelper  event={event} />)
        ))}
       </div> */}
+
       <div style={{ margin: "20px" }}>
-        <h1 style={{ color: "rgb(247, 158, 2)" }}>View Result for Past Events</h1>
-        <div style={{ color: "white" }}>
+        <h1 style={{ color: props?.theme == "light" ? "black" : "rgb(247, 158, 2)"}}>View Result for Past Events</h1>
+        <div style={{ color: props?.theme == "light" ? "black" : "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px"}}>
           Welcome to our gallery! Here, we proudly showcase the creative talents
           of our club members, as well as other emerging writers and artists in
           the community.Whether you are a seasoned writer, a budding artist, or
@@ -98,7 +99,7 @@ const UpcomingEvent = () => {
         {events.map(
           (event) =>
             currentDate > event?.Eventdate && (
-              <UpcomingEventhelper event={event} />
+              <UpcomingEventhelper event={event} theme={props?.theme}/>
             )
         )}
       </div>

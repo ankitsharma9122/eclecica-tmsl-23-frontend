@@ -121,7 +121,7 @@ const styles = {
     fontSize: '14px',
   },
 };
-const Registration = () => {
+const Registration = (props) => {
 
   const [selectedClub, setSelectedClub] = useState(null);
 
@@ -136,8 +136,8 @@ const Registration = () => {
   return (
   <div  style={{display:"flex",flexDirection:"row",flexWrap:"wrap",marginTop:"80px",justifyContent:"center"}}>
        <div style={{margin:"10px"}}>
-    <h1 style={{color:"rgb(247, 158, 2)"}}>Sub Clubs Under Eclectica</h1>
-    <div style={{color:"white"}}>Welcome to our gallery! Here, we proudly showcase the creative talents of our club members, as well as other emerging writers and artists in the community.Whether you are a seasoned writer, a budding artist, or simply someone who appreciates the beauty and power of words, we hope that you will find something to love in our gallery. So take your time, explore our collection.</div>
+    <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)"}}>Sub Clubs Under Eclectica</h1>
+    <div style={{color: props?.theme === "light" ? "black" : "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px"}}>Welcome to our gallery! Here, we proudly showcase the creative talents of our club members, as well as other emerging writers and artists in the community.Whether you are a seasoned writer, a budding artist, or simply someone who appreciates the beauty and power of words, we hope that you will find something to love in our gallery. So take your time, explore our collection.</div>
     </div>
      {subEventClubs.map((club) => (
       <Card style={styles.root} onClick={() => handleClubClick(club)}>

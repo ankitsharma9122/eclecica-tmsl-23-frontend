@@ -13,9 +13,10 @@ import OurpastGuest from "./OurpastGuest";
 
 const images = [blog_1, blog_2, blog_1];
 
-const Home = () => {
+const Home = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const theme = useTheme();
+  
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const handleDotButtonClick = (index) => {
@@ -106,9 +107,9 @@ const Home = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          color: "rgb(253 165 118)",
+          color: props?.theme == "light" ? "black" : "rgb(253 165 118)",
           margin: "10px",
-          textAlign: "center"
+          textAlign: "center",
         }}
         className="div-quates"
       >
@@ -122,8 +123,8 @@ const Home = () => {
         <div
           className="about-us-div-parent-child"
         >
-          <h1 style={{ color: "#f79e02", textAlign: "center" }}>About us</h1>
-          <div style={{ color: "white", textAlign: "center" }} className="about-us-content-div-2">
+          <h1 style={{ color: props?.theme == "light" ? "black" : "#f79e02" , textAlign: "center", }}>About us</h1>
+          <div style={{ color: props?.theme == "light" ? "black" : "white", textAlign: "center",fontSize:"18px",letterSpacing:"0.6px",marginTop:"10px",lineHeight:"1.4" }}>
           Team Eclectica–the literary committee of Techno Main Salt Lake, is a student-governed organization dedicated to building a healthy community receptive to works of literature. Throughout the year Team Eclectica organizes seminars, holds webinars, hosts competitions and grooms students through workshops. The sole purpose behind its inception was to ensure that the spirit of artistry, spoken and written expression, debating, drama and quizzing is sustained in society in general and our members and followers in particular. To accomplish these goals, apart from contests and workshops, we also maintain an online presence through our official blog to encourage students to post their original content for the world to view. Through our year-long activities, members of the community get to discover new avenues of interest and explore their creativity in ways manifold.
           </div>
         </div>
@@ -133,24 +134,25 @@ const Home = () => {
           <ReactPlayer url={trailer} controls light={blog_1} width="100%" height="100%"/>
         </div>
       </div>
-      <div style={{          display: "flex",
+      <div style={{          
+          display: "flex",
           flexDirection:"column",
           justifyContent: "center",
           alignItems: "center",}}>
       <h1
         style={{
-          marginTop:"10px",
-          color: "#f79e02",
+          marginTop:"20px",
+          color: props?.theme === "light" ? "black" : "#f79e02",
           margin: "auto",
           textAlign: "center"
         }}
       >
         Our Past Event Guests
       </h1>
-      <div style={{color:"white",fontSize:"20px", display: "flex",
+      <div style={{color: props?.theme === "light" ? "black" : "white",fontSize:"20px", display: "flex",
           justifyContent: "center",
-          alignItems: "center", textAlign: "center",margin:"10px"}} className="about-us-content-div">These guests brought their unique perspectives and expertise to our events, and their presence contributed to the success of the events. We are grateful for their support and participation, and we hope to have them as our guests again in the future.</div>
-      <OurpastGuest/>
+          alignItems: "center", textAlign: "center",margin:"10px",fontSize:"18px",letterSpacing:"0.6px",lineHeight:"1.4"}}>These guests brought their unique perspectives and expertise to our events, and their presence contributed to the success of the events. We are grateful for their support and participation, and we hope to have them as our guests again in the future.</div>
+      <OurpastGuest theme={props.theme}/>
       </div>
       <div></div>
     </div>

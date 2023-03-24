@@ -4,10 +4,10 @@ import Login from './Login';
 import Signup from './Signup';
 import ForgotPassword from './ForgotPassword';
 
-const Auth = () => {
+const Auth = ({theme}) => {
   return (
     <div style={{display:"flex",flexDirection:"column",flexWrap:"wrap",marginTop:"160px",justifyContent:"center"}}> 
-     <Signup/>
+     <Signup theme={theme}/>
     </div>
   );
 };

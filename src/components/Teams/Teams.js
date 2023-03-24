@@ -156,7 +156,7 @@ const MangementTeam = [
   },
 ];
 
-const Teams = () => {
+const Teams = (props) => {
   return (
     <div
       style={{
@@ -168,8 +168,8 @@ const Teams = () => {
       }}
     >
       <div style={{ margin: "10px" }}>
-        <h1 style={{ color: "rgb(247, 158, 2)" }}>Team Eclectica</h1>
-        <div style={{ color: "white" }}>
+        <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)" }}>Team Eclectica</h1>
+        <div style={{ color: props?.theme === "light" ? "black" : "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px" }}>
           Welcome to our gallery! Here, we proudly showcase the creative talents
           of our club members, as well as other emerging writers and artists in
           the community.Whether you are a seasoned writer, a budding artist, or
@@ -178,7 +178,7 @@ const Teams = () => {
           time, explore our collection.
         </div>
       </div>
-      <h1 style={{ color: "rgb(247, 158, 2)" }}>Core Members</h1>
+      <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)" }}>Core Members</h1>
       <div style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center",flexWrap:"wrap"}}>
       {coreMembers.map((data)=>{
         return (
@@ -190,7 +190,7 @@ const Teams = () => {
         )
       })}
        </div>
-       <h1 style={{ color: "rgb(247, 158, 2)" }}>Content Team</h1>
+       <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)"}}>Content Team</h1>
       <div style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center",flexWrap:"wrap"}}>
       {ContentTeam.map((data)=>{
         return (
@@ -203,7 +203,7 @@ const Teams = () => {
       })}
        </div>
 
-       <h1 style={{ color: "rgb(247, 158, 2)" }}>Design Team</h1>
+       <h1 style={{  color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)" }}>Design Team</h1>
       <div style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center",flexWrap:"wrap"}}>
       {DesignTeam.map((data)=>{
         return (
@@ -215,7 +215,7 @@ const Teams = () => {
         )
       })}
        </div>
-       <h1 style={{ color: "rgb(247, 158, 2)" }}>Mangement Team</h1>
+       <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)" }}>Mangement Team</h1>
       <div style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center",flexWrap:"wrap"}}>
       {MangementTeam.map((data)=>{
         return (

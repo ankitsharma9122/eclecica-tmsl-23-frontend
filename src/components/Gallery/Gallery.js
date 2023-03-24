@@ -18,14 +18,14 @@ function srcset(image, size, rows = 5, cols = 5) {
   };
 }
 
-export default function Gallery() {
+export default function Gallery(props) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <div style={{marginTop:"80px"}}>
     <div style={{margin:"10px"}}>
-    <h1 style={{color:"rgb(247, 158, 2)"}}>Eclectica Gallery</h1>
-    <div style={{color:"white"}}>Welcome to our gallery! Here, we proudly showcase the creative talents of our club members, as well as other emerging writers and artists in the community.Whether you are a seasoned writer, a budding artist, or simply someone who appreciates the beauty and power of words, we hope that you will find something to love in our gallery. So take your time, explore our collection.</div>
+    <h1 style={{color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)"}}>Eclectica Gallery</h1>
+    <div style={{color: props?.theme === "light" ? "black" : "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px"}}>Welcome to our gallery! Here, we proudly showcase the creative talents of our club members, as well as other emerging writers and artists in the community.Whether you are a seasoned writer, a budding artist, or simply someone who appreciates the beauty and power of words, we hope that you will find something to love in our gallery. So take your time, explore our collection.</div>
     </div>
     <ImageList
       sx={{margin:"10px"}}

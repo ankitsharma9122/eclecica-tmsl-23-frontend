@@ -12,7 +12,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 })
 
 
-const Blog=()=>{
+const Blog=(props)=>{
   const [blogPosts,setblogPosts]=useState([]);
   const [pendingBlogs,setPendingBlogs]=useState([]);
   const [blogPopup,setBlogPopUp]=useState(false);
@@ -120,7 +120,7 @@ const Blog=()=>{
           email={blogPosts[idx]?.email}
         />
       ))}
-      {loading && <><h3 style={{ color:"white",marginRight:"20px"}}>Fetching Blogs...</h3><CircularProgress style={{color:"rgb(255, 89, 0)"}}/></>}
+      {loading && <><h3 style={{color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)",marginRight:"20px"}}>Fetching Blogs...</h3><CircularProgress style={{color:"rgb(255, 89, 0)"}}/></>}
     </div>
     {blogPopup && <PublishBlogDialog open={blogPopup} blogPopup={blogPopup} setBlogPopUp={setBlogPopUp} setblogPostSucess={setblogPostSucess}/>}
     {blogpostSucess && <Snackbar open={blogpostSucess} autoHideDuration={6000} onClose={handleClose}>

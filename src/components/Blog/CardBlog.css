@@ -1,4 +1,6 @@
 .text-content {
+    letter-spacing: 0.6px;
+    list-style:1.4 ;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
     transition: transform 0.5s ease-in-out;
@@ -7,7 +9,10 @@
   .text-content.visible {
     transform: translateY(0);
   }
-  
+  .css-nrdprl-MuiTypography-root{
+    color: black !important;
+    font-family: serif !important;
+  }
   @keyframes fadeIn {
     0% {
       opacity: 0;

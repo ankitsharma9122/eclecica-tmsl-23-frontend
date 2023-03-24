@@ -10,7 +10,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
 import './Contactus.css';
 
-const Contactus = () => {
+const Contactus = (props) => {
   const styles = {
     root: {
       display: 'flex',
@@ -85,7 +85,8 @@ const Contactus = () => {
     <div style={styles.root}>
       <Grid item xs={12} sm={10} md={8}>
         <Box style={styles.form} >
-          <Typography variant="h4" align="center" gutterBottom className="drop-ms-typo">
+          <Typography variant="h4" align="center" gutterBottom  
+          style={{color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)"}}>
             Drop a Message
           </Typography>
           <Divider />

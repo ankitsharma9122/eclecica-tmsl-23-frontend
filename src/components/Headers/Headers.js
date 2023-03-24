@@ -66,13 +66,10 @@ const navItems = [
   },
 ];
 
-export default function DrawerAppBar() {
+export default function DrawerAppBar({theme,setTheme}) {
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [indexMenu, setIndexMenu] = React.useState(0);
-  const [theme, setTheme] = React.useState(
-    sessionStorage.getItem("theme") ?? "dark"
-  );
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
@@ -111,12 +108,12 @@ export default function DrawerAppBar() {
         <Typography
           variant="h6"
           sx={{ my: 2 }}
-          style={{ fontFamily: "serif", fontWeight: "400", color: "white" }}
+          style={{ fontFamily: "serif", fontWeight: "400", color: theme === "light" ? "black" : "white" }}
         >
           Eclectica'23
         </Typography>
       </div>
-      <Divider style={{ fontWeight: "600", backgroundColor: "white" }} />
+      <Divider style={{ fontWeight: "600", backgroundColor: theme === "light" ? "black" : "white" }} />
       <div
         style={{
           display: "flex",
@@ -138,10 +135,10 @@ export default function DrawerAppBar() {
                   // window.history.pushState(null, null, `/${idx?.url}`);
                 }}
               >
-                <ListItemIcon style={{ minWidth: "39px", color: "white" }}>
+                <ListItemIcon style={{ minWidth: "39px", color: theme === "light" ? "black" : "white" }}>
                   {idx?.icon}
                 </ListItemIcon>
-                <ListItemText style={{ color: "white" }} primary={idx?.item} />
+                <ListItemText style={{  color: theme === "light" ? "black" : "white" }} primary={idx?.item} />
               </ListItemButton>
             </ListItem>
           ))}
@@ -149,14 +146,12 @@ export default function DrawerAppBar() {
             {theme === "dark" ? (
                <ListItemButton
                   onClick={()=>{sessionStorage.setItem("theme","light")
-                  setTheme("light");
                   document.querySelector('body').className = 'light-mode';
+                  setTheme("light");
                 }}
                >
               <ListItemIcon  style={{ minWidth: "39px", color: "white" }}>
-                <LightModeIcon
-                
-                />
+                <LightModeIcon/>
                 </ListItemIcon>
                 <ListItemText style={{ color: "white" }} primary="Light Mode" />
                 
@@ -164,18 +159,18 @@ export default function DrawerAppBar() {
               ) : (
                 <ListItemButton
                   onClick={()=>{sessionStorage.setItem("theme","dark")
-                  setTheme("dark");
                   const bodyClassList = document.body.classList;
+                  setTheme("dark");
                   if (bodyClassList.contains('light-mode')) {
                     bodyClassList.remove('light-mode');
                   }
                 }}
                 >
-                <ListItemIcon style={{ minWidth: "39px", color: "white" }}>
+                <ListItemIcon style={{ minWidth: "39px",  color: theme === "light" ? "black" : "white" }}>
                 <NightlightIcon 
                 />
                 </ListItemIcon>
-                <ListItemText style={{ color: "white" }} primary="Dark Mode" />
+                <ListItemText style={{  color: theme === "light" ? "black" : "white" }} primary="Dark Mode" />
             
                 </ListItemButton>
               )}
@@ -188,7 +183,7 @@ export default function DrawerAppBar() {
 
   return (
     <Box>
-      <AppBar component="nav">
+      <AppBar component="nav" style={{ backgroundColor: theme === "light" ? "#dad4d4" : "#263441" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -197,7 +192,7 @@ export default function DrawerAppBar() {
             onClick={handleDrawerToggle}
             sx={{ mr: -2, display: { sm: "none" } }}
           >
-            <MenuIcon style={{ height: "35px", width: "50px" }} />
+            <MenuIcon style={{ height: "35px", width: "50px",color: theme === "light" ? "black" : "white" }} />
           </IconButton>
           <div
             className="nav-div"
@@ -219,7 +214,7 @@ export default function DrawerAppBar() {
                   marginRight: "6px",
                 }}
               ></img>
-              <Typography variant="h6" style={{ fontFamily: "serif" }}>
+              <Typography variant="h6" style={{ fontFamily: "serif",color: theme === "light" ? "black" : "white"  }}>
                 Eclectica'23
               </Typography>
             </div>
@@ -237,10 +232,10 @@ export default function DrawerAppBar() {
                   <Button
                     key={item?.item}
                     sx={{
-                      color: "#fff",
+                      color: theme === "light" ? "black" : "white",
                       marginRight: "5px",
                       borderBottom:
-                        indexMenu === idx ? "2px solid #fff" : "none",
+                        indexMenu === idx ? `2px solid ${theme==="light" ? "black" : "white"}` : "none",       
                       borderRadius: "0px",
                     }}
                     onClick={() => {
@@ -254,7 +249,7 @@ export default function DrawerAppBar() {
               </Box>
               {theme === "dark" ? (
                 <LightModeIcon
-                  style={{ alignItems: "center", cursor: "pointer" }}
+                  style={{ alignItems: "center", cursor: "pointer", color:"white" }}
                   sx={{ display: { xs: "none", sm: "block" } }}
                   onClick={()=>{sessionStorage.setItem("theme","light")
                   setTheme("light");
@@ -263,7 +258,7 @@ export default function DrawerAppBar() {
                 />
               ) : (
                 <NightlightIcon
-                  style={{ alignItems: "center", cursor: "pointer" }}
+                  style={{ alignItems: "center", cursor: "pointer",color:"black" }}
                   sx={{ display: { xs: "none", sm: "block" } }}
                   onClick={()=>{sessionStorage.setItem("theme","dark")
                   setTheme("dark");
@@ -290,7 +285,7 @@ export default function DrawerAppBar() {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
-              backgroundColor: "#343139",
+              backgroundColor: theme == "light" ? "white" : "#343139",
             },
           }}
         >

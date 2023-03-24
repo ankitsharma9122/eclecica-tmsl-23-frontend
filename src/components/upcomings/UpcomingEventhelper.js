@@ -4,7 +4,7 @@ import { Margin } from '@mui/icons-material';
 import "./UpcomingEventhelper.css"
 import sample from "../images/sample.pdf";
 
-const UpcomingEventhelper = ({ event }) => {
+const UpcomingEventhelper = ({ event,theme }) => {
   const [isHovered, setIsHovered] = useState(false);
   let [currentDate,setCurrentDate]=useState(new Date())
   const handleHover = () => {
@@ -14,7 +14,7 @@ const UpcomingEventhelper = ({ event }) => {
   const handleLeave = () => {
     setIsHovered(false);
   };
-
+  console.log("ankit98",theme);
   const overlayStyle = {
     position: 'absolute',
     top: 0,
@@ -67,12 +67,13 @@ const UpcomingEventhelper = ({ event }) => {
         alt={event.title}
       />
       <div style={overlayStyle}>
-        <Typography variant="h5" component="h2" color="textSecondary">
+        <Typography variant="h5" component="h2" style={{ color: "white"}}>
           {event.title}
         </Typography>
       </div>
-      <CardContent className="Events-card-div">
-        <Typography variant="body2" component="p" style={{color:"white"}}>
+      <CardContent className="Events-card-div"
+      >
+        <Typography variant="body2" component="p" style={{ color: "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px"}}>
           {event.description}
         </Typography>
  
