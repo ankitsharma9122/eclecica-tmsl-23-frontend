@@ -54,7 +54,10 @@ const Blog=(props)=>{
         console.error("Error fetching blog posts:", error);
       }
     };
-    fetchData();
+    // setTimeout(()=>{
+      fetchData();
+    // },200000)
+    
   }, []);
   
   const handleClose = (event, reason) => {
@@ -120,7 +123,7 @@ const Blog=(props)=>{
           email={blogPosts[idx]?.email}
         />
       ))}
-      {loading && <><h3 style={{color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)",marginRight:"20px"}}>Fetching Blogs...</h3><CircularProgress style={{color:"rgb(255, 89, 0)"}}/></>}
+      {loading && <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",height:"60vh",width:"100%"}}><h3 style={{color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)",marginRight:"20px"}}>Fetching Blogs...</h3><CircularProgress style={{color:"rgb(255, 89, 0)"}}/></div>}
     </div>
     {blogPopup && <PublishBlogDialog open={blogPopup} blogPopup={blogPopup} setBlogPopUp={setBlogPopUp} setblogPostSucess={setblogPostSucess}/>}
     {blogpostSucess && <Snackbar open={blogpostSucess} autoHideDuration={6000} onClose={handleClose}>
