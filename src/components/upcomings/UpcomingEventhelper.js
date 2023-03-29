@@ -4,9 +4,12 @@ import { Margin } from '@mui/icons-material';
 import "./UpcomingEventhelper.css"
 import sample from "../images/sample.pdf";
 
-const UpcomingEventhelper = ({ event,theme }) => {
+const UpcomingEventhelper = ({ event,theme,setRegisterClicked }) => {
   const [isHovered, setIsHovered] = useState(false);
-  let [currentDate,setCurrentDate]=useState(new Date())
+  const [currentDate,setCurrentDate]=useState(new Date())
+  
+
+
   const handleHover = () => {
     setIsHovered(true);
   };
@@ -78,12 +81,12 @@ const UpcomingEventhelper = ({ event,theme }) => {
         </Typography>
  
       {/* <CardActions> */}
-        {currentDate>event?.Eventdate && <a href={sample} download="sample" target='_blank' style={{cursor:"pointer",textDecoration:"none"}}><Button variant="contained" color="primary" className="click-to-know-button">
+        {currentDate>event?.Eventdate ? <a href={sample} download="sample" target='_blank' style={{cursor:"pointer",textDecoration:"none"}}><Button variant="contained" color="primary" className="click-to-know-button">
           View Result
         </Button></a> 
-        // :<Button variant="contained" color="primary">
-        //   Register
-        // </Button>
+        : <Button variant="contained" color="primary" className="click-to-know-button" onClick={()=>{setRegisterClicked(true)}}>
+          Register
+        </Button>
         }
         
       {/* </CardActions> */}

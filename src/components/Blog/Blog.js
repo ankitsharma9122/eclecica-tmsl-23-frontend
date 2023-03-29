@@ -125,8 +125,8 @@ const Blog=(props)=>{
       ))}
       {loading && <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",height:"60vh",width:"100%"}}><h3 style={{color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)",marginRight:"20px"}}>Fetching Blogs...</h3><CircularProgress style={{color:"rgb(255, 89, 0)"}}/></div>}
     </div>
-    {blogPopup && <PublishBlogDialog open={blogPopup} blogPopup={blogPopup} setBlogPopUp={setBlogPopUp} setblogPostSucess={setblogPostSucess}/>}
-    {blogpostSucess && <Snackbar open={blogpostSucess} autoHideDuration={6000} onClose={handleClose}>
+     {blogPopup && <PublishBlogDialog open={blogPopup} blogPopup={blogPopup} setBlogPopUp={setBlogPopUp} setblogPostSucess={setblogPostSucess}/>}
+     {blogpostSucess && <Snackbar open={blogpostSucess} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
           Your Blog Request has been sent to Eclectica!
         </Alert>
