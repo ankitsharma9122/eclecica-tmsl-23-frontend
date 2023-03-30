@@ -70,7 +70,7 @@ const Home = (props) => {
               src={image}
               alt={`Image ${index + 1}`}
               style={{
-                height: isMobile ? 300 : 450,
+                height: isMobile ? 300 : 500,
                 objectFit: "cover",
                 width: "100%",
               }}
