@@ -17,4 +17,12 @@ body {
   background-image:none;
   background-color:white;
 }
+.css-ahj2mt-MuiTypography-root{
+  font-size: 15px !important;
+}
 
+@media screen and (max-width: 480px) {
+  .css-ahj2mt-MuiTypography-root{
+    font-size: 13px !important;
+  }
+}

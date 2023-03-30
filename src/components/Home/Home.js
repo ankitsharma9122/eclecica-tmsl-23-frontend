@@ -10,8 +10,11 @@ import "./Home.css";
 import ReactPlayer from "react-player/lazy";
 import trailer from "../images/trailer.mp4";
 import OurpastGuest from "./OurpastGuest";
+import g_4 from "../images/gallery/g_4.JPG";
+import g_5 from "../images/gallery/g_5.JPG";
+import g_7 from "../images/gallery/g_7.JPG";
 
-const images = [blog_1, blog_2, blog_1];
+const images = [g_7, g_4, g_5];
 
 const Home = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
