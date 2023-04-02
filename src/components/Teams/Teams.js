@@ -19,6 +19,7 @@ import ct_7 from "../images/Memberlist/Debjit chatterjee.jpg";
 import ct_8 from "../images/Memberlist/Sristi Chakraborty.jpg";
 import ct_9 from "../images/Memberlist/Simron Paul.jpg";
 import ct_10 from "../images/Memberlist/Uddipan Maitra.jpg";
+import ct_11 from "../images/Memberlist/Ayush Ghosal.jpg"
 import d_1 from "../images/Memberlist/Monideepa Maiti.jpg";
 import d_2 from "../images/Memberlist/Sayan Paul.jpg";
 import d_4 from "../images/Memberlist/Sreejita Mukhopadhyay.jpg";
@@ -34,6 +35,7 @@ import m_6 from "../images/Memberlist/Debosmita Bedajna.jpg";
 import m_7 from "../images/Memberlist/Adity seth.jpg";
 import m_8 from "../images/Memberlist/ARIF ALI.jpg";
 import m_9 from "../images/Memberlist/Shalini Sinha.jpg";
+import m_10 from "../images/Memberlist/SOUMYADEEP DAS.jpg"
 import q_1 from "../images/Memberlist/Ritam roy.jpg";
 import q_2 from "../images/Memberlist/Shounak Basu.jpg";
 import q_3 from "../images/Memberlist/Shekhar Raha.jpg";
@@ -138,6 +140,12 @@ const MangementTeam = [
     role:"Management Team",
     image:  m_8,
   },
+  {
+    id: 1,
+    name: "Soumydeep Das",
+    role:"Management Team",
+    image:  m_10,
+  },
 
 ];
 const DesignTeam = [
@@ -208,6 +216,12 @@ const ContentTeam = [
     name: "Ahana Sarkar",
     role:"Content Team",
     image:  ct_5,
+  },
+  {
+    id: 1,
+    name: "Ayush Ghosal",
+    role:"Management Team",
+    image:  ct_11,
   },
   {
     id: 1,

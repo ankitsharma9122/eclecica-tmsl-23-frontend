@@ -143,7 +143,6 @@ export default function Gallery(props) {
           <img
             {...srcset(item.img, 121, item.rows, item.cols)}
             alt={item.title}
-            loading="lazy"
           />
         </ImageListItem>
       ))}
@@ -159,7 +158,7 @@ export default function Gallery(props) {
           <img
             {...srcset(item.img, 121, item.rows, item.cols)}
             alt={item.title}
-            loading="lazy"
+
           />
         </ImageListItem>
       ))}
