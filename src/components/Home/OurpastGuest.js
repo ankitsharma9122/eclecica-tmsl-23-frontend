@@ -2,43 +2,49 @@ import { Grid, Paper, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { height } from '@mui/system';
 import { useState } from 'react';
 import "./OurpastGuest.css";
+import guest_1 from "../images/ECLECTICA PAST GUES/MADHURA BANERJEE.jpg"
+import guest_2 from "../images/ECLECTICA PAST GUES/MC HEADSHOT.jpg"
+import guest_3 from "../images/ECLECTICA PAST GUES/NASIF AKHTAR.jpg"
+import guest_4 from "../images/ECLECTICA PAST GUES/RAJDEEP MUKHERJEE.jpg"
+import guest_5 from "../images/ECLECTICA PAST GUES/SUPRIYA NEWAR.jpg"
+import guest_6 from "../images/ECLECTICA PAST GUES/TAPOJIT MITRA.jpg"
 
 const teamMembers = [
   {
-    name: 'Ashish khasyap',
+    name: 'MADHURA BANERJEE',
     position: 'CEO',
-    photo: 'https://picsum.photos/200/200',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    photo: guest_1,
+    description: 'Madhura Banerjee is an author who released her first book, ‘A Tenant of the World’, at age 21. Her second book, ‘Monsoon Arrives at the Junction Crossing’, was published in 2019 by Dhauli Books.She has been a co-author of Scholastic India’s Yearbooks, for three years in a row.',
   },
   {
-    name: 'Ashish khasyap',
+    name: 'MC HEADSHOT',
     position: 'CTO',
-    photo: 'https://picsum.photos/200/201',
-    description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    photo: guest_2,
+    description: 'MC Headshot aka, Tamojit Chatterjee is a talented rapper and entertainer who gained recognition through his appearance  on MTV Hustle, a popular Indian reality show focussing on the rap genre.',
   },
   {
-    name: 'Ashish khasyap',
+    name: 'NASIF AKHTAR',
     position: 'CFO',
-    photo: 'https://picsum.photos/201/200',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    photo: guest_3,
+    description: 'Nasif Akhtar is a comedian from Malda, a small town in West Bengal, India. He started doing comedy in Kolkata in 2016 and later moved to Mumbai. He won the All India Standup Soapbox competition, the biggest standup competition in India, and several others. ',
   },
   {
-    name: 'Ashish khasyap',
+    name: 'RAJDEEP MUKHERJEE',
     position: 'CEO',
-    photo: 'https://picsum.photos/200/200',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    photo: guest_4,
+    description: ' Hailing from the Steel City of India - Jamshedpur, Rajdeep Mukherjee is a multi-dimensional singer, performer, music teacher, and composer who currently lives in Kolkata. He has been performing on stage since the age of 11 and has not stopped since',
   },
   {
-    name: 'Ashish khasyap',
+    name: 'SUPRIYA NEWAR',
     position: 'CTO',
-    photo: 'https://picsum.photos/200/201',
-    description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    photo: guest_5,
+    description: 'Supriya Newar is a communication professional with 20 years of experience in the industry. Throughout her career, she has visited every nook and corner of her field and has worked with some of the masterminds of the business.',
   },
   {
-    name: 'Ashish khasyap',
+    name: 'TAPOJIT MITRA',
     position: 'CFO',
-    photo: 'https://picsum.photos/201/200',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    photo: guest_6,
+    description: 'Tapojit Mitra,more popularly known as HarryBol, is a Bengali creator from Kolkata. He gained popularity through his content which comprises wit, sarcasm and social commentary. His humorous videos and social media content often uphold numerous social issues and his perspective of life as a Bengali and an Indian.',
   },
 ];
 

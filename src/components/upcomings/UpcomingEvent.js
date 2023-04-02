@@ -91,6 +91,7 @@ const UpcomingEvent = (props) => {
                 lineHeight: "1.4",
                 fontSize: "18px",
               }}
+              className="small-font"
             >
               Welcome to our gallery! Here, we proudly showcase the creative
               talents of our club members, as well as other emerging writers and
@@ -134,6 +135,7 @@ const UpcomingEvent = (props) => {
                 lineHeight: "1.4",
                 fontSize: "18px",
               }}
+              className="small-font"
             >
               Welcome to our gallery! Here, we proudly showcase the creative
               talents of our club members, as well as other emerging writers and
