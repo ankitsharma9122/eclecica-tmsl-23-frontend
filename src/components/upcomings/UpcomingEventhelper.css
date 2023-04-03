@@ -1,5 +1,6 @@
 .card-component{
-    width: 40%;
+    width: 35%;
+    /* min-height:400px !important; */
 }
 .Events-card-div{
     width: 100%;
@@ -7,6 +8,7 @@
     background-image: url("../images/bgImg.gif");
     background-size: cover;
     background-repeat: none;
+    min-height: fit-content !important;
     z-index: 1;
 }
 .click-to-know-button{

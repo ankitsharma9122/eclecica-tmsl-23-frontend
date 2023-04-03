@@ -12,55 +12,50 @@ import {
   CardMedia,
 } from "@mui/material";
 import blog_1 from "../images/blog_1.jpeg"
+import ffd from "../images/POSTERS/ffd.jpg"
+import dis from "../images/POSTERS/DISPUTATIO.jpg";
+import gq from "../images/POSTERS/general_quiz.jpg";
+import tq from "../images/POSTERS/trivia_quiz.png";
+import pal from "../images/POSTERS/Palette.png";
+import pic from "../images/POSTERS/PICTIONARY.png";
+import pos from "../images/POSTERS/PROSIMETRUM (1).png";
+import spell from "../images/POSTERS/Spell-Bee .png";
+import uno from "../images/POSTERS/UNO.png";
+import mk from "../images/POSTERS/moksha.jpg"
+import qzone from "../images/POSTERS/qzone.jpg"
 import "./Registration.css"
 const subEventClubs = [
   {
     id: 1,
-    name: "Coding Club",
+    name: "OPEN-MIC",
     description:
-      "A club for those who are passionate about coding and want to learn more about software development.",
-    head: "Abhishek kumar",
-    image:  blog_1,
+      "The official open mic club of Eclectica, the literary club of Techno Main Saltlake Kolkata is a platform that provides students with the opportunity to showcase their talents in poetry, storytelling, music, stand-up comedy, and other forms of spoken-word performance. The members of the Open-Mic Club are passionate about expressing themselves through spoken-word performance. They possess excellent communication and stage presence skills and are committed to sharing their talents with an audience. Through regular open mic sessions and workshops, Open-Mic Club aims to help its members develop their performance abilities, build their confidence, and enhance their communication skills.",
+    head: "Shalini sinha",
+    image: ffd,
   },
   {
     id: 2,
-    name: "Design Club",
+    name: "OPINIONIST",
     description:
-      "A club for those who are passionate about graphic design and want to learn more about design principles.",
-      head: "Abhishek kumar",
-    image: blog_1,
+      " Opinionist is the official debate club of Eclectica, the literary club of Techno Main Saltlake Kolkata. It is a platform that provides students with the opportunity to express their opinions and engage in lively and intellectually stimulating debates on a variety of topics. The members of Opinionist are passionate about public speaking and argumentation. They possess excellent communication skills and are well-versed in current affairs, politics, philosophy, and other disciplines that are relevant to the debates they engage in. Through regular meetings, workshops, and competitions, Opinionist aims to help its members develop their critical thinking abilities, broaden their perspectives, and enhance their confidence in public speaking.",
+    head: "Shekhar Raha",
+    image: dis,
   },
   {
     id: 1,
-    name: "Coding Club",
+    name: "MOKSHA",
     description:
-      "A club for those who are passionate about coding and want to learn more about software development.",
-      head: "Abhishek kumar",
-    image:  blog_1,
+      "Moksha is the official drama club of Eclectica, the literary club of Techno Main Saltlake Kolkata. It is a platform that provides students with the opportunity to explore and express their creative talents through various forms of theatre. The members of Moksha are passionate about acting, directing, scriptwriting, stage design, and all aspects of drama production. They possess excellent communication and collaboration skills and are committed to bringing their artistic visions to life. Through regular meetings, workshops, and performances, Moksha aims to help its members develop their theatrical abilities, broaden their perspectives, and enhance their confidence in public performance. The club encourages its members to experiment with different forms and styles of theatre, from traditional plays to avant-garde performances. ",
+      head: "Ashish Kashyap",
+    image:  mk,
   },
   {
     id: 1,
-    name: "Coding Club",
+    name: "QZONE",
     description:
-      "A club for those who are passionate about coding and want to learn more about software development.",
-      head: "Abhishek kumar",
-    image:  blog_1,
-  },
-  {
-    id: 1,
-    name: "Coding Club",
-    description:
-      "A club for those who are passionate about coding and want to learn more about software development.",
-      head: "Abhishek kumar",
-    image:  blog_1,
-  },
-  {
-    id: 1,
-    name: "Coding Club",
-    description:
-      "A club for those who are passionate about coding and want to learn more about software development.",
-      head: "Abhishek kumar",
-    image:  blog_1,
+      " QZone is the official quiz club of Eclectica, the literary club of Techno Main Saltlake Kolkata. It is a platform that provides students with the opportunity to showcase their knowledge and compete with their peers in various fields of trivia and general knowledge. The members of QZone are passionate about quizzing and possess excellent analytical and problem-solving skills. They are well-versed in a wide range of topics, including history, science, literature, current affairs, and pop culture.",
+      head: "Ritam Roy",
+    image:  qzone,
   },
   // Add more sub-event clubs here
 ];
@@ -143,7 +138,7 @@ const Registration = (props) => {
       <Card style={styles.root} onClick={() => handleClubClick(club)}>
         <CardMedia
         style={styles.media}
-        image={club.image}
+        image={club.image} 
        />
        <div className="div-card-subclub">
         <CardHeader title={club.name} />
@@ -180,7 +175,7 @@ const Registration = (props) => {
                 {selectedClub.description}
               </Typography>
               <Typography variant="body2" color="textSecondary" style={{color:"rgb(224, 133, 21)"}}>
-                Head of {selectedClub.name}: {selectedClub.head}
+                Head : {selectedClub.head}
               </Typography>
             </DialogContent>
           </>

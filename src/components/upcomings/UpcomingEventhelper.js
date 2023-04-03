@@ -34,7 +34,7 @@ const UpcomingEventhelper = ({ event,theme,setRegisterClicked }) => {
   };
 
   const mediaStyle = {
-    height: 300,
+    height:"300px",
     transition: 'transform 0.5s',
     transform: isHovered ? 'scale(1.1)' : 'scale(1)'
   };
@@ -55,20 +55,24 @@ const UpcomingEventhelper = ({ event,theme,setRegisterClicked }) => {
             opacity: 1,
             transition: 'opacity 0.5s'
           }
-        }
+        },
+       
         
       }}
       className="card-component"
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
     >
+      <div>
       <CardMedia
         component="img"
         style={mediaStyle}
         xs={{height:100,width:200}}
         image={event.image}
         alt={event.title}
+        // style={{ minHeight:"500px"}}
       />
+      </div>
       <div style={overlayStyle}>
         <Typography variant="h5" component="h2" style={{ color: "white"}}>
           {event.title}
@@ -81,7 +85,7 @@ const UpcomingEventhelper = ({ event,theme,setRegisterClicked }) => {
         </Typography>
  
       {/* <CardActions> */}
-        {currentDate>event?.Eventdate ? <a href={sample} download="sample" target='_blank' style={{cursor:"pointer",textDecoration:"none"}}><Button variant="contained" color="primary" className="click-to-know-button">
+        {currentDate>event?.Eventdate ? <a href={event?.pdf} download="sample" target='_blank' style={{cursor:"pointer",textDecoration:"none"}}><Button variant="contained" color="primary" className="click-to-know-button">
           View Result
         </Button></a> 
         : <Button variant="contained" color="primary" className="click-to-know-button" onClick={()=>{setRegisterClicked(true)}}>

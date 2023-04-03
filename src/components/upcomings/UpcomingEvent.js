@@ -3,58 +3,104 @@ import UpcomingEventhelper from "./UpcomingEventhelper";
 import Registration from "./Registration";
 import { Typography } from "@mui/material";
 import blog_1 from "../images/blog_1.jpeg";
+import ffd from "../images/POSTERS/ffd.jpg"
+import dis from "../images/POSTERS/DISPUTATIO.jpg";
+import gq from "../images/POSTERS/general_quiz.jpg";
+import tq from "../images/POSTERS/trivia_quiz.png";
+import pal from "../images/POSTERS/Palette.png";
+import pic from "../images/POSTERS/PICTIONARY.png";
+import pos from "../images/POSTERS/PROSIMETRUM (1).png";
+import spell from "../images/POSTERS/Spell-Bee .png";
+import uno from "../images/POSTERS/UNO.png";
+import ffd1 from "../images/WINNER_PAST/FFD_WINNER_2023_INTRA - Sheet1.pdf";
+import dis1 from "../images/WINNER_PAST/DISPUTATIO_WINNER_2023_INTRA - Sheet1.pdf";
+import gq1 from "../images/WINNER_PAST/GENERAL QUIZ_WINNER_INTRA_2023 - Sheet1.pdf";
+import tq1 from "../images/WINNER_PAST/TRIVIA QUIZ_WINNER_2023_INTRA - Sheet1.pdf";
+import pa1 from "../images/WINNER_PAST/PALETTE_WINNER_INTRA_2033 - Sheet1.pdf";
+import pic1 from "../images/WINNER_PAST/PICTIONARY_INTRA_WINNER_2023 - Sheet1.pdf";
+import pos1 from "../images/WINNER_PAST/PROSIMETRUM INTRA 2023 WINNER - Sheet1.pdf";
+import spell1 from "../images/WINNER_PAST/SPELLBEE_WINNER_2023_INTRA - Sheet1.pdf";
+import uno1 from "../images/WINNER_PAST/UNO_WINNER_INTRA_2023 - Sheet1.pdf";
 const events = [
   {
-    title: "Event 1",
+    title: "ECLECTICA'23",
     date: "January 1, 2023",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "FIVE FEET DROP an open mic event where participants will present their original pieces.",
     image: blog_1,
-    Eventdate: new Date("6/01/2022"),
+    pdf:ffd1,
+    Eventdate: new Date("4/30/2023"),
   },
   {
-    title: "Event 2",
-    date: "February 14, 2023",
-    description:
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: blog_1,
-    Eventdate: new Date("6/05/2021"),
-  },
-  {
-    title: "Event 1",
+    title: "FIVE FEET DROP",
     date: "January 1, 2023",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: blog_1,
-    Eventdate: new Date("6/10/2022"),
+    description: "FIVE FEET DROP an open mic event where participants will present their original pieces.",
+    image: ffd,
+    pdf:ffd1,
+    Eventdate: new Date("1/06/2023"),
   },
   {
-    title: "Event 1",
+    title: "DISPUTATIO",
     date: "January 1, 2023",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: blog_1,
-    Eventdate: new Date("6/10/2022"),
+    description: "Express your voice in Disputatio, the ultimate debate competition.",
+    image:dis,
+    pdf:dis1,
+    Eventdate: new Date("1/06/2023"),
   },
   {
-    title: "Event 2",
-    date: "February 14, 2023",
-    description:
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: blog_1,
-    Eventdate: new Date("6/01/2023"),
-  },
-  {
-    title: "Event 1",
+    title: "TRIVIA QUIZ",
     date: "January 1, 2023",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: blog_1,
-    Eventdate: new Date("6/01/2022"),
+    description: "Trivia Quiz : questions on interesting topics",
+    image: tq,
+    pdf:tq1,
+    Eventdate: new Date("1/06/2023"),
   },
   {
-    title: "Event 2",
-    date: "February 14, 2023",
-    description:
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: blog_1,
-    Eventdate: new Date("1/01/2019"),
+    title: "GENERAL QUIZ",
+    date: "January 1, 2023",
+    description: "Test of knowledge and skill with the General Quiz competition",
+    image: gq,
+    pdf:gq1,
+    Eventdate: new Date("1/06/2023"),
+  },
+  {
+    title: "SPELLBEE",
+    date: "January 1, 2023",
+    description: "spellbees are a popular and effective tool for promoting literacy and improving spelling skills",
+    image: spell,
+    pdf:spell1,
+    Eventdate: new Date("1/06/2023"),
+  },
+  {
+    title: "UNO",
+    date: "January 1, 2023",
+    description: "UNO : multi-player card game.",
+    image: uno,
+    pdf:uno1,
+    Eventdate: new Date("1/06/2023"),
+  },
+  {
+    title: "PICTIONARY",
+    date: "January 1, 2023",
+    description: "A game packed with enthuse and fascination sprinkled with a dash of vying and your favourite- GUESSING",
+    image: pic,
+    pdf:pic1,
+    Eventdate: new Date("1/06/2023"),
+  },
+  {
+    title: "PALETTE",
+    date: "January 1, 2023",
+    description: "An event where you can narrate your anecdote with your illustration skills to broad-ranging onlookers",
+    image: pal,
+    pdf:pa1,
+    Eventdate: new Date("1/06/2023"),
+  },
+  {
+    title: "PROSIMETRUM",
+    date: "January 1, 2023",
+    description: "Content writing event, PROSIMETRUM, bringing you ideas to explore and  endless possibilitie",
+    image:pos,
+    pdf:pos1,
+    Eventdate: new Date("1/06/2023"),
   },
 ];
 const UpcomingEvent = (props) => {
