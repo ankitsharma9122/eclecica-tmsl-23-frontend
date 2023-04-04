@@ -14,7 +14,7 @@ const teamMembers = [
     name: 'MADHURA BANERJEE',
     position: 'CEO',
     photo: guest_1,
-    description: 'Madhura Banerjee is an author who released her first book, ‘A Tenant of the World’, at age 21. Her second book, ‘Monsoon Arrives at the Junction Crossing’, was published in 2019 by Dhauli Books.She has been a co-author of Scholastic India’s Yearbooks, for three years in a row.',
+    description: 'Madhura Banerjee is an author who released her first book, ‘A Tenant of the World’, at age 21. Her second book.She has been a co-author of Scholastic India’s Yearbooks, for three years in a row.',
   },
   {
     name: 'MC HEADSHOT',
@@ -26,13 +26,13 @@ const teamMembers = [
     name: 'NASIF AKHTAR',
     position: 'CFO',
     photo: guest_3,
-    description: 'Nasif Akhtar is a comedian from Malda, a small town in West Bengal, India. He started doing comedy in Kolkata in 2016 and later moved to Mumbai. He won the All India Standup Soapbox competition, the biggest standup competition in India, and several others. ',
+    description: 'Nasif Akhtar is a comedian from Malda, a small town in West Bengal, India. He started doing comedy in Kolkata in 2016 and later moved to Mumbai. He won the All India Standup Soapbox competition. ',
   },
   {
     name: 'RAJDEEP MUKHERJEE',
     position: 'CEO',
     photo: guest_4,
-    description: ' Hailing from the Steel City of India - Jamshedpur, Rajdeep Mukherjee is a multi-dimensional singer, performer, music teacher, and composer who currently lives in Kolkata. He has been performing on stage since the age of 11 and has not stopped since',
+    description: ' Hailing from the Steel City of India - Jamshedpur, Rajdeep Mukherjee is a multi-dimensional singer, performer, music teacher, and composer who currently lives in Kolkata.',
   },
   {
     name: 'SUPRIYA NEWAR',
@@ -44,7 +44,7 @@ const teamMembers = [
     name: 'TAPOJIT MITRA',
     position: 'CFO',
     photo: guest_6,
-    description: 'Tapojit Mitra,more popularly known as HarryBol, is a Bengali creator from Kolkata. He gained popularity through his content which comprises wit, sarcasm and social commentary. His humorous videos and social media content often uphold numerous social issues and his perspective of life as a Bengali and an Indian.',
+    description: 'Tapojit Mitra,more popularly known as HarryBol, is a Bengali creator from Kolkata. He gained popularity through his content which comprises wit, sarcasm and social commentary.',
   },
 ];
 
@@ -116,8 +116,8 @@ const OurpastGuest = (props) => {
                 style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 0 }}
               />
               </div>
-              <div style={{ padding: 5,borderTop:"solid",borderBottom:"solid",borderColor:props?.theme=="light" ? "#c9c3c3" : "white"}} className="typo-desciption">
-                <Typography variant="h5" style={{color:"rgb(255, 89, 0)",fontFamily:"serif",letterSpacing:"1px"}}>{member.name}</Typography>
+              <div style={{ padding: 5,borderTop:"solid",borderBottom:"solid",borderColor:props?.theme=="light" ? "white" : "white"}}  className={props?.theme=="light" ? "typo-desciption-light" : "typo-desciption"}>
+                <Typography variant="h5" style={{color:"white",fontFamily:"serif",letterSpacing:"1px"}}>{member.name}</Typography>
               </div>
             </div>
             <div

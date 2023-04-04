@@ -47,12 +47,12 @@ function Footer() {
       }}
       className="footer-main"
     >
-      <Grid container spacing={10} justifyContent="space-between">
+      <Grid container spacing={12} justifyContent="space-between" justifyItems="center" style={{display:"flex",flexDirection:"row",flexWrap:"wrap",justifyContent:"center"}}>
         <Grid item xs={12} sm={4}>
           <h3 style={{ color: "white" }}>Eclectica</h3>
           <p style={{ color: "rgb(242, 242, 242)", marginTop: "1rem" }}>
             Eclectica - The 
-            official Literary Committee of Techno Main Salt lake Kolkata,is a student-governed organization dedicated to building a healthy community receptive to works of literature.
+            official Literary Committee of Techno Main Salt lake Kolkata , is a student - governed organization dedicated to building a healthy community receptive to works of literature.
           </p>
         </Grid>
         <Grid item xs={12} sm={4}>
@@ -97,13 +97,13 @@ function Footer() {
 
           </div>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={4} style={{right:"0"}}>
           <h3 style={{ color: "white" }}>Contact Us</h3>
           <a href="https://goo.gl/maps/mCyi8Cxfk7Bc8GPr6" target="_blank" style={{textDecoration:"none"}}>
           <div style={{display:"flex",flexDirection:"row",alignItems:"center",margin:"10px",marginLeft:"0px"}}>
           <RoomIcon style={{ marginRight: "0.5rem",marginTop:"0px",color:"white" }} />
           <p style={{ color: "rgb(242, 242, 242)" }}>
-            Techno main salt, Kolkata
+            Techno main salt Lake, Kolkata
           </p>
           </div>
           </a>

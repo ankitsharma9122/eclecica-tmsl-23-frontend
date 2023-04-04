@@ -105,7 +105,7 @@ const events = [
 ];
 const UpcomingEvent = (props) => {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [registerClicked, setRegisterClicked] = useState(false);
+  const {registerClicked ,setRegisterClicked }=props;
 
   return (
     <>
@@ -139,12 +139,7 @@ const UpcomingEvent = (props) => {
               }}
               className="small-font"
             >
-              Welcome to our gallery! Here, we proudly showcase the creative
-              talents of our club members, as well as other emerging writers and
-              artists in the community.Whether you are a seasoned writer, a
-              budding artist, or simply someone who appreciates the beauty and
-              power of words, we hope that you will find something to love in
-              our gallery. So take your time, explore our collection.
+              Join Eclectica 2023 for a diverse range of literary events: debates, drama, quizzes, sketching, open mic & more. Showcase your talents, connect with like-minded individuals, and be a part of an unforgettable literary fest. Register now to secure your spot and experience the magic of Eclectica 2023.
             </div>
           </div>
           <div
@@ -183,12 +178,7 @@ const UpcomingEvent = (props) => {
               }}
               className="small-font"
             >
-              Welcome to our gallery! Here, we proudly showcase the creative
-              talents of our club members, as well as other emerging writers and
-              artists in the community.Whether you are a seasoned writer, a
-              budding artist, or simply someone who appreciates the beauty and
-              power of words, we hope that you will find something to love in
-              our gallery. So take your time, explore our collection.
+             View Result for Past Events: Relive the magic of Eclectica Intra 2023! Our past results page showcases outstanding performances, creative flair & intellectual prowess. Discover the talents of others or relive your accomplishments. Click now & step into the time machine!
             </div>
           </div>
           <div

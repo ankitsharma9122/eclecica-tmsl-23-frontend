@@ -44,11 +44,11 @@ const navItems = [
     icon: <AppRegistrationIcon />,
     url: "sub-club",
   },
-  {
-    item: "Blog",
-    icon: <ArticleIcon />,
-    url: "blogs",
-  },
+  // {
+  //   item: "Blog",
+  //   icon: <ArticleIcon />,
+  //   url: "blogs",
+  // },
   {
     item: "Gallery",
     icon: <CollectionsIcon />,
@@ -183,7 +183,7 @@ export default function DrawerAppBar({theme,setTheme}) {
 
   return (
     <Box>
-      <AppBar component="nav" style={{ backgroundColor: theme === "light" ? "#dad4d4" : "#263441" }}>
+      <AppBar component="nav" style={{ backgroundColor: theme === "light" ? "#0990af" : "#263441" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -192,7 +192,7 @@ export default function DrawerAppBar({theme,setTheme}) {
             onClick={handleDrawerToggle}
             sx={{ mr: -2, display: { sm: "none" } }}
           >
-            <MenuIcon style={{ height: "35px", width: "50px",color: theme === "light" ? "black" : "white" }} />
+            <MenuIcon style={{ height: "35px", width: "50px",color: theme === "light" ? "white" : "white" }} />
           </IconButton>
           <div
             className="nav-div"
@@ -214,7 +214,7 @@ export default function DrawerAppBar({theme,setTheme}) {
                   marginRight: "6px",
                 }}
               ></img>
-              <Typography variant="h6" style={{ fontFamily: "serif",color: theme === "light" ? "black" : "white"  }}>
+              <Typography variant="h6" style={{ fontFamily: "serif",color: theme === "light" ? "white" : "white"  }}>
                 Eclectica'23
               </Typography>
             </div>
@@ -232,10 +232,10 @@ export default function DrawerAppBar({theme,setTheme}) {
                   <Button
                     key={item?.item}
                     sx={{
-                      color: theme === "light" ? "black" : "white",
+                      color: theme === "light" ? "white" : "white",
                       marginRight: "5px",
                       borderBottom:
-                        indexMenu === idx ? `2px solid ${theme==="light" ? "black" : "white"}` : "none",       
+                        indexMenu === idx ? `2px solid ${theme==="light" ? "white" : "white"}` : "none",       
                       borderRadius: "0px",
                     }}
                     onClick={() => {
@@ -258,7 +258,7 @@ export default function DrawerAppBar({theme,setTheme}) {
                 />
               ) : (
                 <NightlightIcon
-                  style={{ alignItems: "center", cursor: "pointer",color:"black" }}
+                  style={{ alignItems: "center", cursor: "pointer",color:"white" }}
                   sx={{ display: { xs: "none", sm: "block" } }}
                   onClick={()=>{sessionStorage.setItem("theme","dark")
                   setTheme("dark");

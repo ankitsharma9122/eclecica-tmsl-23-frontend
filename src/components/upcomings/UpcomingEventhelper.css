@@ -5,7 +5,7 @@
 .Events-card-div{
     width: 100%;
     height: 100%;
-    background-image: url("../images/bgImg.gif");
+    background-image: url("../images/bgImg.svg");
     background-size: cover;
     background-repeat: none;
     min-height: fit-content !important;

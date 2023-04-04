@@ -27,6 +27,6 @@ b {
   display: flex;
   justify-content:center;
   align-items:center;
-  background-image: url('./components/images/bgImg.gif') !important;
+  background-image: url('./components/images/bgImg.svg') !important;
 }
 

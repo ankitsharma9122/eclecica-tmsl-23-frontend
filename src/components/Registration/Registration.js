@@ -132,7 +132,8 @@ const Registration = (props) => {
   <div  style={{display:"flex",flexDirection:"row",flexWrap:"wrap",marginTop:"80px",justifyContent:"center"}}>
        <div style={{margin:"10px"}}>
     <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)"}}>Sub Clubs Under Eclectica</h1>
-    <div style={{color: props?.theme === "light" ? "black" : "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px"}}>Welcome to our gallery! Here, we proudly showcase the creative talents of our club members, as well as other emerging writers and artists in the community.Whether you are a seasoned writer, a budding artist, or simply someone who appreciates the beauty and power of words, we hope that you will find something to love in our gallery. So take your time, explore our collection.</div>
+    <div style={{color: props?.theme === "light" ? "black" : "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px"}}> Explore your creativity with Team Eclectica's sub-clubs: Open Mic, QZone, Moksha, and Opinionist. Connect with like-minded individuals and learn from the best in the business. Join now and unleash your full potential.
+   </div>
     </div>
      {subEventClubs.map((club) => (
       <Card style={styles.root} onClick={() => handleClubClick(club)}>

@@ -18,6 +18,7 @@ import eclectica_23_img from "./components/images/eclectica_23_img.jpg";
 function App() {
   const [loading, setloading] = useState(false);
   const [theme, setTheme] = useState(sessionStorage.getItem("theme") ?? "dark");
+  const [registerClicked, setRegisterClicked] = useState(false);
   useEffect(() => {
     if (sessionStorage.getItem("theme") == "light") {
       document.querySelector("body").className = "light-mode";
@@ -63,15 +64,15 @@ function App() {
             <Route
               exact
               path="/"
-              element={<Home theme={theme} setTheme={setTheme} />}
+              element={<Home theme={theme} setTheme={setTheme} registerClicked={registerClicked} setRegisterClicked={setRegisterClicked}/>}
             />
-            <Route path="/blogs" element={<Blog theme={theme} />} />
-            <Route path="/sub-club" element={<Registration theme={theme} />} />
+            {/* <Route path="/blogs" element={<Blog theme={theme} />} /> */}
+            <Route path="/sub-club" element={<Registration theme={theme}  />} />
             <Route path="/gallery" element={<Gallery theme={theme} />} />
             <Route path="/eclecticateams" element={<Teams theme={theme} />} />
             <Route path="/contact" element={<Contactus theme={theme} />} />
-            <Route path="/events" element={<UpcomingEvent theme={theme} />} />
-            <Route path="/auth" element={<Auth theme={theme} />} />
+            <Route path="/events" element={<UpcomingEvent theme={theme} registerClicked={registerClicked} setRegisterClicked={setRegisterClicked}/>} />
+            {/* <Route path="/auth" element={<Auth theme={theme} />} /> */}
           </Routes>
           <Footer />
         </BrowserRouter>

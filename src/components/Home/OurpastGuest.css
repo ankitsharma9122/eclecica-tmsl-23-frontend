@@ -16,13 +16,18 @@
     background-image: url("../images/bgImg.gif");
     background-size: cover;
     background-repeat: none;
-      }
-      
+    /* background-color: rgb(9, 144, 175); */
+}
+.typo-desciption-light {
+ background-color: rgb(9, 144, 175);
+}
 @media screen and (max-width: 480px) {
     .typo-desciption{
-  background-image: url("../images/bgImg.gif");
-  background-size: cover;
-  background-repeat: none;
+      background-color: rgb(9, 144, 175);;
+        padding: 2px !important;
+    }
+    .typo-desciption-light{
+      background-color: rgb(9, 144, 175);;
         padding: 2px !important;
     }
   }

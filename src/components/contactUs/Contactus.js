@@ -8,6 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import './Contactus.css';
 
 const Contactus = (props) => {
@@ -86,7 +87,7 @@ const Contactus = (props) => {
       <Grid item xs={12} sm={10} md={8}>
         <Box style={styles.form} >
           <Typography variant="h4" align="center" gutterBottom  
-          style={{color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)"}}>
+          style={{color: props?.theme === "light" ? "black" : "black"}}>
             Drop a Message
           </Typography>
           <Divider />
@@ -137,21 +138,21 @@ const Contactus = (props) => {
         Eclectica - The official literary committee of Techno Main Salt Lake.
         </Typography>
         <div style={styles.phone}>
-          <PhoneIcon style={styles.phoneIcon} />
+          <EmailIcon style={styles.phoneIcon} />
           <Typography variant="body1" style={styles.phoneNum}>
-            8809731829
+            eclecticatmsl@gmail.com
           </Typography>
         </div>
         <div style={styles.phone}>
-          <EmailIcon style={styles.phoneIcon} />
+          <PhoneIcon style={styles.phoneIcon} />
           <Typography variant="body1" style={styles.phoneNum}>
-            Eclecticatmsl@gmail.com
+            7718651718
           </Typography>
         </div>
         <div style={styles.phone}>
           <LocationOnIcon style={styles.phoneIcon} />
           <Typography variant="body1" style={styles.phoneNum}>
-          Techno Main Salt Lake EM 4/5 , Salt Lake Sector 5, Kolkata, 700091
+           Techno Main Salt Lake EM 4/5 , Salt Lake Sector 5, Kolkata, 700091
           </Typography>
         </div>
         <div style={{display:"flex",justifyContent:"row",alighnItem:"center",flexWrap:"wrap",height:"100%",width:"100%",marginTop:"20px"}} className="contact-us-map-section">
@@ -160,18 +161,26 @@ const Contactus = (props) => {
           <h3 style={{color:"white", display:"flex",justifyContent:"center",alignItems:"center",marginTop:"20px"}}>Follow us on </h3>
           <Divider variant="middle" style={{backgroundColor:"white"}} />
            <div style={{marginTop:"20px",display:"flex"}}>
+           <a href="https://api.whatsapp.com/send?phone=7718651718">
             <IconButton style={{ ...iconStyles, ...linkedInStyles }}>
               <WhatsAppIcon style={{color:"white"}}/>
             </IconButton>
+            </a>
+            <a href="https://www.instagram.com/eclecticatmsl/">
             <IconButton style={{ ...iconStyles, ...instagramStyles }}>
               < InstagramIcon style={{color:"white"}}/>
             </IconButton>
+            </a>
+            <a href="https://www.linkedin.com/in/eclectica-tmsl-342b31185/">
             <IconButton style={{ ...iconStyles, ...whatsAppStyles }}>
               <LinkedInIcon style={{color:"white"}}/>
             </IconButton>
+            </a>
+            <a href="https://www.facebook.com/eclecticaTMSL/">
             <IconButton style={{ ...iconStyles, ...whatsAppStyles }}>
-              <TwitterIcon style={{color:"white"}}/>
+              <FacebookIcon style={{color:"white"}}/>
             </IconButton>
+             </a>
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@
 body {
   width: 100%;
   height: 100%;
-  background-image: url("../src/components/images/bgImg.gif");
+  background-image: url("../src/components/images/bgImg.svg");
   background-size: cover;
   background-repeat: none;
 }
