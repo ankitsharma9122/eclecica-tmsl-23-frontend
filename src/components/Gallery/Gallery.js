@@ -130,7 +130,7 @@ export default function Gallery(props) {
     <div style={{marginTop:"80px"}}>
     <div style={{margin:"10px"}}>
     <h1 style={{color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)"}}>Eclectica Gallery</h1>
-    <div style={{color: props?.theme === "light" ? "black" : "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px"}}>Welcome to our gallery! Pictures are a way of capturing moments. As time fleets by, here are some of the moments which we captured from our past events ,we hope that you will find something to love in our gallery,So take your time, explore our collection.</div>
+    <div style={{color: props?.theme === "light" ? "black" : "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px"}} className="small-font">Welcome to our gallery! Pictures are a way of capturing moments. As time fleets by, here are some of the moments which we captured from our past events ,we hope that you will find something to love in our gallery,So take your time, explore our collection.</div>
     </div>
     <ImageList
       sx={{margin:"10px"}}

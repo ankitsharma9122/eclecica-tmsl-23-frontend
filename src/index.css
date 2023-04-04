@@ -25,4 +25,7 @@ body {
   .css-ahj2mt-MuiTypography-root{
     font-size: 13px !important;
   }
+  h1 {
+    font-size: 25px;
+  }
 }

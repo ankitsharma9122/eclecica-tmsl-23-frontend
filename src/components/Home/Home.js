@@ -164,11 +164,11 @@ const Home = (props) => {
                 textAlign: "center"
               }}
             >
-              Our Past Event Guests
+              Past Event Guests
             </h1>
             <div style={{color: props?.theme === "light" ? "black" : "white",fontSize:"20px", display: "flex",
                 justifyContent: "center",
-                alignItems: "center", textAlign:"center",margin:"10px",fontSize:"18px",letterSpacing:"0.6px",lineHeight:"1.4",width:isMobile ? "90%" : "70%"}}  className="small-font">These guests brought their unique perspectives and expertise to our events, and their presence contributed to the success of the events. We are grateful for their support and participation, and we hope to have them as our guests again in the future.</div>
+                alignItems: "center", textAlign:isMobile? "justify" :"center",margin:"10px",fontSize:"18px",letterSpacing:"0.6px",lineHeight:"1.4",width:isMobile ? "90%" : "70%"}}  className="small-font">These guests brought their unique perspectives and expertise to our events, and their presence contributed to the success of the events. We are grateful for their support and participation, and we hope to have them as our guests again in the future.</div>
              <OurpastGuest theme={props.theme}/>
             </div>
             <div></div>
