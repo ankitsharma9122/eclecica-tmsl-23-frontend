@@ -2,12 +2,12 @@ import { Grid, Paper, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { height } from '@mui/system';
 import { useState } from 'react';
 import "./OurpastGuest.css";
-import guest_1 from "../images/ECLECTICA PAST GUES/MADHURA BANERJEE.jpg"
-import guest_2 from "../images/ECLECTICA PAST GUES/MC HEADSHOT.jpg"
-import guest_3 from "../images/ECLECTICA PAST GUES/NASIF AKHTAR.jpg"
-import guest_4 from "../images/ECLECTICA PAST GUES/RAJDEEP MUKHERJEE.jpg"
-import guest_5 from "../images/ECLECTICA PAST GUES/SUPRIYA NEWAR.jpg"
-import guest_6 from "../images/ECLECTICA PAST GUES/TAPOJIT MITRA.jpg"
+const guest_1 = "/images/ECLECTICA PAST GUES/MADHURA BANERJEE.jpg"
+const guest_2 = "/images/ECLECTICA PAST GUES/MC HEADSHOT.jpg"
+const guest_3 = "/images/ECLECTICA PAST GUES/NASIF AKHTAR.jpg"
+const guest_4 = "/images/ECLECTICA PAST GUES/RAJDEEP MUKHERJEE.jpg"
+const guest_5 = "/images/ECLECTICA PAST GUES/SUPRIYA NEWAR.jpg"
+const guest_6 = "/images/ECLECTICA PAST GUES/TAPOJIT MITRA.jpg"
 
 const teamMembers = [
   {

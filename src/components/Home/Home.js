@@ -9,13 +9,11 @@ import "./Home.css";
 import ReactPlayer from "react-player/lazy";
 import trailer from "../images/trailer.mp4";
 import OurpastGuest from "./OurpastGuest";
-import g_4 from "../images/gallery/g_4.jpg";
-import g_5 from "../images/gallery/g_5.jpg";
-import g_7 from "../images/gallery/g_7.jpg";
-import g_22 from "../images/gallery/g_22.jpg";
-
-const images = [g_7, g_4, g_5];
-
+const g_4  = "/images/gallery/g_4.jpg";
+const g_5  = "/images/gallery/g_5.jpg";
+const g_7  = "/images/gallery/g_7.jpg";
+const g_22 =  "/images/gallery/g_22.jpg";
+const images =[g_7, g_4, g_5];
 const Home = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const theme = useTheme();

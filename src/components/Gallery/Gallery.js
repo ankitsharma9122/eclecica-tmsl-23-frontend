@@ -4,22 +4,22 @@ import ImageListItem from '@mui/material/ImageListItem';
 import { useMediaQuery, Button, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import "./Gallery.css";
-import g_2 from "../images/gallery/g_2.jpg"
-import g_3 from "../images/gallery/g_3.jpg"
-// import g_4 from "../images/gallery/g_4.jpg"
-import g_5 from "../images/gallery/g_5.jpg"
-import g_6 from "../images/gallery/g_6.jpg"
-import g_7 from "../images/gallery/g_7.jpg"
-import g_11 from "../images/gallery/g_11.jpg"
-import g_13 from "../images/gallery/g_13.jpg"
-import g_15 from "../images/gallery/g_15.jpg"
-import g_16 from "../images/gallery/g_16.jpg"
-import g_17 from "../images/gallery/g_17.jpg"
-import g_18 from "../images/gallery/g_18.jpg"
-import g_19 from "../images/gallery/g_19.jpg"
-import g_22 from "../images/gallery/g_22.jpg"
-import g_24 from "../images/gallery/g_24.jpg"
-import g_26 from "../images/gallery/g_26.jpg"
+const g_2  = "/images/gallery/g_2.jpg"
+const g_3  = "/images/gallery/g_3.jpg"
+const g_4  = "/images/gallery/g_4.jpg"
+const g_5  = "/images/gallery/g_5.jpg"
+const g_6  = "/images/gallery/g_6.jpg"
+const g_7  = "/images/gallery/g_7.jpg"
+const g_11 =  "/images/gallery/g_11.jpg"
+const g_13 =  "/images/gallery/g_13.jpg"
+const g_15 =  "/images/gallery/g_15.jpg"
+const g_16 =  "/images/gallery/g_16.jpg"
+const g_17 =  "/images/gallery/g_17.jpg"
+const g_18 =  "/images/gallery/g_18.jpg"
+const g_19 =  "/images/gallery/g_19.jpg"
+const g_22 =  "/images/gallery/g_22.jpg"
+const g_24 =  "/images/gallery/g_24.jpg"
+const g_26 =  "/images/gallery/g_26.jpg"
 function srcset(image, size, rows = 5, cols = 5) {
 
   return {
@@ -39,18 +39,18 @@ export default function Gallery(props) {
       cols: 2,
     },
     {
-      img: g_2,
+      img: '/images/gallery/g_2.jpg',
       title: 'Burger',
     },
     {
       img:g_3,
       title: 'Camera',
     },
-    // {
-    //   img: g_4,
-    //   title: 'Coffee',
-    //   cols: 2,
-    // },
+    {
+      img: g_4,
+      title: 'Coffee',
+      cols: 2,
+    },
     {
       img: g_7,
       title: 'Honey',
@@ -107,10 +107,10 @@ export default function Gallery(props) {
       img: g_19,
       title: 'Basketball',
     },
-    // {
-    //   img: g_4,
-    //   title: 'Fern',
-    // },
+    {
+      img: g_4,
+      title: 'Fern',
+    },
     {
       img: g_6,
       title: 'Mushrooms',

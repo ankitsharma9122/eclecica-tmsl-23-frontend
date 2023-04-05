@@ -1,49 +1,49 @@
 import React from "react";
 import Teamshelper from "./Teamshelper";
-import blog_1 from "../images/blog_1.jpeg";
-import c_1 from "../images/Memberlist/SrabastiBanerjee.jpg"
-import c_2 from "../images/Memberlist/Vishal jha.jpg";
-import c_4 from "../images/Memberlist/Harsh pratik.jpg";
-import c_3 from "../images/Memberlist/Supratick ghosh.jpg"
-import c_5 from "../images/Memberlist/Suprotik poddar.jpg";
-import c_6 from "../images/Memberlist/Eleen das.jpg";
-import c_7 from "../images/Memberlist/Ashish Kashyap.jpg";
-import c_8 from "../images/Memberlist/Astha jha.jpg";
-import ct_1 from "../images/Memberlist/Arijit Datta.jpg";
-import ct_2 from "../images/Memberlist/Soham Roy.jpg";
-import ct_3 from "../images/Memberlist/Atryee dhar.jpg";
-import ct_4 from "../images/Memberlist/Anuvab Chakravrty.jpg";
-import ct_5 from "../images/Memberlist/Ahana Sarkar.jpg";
-import ct_6 from "../images/Memberlist/Kumar Aditya.jpg";
-import ct_7 from "../images/Memberlist/Debjit chatterjee.jpg";
-import ct_8 from "../images/Memberlist/Sristi Chakraborty.jpg";
-import ct_9 from "../images/Memberlist/Simron Paul.jpg";
-import ct_10 from "../images/Memberlist/Uddipan Maitra.jpg";
-import ct_11 from "../images/Memberlist/Ayush Ghosal.jpg"
-import ct_12 from "../images/Memberlist/aman.jpg"
-import d_1 from "../images/Memberlist/Monideepa Maiti.jpg";
-import d_2 from "../images/Memberlist/Sayan Paul.jpg";
-import d_4 from "../images/Memberlist/Sreejita Mukhopadhyay.jpg";
-import d_3 from "../images/Memberlist/Aparna das.jpg";
-import d_5 from "../images/Memberlist/Shreya Paul.jpg";
-import d_6 from "../images/Memberlist/Niket Bachhawat.jpg";
-import m_1 from "../images/Memberlist/Piyush Jha.jpg";
-import m_2 from "../images/Memberlist/Arkajit Chakraborty.jpg";
-import m_3 from "../images/Memberlist/ABHISHEK BHATTACHARYA.jpg";
-import m_4 from "../images/Memberlist/Swarnali Banerjee.jpg";
-import m_5 from "../images/Memberlist/Sarvesh Kumar.jpg";
-import m_6 from "../images/Memberlist/Debosmita Bedajna.jpg";
-import m_7 from "../images/Memberlist/Adity seth.jpg";
-import m_8 from "../images/Memberlist/ARIF ALI.jpg";
-import m_9 from "../images/Memberlist/Shalini Sinha.jpg";
-import m_10 from "../images/Memberlist/SOUMYADEEP DAS.jpg"
-import m_11 from "../images/Memberlist/Anjali.jpg"
-import q_1 from "../images/Memberlist/Ritam roy.jpg";
-import q_2 from "../images/Memberlist/Shounak Basu.jpg";
-import q_3 from "../images/Memberlist/Shekhar Raha.jpg";
-import q_4 from "../images/Memberlist/SUBHROJIT HORE.jpg";
-import q_5 from "../images/Memberlist/Swastik Deb Majumder.jpg";
-import q_6 from "../images/Memberlist/Debanjan bhattcharjee.jpg";
+const blog_1= "/images/blog_1.jpeg";
+const c_1=  "/images/Memberlist/SrabastiBanerjee.jpg"
+const c_2=  "/images/Memberlist/Vishal jha.jpg";
+const c_4=  "/images/Memberlist/Harsh pratik.jpg";
+const c_3=  "/images/Memberlist/Supratick ghosh.jpg"
+const c_5=  "/images/Memberlist/Suprotik poddar.jpg";
+const c_6=  "/images/Memberlist/Eleen das.jpg";
+const c_7=  "/images/Memberlist/Ashish Kashyap.jpg";
+const c_8=  "/images/Memberlist/Astha jha.jpg";
+const ct_1= "/images/Memberlist/Arijit Datta.jpg";
+const ct_2= "/images/Memberlist/Soham Roy.jpg";
+const ct_3= "/images/Memberlist/Atryee dhar.jpg";
+const ct_4= "/images/Memberlist/Anuvab Chakravrty.jpg";
+const ct_5= "/images/Memberlist/Ahana Sarkar.jpg";
+const ct_6= "/images/Memberlist/Kumar Aditya.jpg";
+const ct_7= "/images/Memberlist/Debjit chatterjee.jpg";
+const ct_8= "/images/Memberlist/Sristi Chakraborty.jpg";
+const ct_9="/images/Memberlist/Simron Paul.jpg";
+const ct_10= "/images/Memberlist/Uddipan Maitra.jpg";
+const ct_11= "/images/Memberlist/Ayush Ghosal.jpg"
+const ct_12= "/images/Memberlist/aman.jpg"
+const d_1= "/images/Memberlist/Monideepa Maiti.jpg";
+const d_2= "/images/Memberlist/Sayan Paul.jpg";
+const d_4= "/images/Memberlist/Sreejita Mukhopadhyay.jpg";
+const d_3= "/images/Memberlist/Aparna das.jpg";
+const d_5= "/images/Memberlist/Shreya Paul.jpg";
+const d_6= "/images/Memberlist/Niket Bachhawat.jpg";
+const m_1= "/images/Memberlist/Piyush Jha.jpg";
+const m_2= "/images/Memberlist/Arkajit Chakraborty.jpg";
+const m_3= "/images/Memberlist/ABHISHEK BHATTACHARYA.jpg";
+const m_4= "/images/Memberlist/Swarnali Banerjee.jpg";
+const m_5= "/images/Memberlist/Sarvesh Kumar.jpg";
+const m_6= "/images/Memberlist/Debosmita Bedajna.jpg";
+const m_7= "/images/Memberlist/Adity seth.jpg";
+const m_8= "/images/Memberlist/ARIF ALI.jpg";
+const m_9= "/images/Memberlist/Shalini Sinha.jpg";
+const m_10= "/images/Memberlist/SOUMYADEEP DAS.jpg"
+const m_11= "/images/Memberlist/Anjali.jpg"
+const q_1="/images/Memberlist/Ritam roy.jpg";
+const q_2="/images/Memberlist/Shounak Basu.jpg";
+const q_3="/images/Memberlist/Shekhar Raha.jpg";
+const q_4="/images/Memberlist/SUBHROJIT HORE.jpg";
+const q_5="/images/Memberlist/Swastik Deb Majumder.jpg";
+const q_6="/images/Memberlist/Debanjan bhattcharjee.jpg";
 
 
 

@@ -11,19 +11,19 @@ import {
   Button,
   CardMedia,
 } from "@mui/material";
-import blog_1 from "../images/blog_1.jpeg"
-import ffd from "../images/POSTERS/ffd.jpg"
-import dis from "../images/POSTERS/DISPUTATIO.jpg";
-import gq from "../images/POSTERS/general_quiz.jpg";
-import tq from "../images/POSTERS/trivia_quiz.png";
-import pal from "../images/POSTERS/Palette.png";
-import pic from "../images/POSTERS/PICTIONARY.png";
-import pos from "../images/POSTERS/PROSIMETRUM (1).png";
-import spell from "../images/POSTERS/Spell-Bee .png";
-import uno from "../images/POSTERS/UNO.png";
-import mk from "../images/POSTERS/moksha.jpg"
-import qzone from "../images/POSTERS/qzone.jpg"
-import "./Registration.css"
+import "./Registration.css";
+const blog_1 = "/images/blog_1.jpeg"
+const ffd= "/images/POSTERS/ffd.jpg"
+const dis= "/images/POSTERS/DISPUTATIO.jpg";
+const gq ="/images/POSTERS/general_quiz.jpg";
+const tq ="/images/POSTERS/trivia_quiz.png";
+const pal= "/images/POSTERS/Palette.png";
+const pic= "/images/POSTERS/PICTIONARY.png";
+const pos= "/images/POSTERS/PROSIMETRUM (1).png";
+const spell ="/images/POSTERS/Spell-Bee .png";
+const uno= "/images/POSTERS/UNO.png";
+const mk ="/images/POSTERS/moksha.jpg";
+const qzone = "/images/POSTERS/qzone.jpg";
 const subEventClubs = [
   {
     id: 1,
