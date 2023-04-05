@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Grid, Typography, Box, TextField } from "@mui/material";
-import OTPInput from "react-otp-input";
+// import OTPInput from "react-otp-input";
 import { auth } from "../../Firebase";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
@@ -55,7 +55,7 @@ const PhoneOTPPage = (props) => {
 
       <Typography variant="h5" style={{marginBottom:"10px",color:"white"}}>We've sent the code to your phone</Typography>
 
-      <OTPInput
+      {/* <OTPInput
         value={otp}
         onChange={handleChange}
         numInputs={6}
@@ -71,7 +71,7 @@ const PhoneOTPPage = (props) => {
           margin: isMobileScreen ? "0 2px" : "0 12px",
         }}
         shouldAutoFocus={true}
-      />
+      /> */}
       <Button
         variant="contained"
         color="primary"
