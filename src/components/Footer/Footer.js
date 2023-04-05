@@ -99,7 +99,7 @@ function Footer() {
         </Grid>
         <Grid item xs={12} sm={4} style={{right:"0"}}>
           <h3 style={{ color: "white" }}>Contact Us</h3>
-          <a href="https://goo.gl/maps/mCyi8Cxfk7Bc8GPr6" rel="noreferrer" style={{textDecoration:"none"}}>
+          <a href="https://goo.gl/maps/mCyi8Cxfk7Bc8GPr6" target="_blank" rel="noreferrer" style={{textDecoration:"none"}}>
           <div style={{display:"flex",flexDirection:"row",alignItems:"center",margin:"10px",marginLeft:"0px"}}>
           <RoomIcon style={{ marginRight: "0.5rem",marginTop:"0px",color:"white" }} />
           <p style={{ color: "rgb(242, 242, 242)" }}>

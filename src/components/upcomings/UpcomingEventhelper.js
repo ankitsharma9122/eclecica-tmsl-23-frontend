@@ -85,7 +85,7 @@ const UpcomingEventhelper = ({ event,theme,setRegisterClicked }) => {
         </Typography>
  
       {/* <CardActions> */}
-        {currentDate>event?.Eventdate ? <a href={event?.pdf} download="sample" target='_blank' style={{cursor:"pointer",textDecoration:"none"}}><Button variant="contained" color="primary" className="click-to-know-button">
+        {currentDate>event?.Eventdate ? <a href={event?.pdf} download="sample" target='_blank' rel='noreferrer' style={{cursor:"pointer",textDecoration:"none"}}><Button variant="contained" color="primary" className="click-to-know-button">
           View Result
         </Button></a> 
         : <Button variant="contained" color="primary" className="click-to-know-button" onClick={()=>{setRegisterClicked(true)}}>
