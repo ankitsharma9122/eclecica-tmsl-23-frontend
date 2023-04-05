@@ -19,8 +19,10 @@ import ArticleIcon from "@mui/icons-material/Article";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
-import eclectica_23_img from "../images/eclectica_23_img.jpg";
+import eclectica_23_img from "../images/eclectica_23_img.png";
+import eclectica_23_black from "../images/eclectica_23_black.png"
 import { ListItemIcon } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
@@ -92,26 +94,26 @@ export default function DrawerAppBar({theme,setTheme}) {
           flexDirection: "row",
           alignItems: "center",
           marginLeft: "10px",
-          maxHeight: "56px",
+          minHeight: "56px",
         }}
       >
         <img
-          src={eclectica_23_img}
+          src={theme === "light" ? eclectica_23_black : eclectica_23_img}
           style={{
             height: "35px",
-            width: "35px",
-            borderRadius: "50%",
+            width: "99px",
+            // borderRadius: "50%",
             marginRight: "6px",
           }}
           alt="images loading"
         ></img>
-        <Typography
+        {/* <Typography
           variant="h6"
           sx={{ my: 2 }}
           style={{ fontFamily: "serif", fontWeight: "400", color: theme === "light" ? "black" : "white" }}
         >
           Eclectica'23
-        </Typography>
+        </Typography> */}
       </div>
       <Divider style={{ fontWeight: "600", backgroundColor: theme === "light" ? "black" : "white" }} />
       <div
@@ -196,7 +198,7 @@ export default function DrawerAppBar({theme,setTheme}) {
           </IconButton>
           <div
             className="nav-div"
-            style={{ display: "flex", justifyContent: "space-between" }}
+            style={{ display: "flex", justifyContent: "space-between",justifyContent:"center",alignItems:"center" }}
           >
             <div
               style={{
@@ -205,18 +207,21 @@ export default function DrawerAppBar({theme,setTheme}) {
                 alignItems: "center",
               }}
             >
+              <div
+              style={{
+                height:"40px",
+                width:"120px",
+                marginRight: "6px",
+              }}>
               <img
                 src={eclectica_23_img}
-                style={{
-                  height: "35px",
-                  width: "35px",
-                  borderRadius: "50%",
-                  marginRight: "6px",
-                }}
+                style={{width:"100%",height:"100%"}}
+               className="logo-img"
               ></img>
-              <Typography variant="h6" style={{ fontFamily: "serif",color: theme === "light" ? "white" : "white"  }}>
+              </div>
+              {/* <Typography variant="h6" style={{ fontFamily: "serif",color: theme === "light" ? "white" : "white"  }}>
                 Eclectica'23
-              </Typography>
+              </Typography> */}
             </div>
             <div
               style={{

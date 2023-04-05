@@ -178,7 +178,7 @@ const UpcomingEvent = (props) => {
               }}
               className="small-font"
             >
-             View Result for Past Events: Relive the magic of Eclectica Intra 2023! Our past results page showcases outstanding performances, creative flair & intellectual prowess. Discover the talents of others or relive your accomplishments. Click now & step into the time machine!
+             Relive the magic of Eclectica Intra 2023! Our past results page showcases outstanding performances, creative flair & intellectual prowess. Discover the talents of others or relive your accomplishments. Click now & step into the time machine!
             </div>
           </div>
           <div

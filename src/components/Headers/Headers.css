@@ -16,4 +16,8 @@
         flex-direction: row-reverse !important;
         justify-content: space-between !important;
     }
+    .logo-img{
+      width: 99px !important;
+      height: 33px !important;
+    }
 }
