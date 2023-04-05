@@ -6,7 +6,7 @@ import { useTheme } from "@mui/material/styles";
 import "./Gallery.css";
 import g_2 from "../images/gallery/g_2.jpg"
 import g_3 from "../images/gallery/g_3.jpg"
-import g_4 from "../images/gallery/g_4.jpg"
+// import g_4 from "../images/gallery/g_4.jpg"
 import g_5 from "../images/gallery/g_5.jpg"
 import g_6 from "../images/gallery/g_6.jpg"
 import g_7 from "../images/gallery/g_7.jpg"
@@ -46,11 +46,11 @@ export default function Gallery(props) {
       img:g_3,
       title: 'Camera',
     },
-    {
-      img: g_4,
-      title: 'Coffee',
-      cols: 2,
-    },
+    // {
+    //   img: g_4,
+    //   title: 'Coffee',
+    //   cols: 2,
+    // },
     {
       img: g_7,
       title: 'Honey',
@@ -107,10 +107,10 @@ export default function Gallery(props) {
       img: g_19,
       title: 'Basketball',
     },
-    {
-      img: g_4,
-      title: 'Fern',
-    },
+    // {
+    //   img: g_4,
+    //   title: 'Fern',
+    // },
     {
       img: g_6,
       title: 'Mushrooms',
