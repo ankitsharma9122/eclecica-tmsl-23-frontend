@@ -15,6 +15,8 @@ import "./Registration.css";
 const blog_1 = "/images/blog_1.jpeg"
 const ffd= "/images/POSTERS/ffd.jpg"
 const dis= "/images/POSTERS/DISPUTATIO.jpg";
+const op ="/images/POSTERS/opinionist.jpg";
+const om= "/images/POSTER/open_mic.jpg"
 const gq ="/images/POSTERS/general_quiz.jpg";
 const tq ="/images/POSTERS/trivia_quiz.png";
 const pal= "/images/POSTERS/Palette.png";
@@ -30,8 +32,8 @@ const subEventClubs = [
     name: "OPEN-MIC",
     description:
       "The official open mic club of Eclectica, the literary club of Techno Main Saltlake Kolkata is a platform that provides students with the opportunity to showcase their talents in poetry, storytelling, music, stand-up comedy, and other forms of spoken-word performance. The members of the Open-Mic Club are passionate about expressing themselves through spoken-word performance. They possess excellent communication and stage presence skills and are committed to sharing their talents with an audience. Through regular open mic sessions and workshops, Open-Mic Club aims to help its members develop their performance abilities, build their confidence, and enhance their communication skills.",
-    head: "Shalini sinha",
-    image: ffd,
+    head: "Shalini Sinha",
+    image: om,
   },
   {
     id: 2,
@@ -39,7 +41,7 @@ const subEventClubs = [
     description:
       " Opinionist is the official debate club of Eclectica, the literary club of Techno Main Saltlake Kolkata. It is a platform that provides students with the opportunity to express their opinions and engage in lively and intellectually stimulating debates on a variety of topics. The members of Opinionist are passionate about public speaking and argumentation. They possess excellent communication skills and are well-versed in current affairs, politics, philosophy, and other disciplines that are relevant to the debates they engage in. Through regular meetings, workshops, and competitions, Opinionist aims to help its members develop their critical thinking abilities, broaden their perspectives, and enhance their confidence in public speaking.",
     head: "Shekhar Raha",
-    image: dis,
+    image: op,
   },
   {
     id: 1,

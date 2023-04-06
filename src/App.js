@@ -14,6 +14,7 @@ import Auth from "./components/Login/Auth";
 import { useEffect } from "react";
 import LinearProgress from "@mui/material/LinearProgress";
 import eclectica_23_img from "./components/images/eclectica_23_img.jpg";
+import eclectica_23_img_1 from "./components/images/eclectica_23_img_1.png"
 
 function App() {
   const [loading, setloading] = useState(false);
@@ -38,7 +39,7 @@ function App() {
             style={{
               position: "relative",
               width: "330px",
-              height: "330px",
+              height: "180px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -46,13 +47,13 @@ function App() {
             }}
           >
             <img
-              src={eclectica_23_img}
-              style={{ width: "70%", height: "70%", marginBottom: "20px",borderRadius:"50%" }}
+              src={eclectica_23_img_1}
+              style={{ width: "100%", height: "100%" }}
             />
             
             <b>Eclectica Loading ...</b>
             <LinearProgress
-              style={{ position: "absolute", bottom: 0, width: "70%",color:"white" }}
+              style={{ position: "absolute", bottom: 2, width: "90%",color:"white" }}
               value={50}
             />
           </div>

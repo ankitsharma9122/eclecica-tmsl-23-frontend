@@ -138,7 +138,7 @@ const Home = (props) => {
                     className="click-to-know-button"
                     onClick={()=>{setRegisterClicked(true)}}
                   >
-                    Register main Event
+                   REGISTER FOR THE MAIN EVENT
                   </Button>
               </div>
               </div>

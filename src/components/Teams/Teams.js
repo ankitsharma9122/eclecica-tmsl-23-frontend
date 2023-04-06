@@ -51,19 +51,19 @@ const qzoneTeam = [
   {
     id: 1,
     name: "Ritam Roy",
-    role:"Qzone Team",
+    role:"Qzone Head",
     image: q_1,
   },
   {
     id: 2,
     name: "Shounak Basu ",
-    role:"Qzone Team",
+    role:"Qzone Co-Head",
     image: q_2,
   },
   {
     id: 1,
     name: "Shekhar Raha",
-    role:"Qzone Team",
+    role:"Opinionists Head",
     image: q_3,
   },
   {
@@ -91,26 +91,26 @@ const MangementTeam = [
   {
     id: 1,
     name: "Shalini Sinha",
-    role:"Management Team",
+    role:"Outreach & Open-Mic Head",
     image:m_9,
+  },
+  {
+    id: 1,
+    name: "Anjali",
+    role:"Outreach Co-Head",
+    image:m_11,
+  },
+  {
+    id: 2,
+    name: "Arkajit Chakraborty ",
+    role:"Public Relations Head",
+    image: m_2,
   },
   {
     id: 1,
     name: "Piyush Jha",
     role:"Management Team",
     image: m_1,
-  },
-  {
-    id: 1,
-    name: "Anjali",
-    role:"Management Team",
-    image:m_11,
-  },
-  {
-    id: 2,
-    name: "Arkajit Chakraborty ",
-    role:"Management Team",
-    image: m_2,
   },
   {
     id: 1,
@@ -197,7 +197,7 @@ const DesignTeam = [
 const ContentTeam = [
   {
     id: 1,
-    name: "ARIJIT DATTA",
+    name: "Arijit Datta",
     role:"Content Team",
     image:  ct_1,
   },
@@ -308,7 +308,7 @@ const coreMembers = [
   {
     id: 1,
     name: "Ashish Kashyap",
-    role:"Admin Head",
+    role:"Admin & Moksha Head",
     image:  c_7,
   },
   {

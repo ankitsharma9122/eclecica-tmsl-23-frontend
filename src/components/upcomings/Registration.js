@@ -29,18 +29,122 @@ import payment_23 from "../images/payment_23.jpg";
 const subEventClubs = [
   {
     id: 1,
-    Event: "FIVE FEET DROP",
-    Rules:
-      "A club for those who are passionate about coding and want to learn more about software development.",
-    poc: "Person to contact [Ankit sharma 123456789]",
+    Event: "FIVE FEET DROP (OPEN MIC)",
+    Rules: (
+      <>
+        <ul>
+          <li>
+            <strong style={{ color: "yellow" }}>Registration Fee :</strong> 100
+          </li>
+        </ul>
+        Step into the limelight and share your voice with the world in our
+        electrifying open mic event, FIVE FEET DROP which celebrates the power
+        of creativity and self-expression.
+        <ol style={{ paddingLeft: "16px", marginTop: "10px" }}>
+          <li>
+            Each participant will be allowed to speak for 4 minutes with 30-sec
+            additional time.
+          </li>
+          <li>
+            Participants need to present their self-written Poem, Story,
+            Shayari, or stand-up comedy. The use of props and background music
+            is not allowed.
+          </li>
+          <li>
+            Participants will be judged based on content and presentation.
+          </li>
+          <li>
+            Participants shall be straight away disqualified for using abusive
+            language and plagiarised content.
+          </li>
+          <li>Winners will be declared on the day of the event.</li>
+          <li>
+            The decision of the judges is final and binding on all participants.
+          </li>
+        </ol>
+      </>
+    ),
+    poc: "srabasti banerjee",
     amt: 100,
   },
   {
     id: 1,
-    Event: "DISPUTATIO",
-    Rules:
-      "A club for those who are passionate about coding and want to learn more about software development.",
-    poc: "Person to contact [Ankit sharma 123456789]",
+    Event: "DISPUTATIO (DEBATE)",
+    Rules: (
+      <>
+        The air crackles with intellectual energy as passionate minds collide
+        and opposing viewpoints clash in our high-stakes debate event,
+        DISPUTATIO.
+        <Typography
+          variant="body2"
+          color="textSecondary"
+          style={{ color: "rgb(224, 133, 21)", paddingLeft: "16px" }}
+        >
+          GENERAL RULES
+        </Typography>
+        <ol style={{ paddingLeft: "16px" }}>
+          <li>
+            At the end of the allotted time for the speech, the speaker must
+            relieve the mic to the moderator. Not respecting the warning buzzer
+            will lead to a score deduction.
+          </li>
+          <li>
+            No abusive language/slang/colloquialisms will be tolerated. Personal
+            attacks will not be tolerated as well.
+          </li>
+        </ol>
+        <Typography
+          variant="body2"
+          color="textSecondary"
+          style={{
+            color: "rgb(224, 133, 21)",
+            paddingLeft: "16px",
+            marginTop: "10px",
+          }}
+        >
+          PRELIMS
+        </Typography>
+        <ol style={{ paddingLeft: "16px" }}>
+          <li>
+            The prelims would be held in Turncoat format. Every speaker will be
+            required to switch their stance in the middle as and when instructed
+            by the moderator.
+          </li>
+          <li>The topic for the prelims will be declared beforehand.</li>
+          <li>
+            Each speaker will get 3 minutes to present in the prelims. A warning
+            bell will be sounded at the 2-minute 30-second mark. The speech
+            would be followed by a single rebuttal question that will be put
+            forward by the moderator.
+          </li>
+          <li>
+            The top participants from the prelims would proceed to the finals.
+          </li>
+        </ol>
+        <Typography
+          variant="body2"
+          color="textSecondary"
+          style={{
+            color: "rgb(224, 133, 21)",
+            paddingLeft: "16px",
+            marginTop: "10px",
+          }}
+        >
+          FINALS
+        </Typography>
+        <ol style={{ paddingLeft: "16px" }}>
+          <li>
+            The finals would be face-off rounds between the speakers who qualify
+            for the prelims. The speakers would be competing against each other
+            one-on-one in an improvised Lincoln-Douglas Format.
+          </li>
+          <li>
+            The topics for the finals would be revealed on-spot. The speakers
+            will be given a preparation time of 30 minutes before the finals.
+          </li>
+        </ol>
+      </>
+    ),
     amt: 100,
   },
   {
@@ -207,23 +311,23 @@ const closeButtonStyle = {
 };
 
 const Registration = ({ setRegisterClicked }) => {
-  const [formdata,setFormData]=useState({
-    name:"",
-    college:"",
-    department:"",
-    year:"",
-    sec:"",
-    email:"",
-    contact:"",
-    wp_contact :"",
-    offline_events:"",
-    online_events:"",
-    payment:"",
-  })
+  const [formdata, setFormData] = useState({
+    name: "",
+    college: "",
+    department: "",
+    year: "",
+    sec: "",
+    email: "",
+    contact: "",
+    wp_contact: "",
+    offline_events: "",
+    online_events: "",
+    payment: "",
+  });
 
   const [checkboxValuesoffOnline, setCheckboxValuesoffOnline] = useState({});
   const [checkboxValuesOnline, setCheckboxValuesOnline] = useState({});
-  const [totalAmmount,setTotalAmmount]=useState(0);
+  const [totalAmmount, setTotalAmmount] = useState(0);
 
   const [selectedClub, setSelectedClub] = useState(null);
   const [blogErrorEmail, setBlogErrorEmail] = useState(false);
@@ -239,35 +343,34 @@ const Registration = ({ setRegisterClicked }) => {
     setSelectedClub(null);
   };
 
-  console.log("ankit121",formdata);
-  console.log("ankit122",totalAmmount)
+  console.log("ankit121", formdata);
+  console.log("ankit122", totalAmmount);
   const handleChangeoffOnline = (event) => {
     const { name, checked } = event.target;
     setCheckboxValuesoffOnline((prevState) => ({
       ...prevState,
       [name]: checked,
     }));
-    let offonline="";
-    setTimeout(()=>{
+    let offonline = "";
+    setTimeout(() => {
       for (const key in checkboxValuesoffOnline) {
-        if(checkboxValuesoffOnline[key]===true){
-          subEventClubs.map((event)=>{
-            if(key==event?.Event){
-              setTotalAmmount((pre)=>pre+event?.amt)
+        if (checkboxValuesoffOnline[key] === true) {
+          subEventClubs.map((event) => {
+            if (key == event?.Event) {
+              setTotalAmmount((pre) => pre + event?.amt);
             }
-          })
-          offonline=offonline+key+","
-        }else{
-          subEventClubs.map((event)=>{
-            if(key==event?.Event){
-              setTotalAmmount((pre)=>pre-event?.amt)
+          });
+          offonline = offonline + key + ",";
+        } else {
+          subEventClubs.map((event) => {
+            if (key == event?.Event) {
+              setTotalAmmount((pre) => pre - event?.amt);
             }
-          })
+          });
         }
       }
-      setFormData((pre)=>({...pre,offline_events:offonline}))
-    },500)
-   
+      setFormData((pre) => ({ ...pre, offline_events: offonline }));
+    }, 500);
   };
   const handleChangeOnline = (event) => {
     const { name, checked } = event.target;
@@ -275,24 +378,24 @@ const Registration = ({ setRegisterClicked }) => {
       ...prevState,
       [name]: checked,
     }));
-    let online="";
+    let online = "";
     for (const key in checkboxValuesOnline) {
-      if(checkboxValuesOnline[key]===true){
-        subEventClubs.map((event)=>{
-          if(key==event?.Event){
-            setTotalAmmount((pre)=>pre+event?.amt)
+      if (checkboxValuesOnline[key] === true) {
+        subEventClubs.map((event) => {
+          if (key == event?.Event) {
+            setTotalAmmount((pre) => pre + event?.amt);
           }
-        })
-        online=online+key+","
-      }else{
-        subEventClubs.map((event)=>{
-          if(key==event?.Event){
-            setTotalAmmount((pre)=>pre-event?.amt)
+        });
+        online = online + key + ",";
+      } else {
+        subEventClubs.map((event) => {
+          if (key == event?.Event) {
+            setTotalAmmount((pre) => pre - event?.amt);
           }
-        })
+        });
       }
     }
-    setFormData((pre)=>({...pre,online_events:online}))
+    setFormData((pre) => ({ ...pre, online_events: online }));
   };
 
   return (
@@ -328,71 +431,55 @@ const Registration = ({ setRegisterClicked }) => {
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
-                autoFocus
                 margin="dense"
                 id="name"
                 label="Name"
                 type="text"
                 value={formError?.name}
-                onChange={(e) => setFormData((pre)=>({...pre,name:e.target.value}))}
+                onChange={(e) =>
+                  setFormData((pre) => ({ ...pre, name: e.target.value }))
+                }
                 fullWidth
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
                 margin="dense"
-                id="college"
+                id="College"
                 label="college
                 "
                 type="text"
                 value={formdata?.college}
-                 onChange={(e) => setFormData((pre)=>({...pre,college:e.target.value}))}
+                onChange={(e) =>
+                  setFormData((pre) => ({ ...pre, college: e.target.value }))
+                }
                 fullWidth
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
-                autoFocus
                 margin="dense"
                 id="title"
                 label="Department"
                 type="text"
                 value={formdata?.department}
-                 onChange={(e) => setFormData((pre)=>({...pre,department:e.target.value}))}
+                onChange={(e) =>
+                  setFormData((pre) => ({ ...pre, department: e.target.value }))
+                }
                 fullWidth
               />
             </Grid>
             <Grid item xs={12}>
-              <FormControl
-                sx={{ minWidth: 120 }}
-                size="small"
-                style={{ width: "100%" }}
-              >
-                <InputLabel id="demo-select-small">Year</InputLabel>
-                <Select
-                  labelId="demo-select-small"
-                  id="demo-select-small"
-                  value={formdata?.year}
-                  label="year"
-                  onChange={(e) => setFormData((pre)=>({...pre,year:e.target.value}))}
-                >
-                  <MenuItem value="1st">
-                    1<sup>st</sup>
-                  </MenuItem>
-                  <MenuItem value="2nd">
-                    2<sup>nd</sup>
-                  </MenuItem>
-                  <MenuItem value="3rd">
-                    3<sup>rd</sup>
-                  </MenuItem>
-                  <MenuItem value="4th">
-                    4<sup>th</sup>
-                  </MenuItem>
-                  <MenuItem value="other">
-                    <em>Other</em>
-                  </MenuItem>
-                </Select>
-              </FormControl>
+              <TextField
+                margin="dense"
+                id="title"
+                type="text"
+                label="Year"
+                onChange={(e) =>
+                  setFormData((pre) => ({ ...pre, year: e.target.value }))
+                }
+                fullWidth
+              />
             </Grid>
             <Grid item xs={12}>
               <FormControl
@@ -405,8 +492,10 @@ const Registration = ({ setRegisterClicked }) => {
                   labelId="demo-select-small"
                   id="demo-select-small"
                   value={formdata?.sec}
-                  label="section"
-                  onChange={(e) => setFormData((pre)=>({...pre,sec:e.target.value}))}
+                  label="Section"
+                  onChange={(e) =>
+                    setFormData((pre) => ({ ...pre, sec: e.target.value }))
+                  }
                 >
                   <MenuItem value="A">A</MenuItem>
                   <MenuItem value="B">B</MenuItem>
@@ -424,7 +513,9 @@ const Registration = ({ setRegisterClicked }) => {
                 label="Email"
                 type="email"
                 value={formdata?.email}
-                onChange={(e) => setFormData((pre)=>({...pre,email:e.target.value}))}
+                onChange={(e) =>
+                  setFormData((pre) => ({ ...pre, email: e.target.value }))
+                }
                 fullWidth
               />
               {blogErrorEmail && (
@@ -434,25 +525,27 @@ const Registration = ({ setRegisterClicked }) => {
 
             <Grid item xs={12}>
               <TextField
-                autoFocus
                 margin="dense"
                 id="title"
-                label="contact No."
+                label="Contact No."
                 type="text"
                 value={formdata?.contact}
-                onChange={(e) => setFormData((pre)=>({...pre,contact:e.target.value}))}
+                onChange={(e) =>
+                  setFormData((pre) => ({ ...pre, contact: e.target.value }))
+                }
                 fullWidth
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
-                autoFocus
                 margin="dense"
                 id="title"
                 label="WhatsApp No."
                 type="text"
                 value={formdata?.title}
-                onChange={(e) => setFormData((pre)=>({...pre,wp_contact:e.target.value}))}
+                onChange={(e) =>
+                  setFormData((pre) => ({ ...pre, wp_contact: e.target.value }))
+                }
                 fullWidth
               />
             </Grid>
@@ -471,11 +564,15 @@ const Registration = ({ setRegisterClicked }) => {
                     >
                       <FormControlLabel
                         style={{ fontSize: isMobileScreen ? "12px" : "20px" }}
-                        control={<Checkbox 
-                          name={event.Event}
-                              checked={checkboxValuesoffOnline[event.Event] || false}
-                              onChange={handleChangeoffOnline}
-                        />}
+                        control={
+                          <Checkbox
+                            name={event.Event}
+                            checked={
+                              checkboxValuesoffOnline[event.Event] || false
+                            }
+                            onChange={handleChangeoffOnline}
+                          />
+                        }
                         label={event.Event}
                       />
                       <div
@@ -511,11 +608,13 @@ const Registration = ({ setRegisterClicked }) => {
                     >
                       <FormControlLabel
                         style={{ fontSize: isMobileScreen ? "12px" : "20px" }}
-                        control={<Checkbox 
-                          name={event.Event}
-                              checked={checkboxValuesOnline[event.Event] || false}
-                              onChange={handleChangeOnline}
-                        />}
+                        control={
+                          <Checkbox
+                            name={event.Event}
+                            checked={checkboxValuesOnline[event.Event] || false}
+                            onChange={handleChangeOnline}
+                          />
+                        }
                         label={event.Event}
                       />
                       <div
@@ -572,7 +671,9 @@ const Registration = ({ setRegisterClicked }) => {
                 id="contained-button-file"
                 type="file"
                 style={{ width: "100%" }}
-                onChange={(e) => setFormData((pre)=>({...pre,payment:e.target.value}))}
+                onChange={(e) =>
+                  setFormData((pre) => ({ ...pre, payment: e.target.value }))
+                }
               />
             </Grid>
           </Grid>
@@ -586,9 +687,14 @@ const Registration = ({ setRegisterClicked }) => {
             justifyContent: "flex-end",
           }}
         >
-          <Button variant="text"  onClick={() => {
+          <Button
+            variant="text"
+            onClick={() => {
               setRegisterClicked(false);
-            }}>cancel</Button>
+            }}
+          >
+            cancel
+          </Button>
           <Button
             variant="contained"
             color="primary"
