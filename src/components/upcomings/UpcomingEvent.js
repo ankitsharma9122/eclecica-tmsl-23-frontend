@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import UpcomingEventhelper from "./UpcomingEventhelper";
 import Registration from "./Registration";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Typography } from "@mui/material";
 import blog_1 from "../images/blog_1.jpeg";
 import ffd from "../images/POSTERS/ffd.jpg"
@@ -106,6 +107,11 @@ const events = [
 const UpcomingEvent = (props) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const {registerClicked ,setRegisterClicked }=props;
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <>

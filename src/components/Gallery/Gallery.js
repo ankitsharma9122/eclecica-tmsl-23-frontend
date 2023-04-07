@@ -2,8 +2,10 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { useMediaQuery, Button, Typography } from "@mui/material";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 import "./Gallery.css";
+import { useEffect } from 'react';
 const g_2  = "/images/gallery/g_2.jpg"
 const g_3  = "/images/gallery/g_3.jpg"
 const g_4  = "/images/gallery/g_4.jpg"
@@ -29,7 +31,6 @@ function srcset(image, size, rows = 5, cols = 5) {
     }&fit=crop&auto=format&dpr=2 2x`,
   };
 }
-
 export default function Gallery(props) {
   const itemData1 = [
     {
@@ -126,6 +127,10 @@ export default function Gallery(props) {
   ];
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <div style={{marginTop:"80px"}}>
     <div style={{margin:"10px"}}>

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Carousel from "react-material-ui-carousel";
 import { useTheme} from "@mui/material/styles";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useMediaQuery, Button, Typography } from "@mui/material";
 import Registration from "../upcomings/Registration";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -15,6 +16,12 @@ const g_7  = "/images/gallery/g_7.jpg";
 const g_22 =  "/images/gallery/g_22.jpg";
 const images =[g_7, g_4, g_5];
 const Home = (props) => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   const [activeIndex, setActiveIndex] = useState(0);
   const theme = useTheme();
   const {registerClicked ,setRegisterClicked }=props;

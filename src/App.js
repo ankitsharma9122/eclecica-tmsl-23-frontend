@@ -31,6 +31,7 @@ function App() {
       setloading(false);
     }, 3000);
   }, []);
+  
   return (
     <>
       {loading ? (
@@ -51,7 +52,7 @@ function App() {
               style={{ width: "100%", height: "100%" }}
             />
             
-            <b>Eclectica Loading ...</b>
+            {/* <b>Eclectica Loading ...</b> */}
             <LinearProgress
               style={{ position: "absolute", bottom: 2, width: "90%",color:"white" }}
               value={50}

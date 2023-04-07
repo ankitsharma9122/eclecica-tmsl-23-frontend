@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -26,6 +27,7 @@ const spell ="/images/POSTERS/Spell-Bee .png";
 const uno= "/images/POSTERS/UNO.png";
 const mk ="/images/POSTERS/moksha.jpg";
 const qzone = "/images/POSTERS/qzone.jpg";
+
 const subEventClubs = [
   {
     id: 1,
@@ -125,6 +127,10 @@ const Registration = (props) => {
   const handleClubClick = (club) => {
     setSelectedClub(club);
   };
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   const handleDialogClose = () => {
     setSelectedClub(null);

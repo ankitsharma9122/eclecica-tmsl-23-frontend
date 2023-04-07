@@ -1,5 +1,7 @@
 import React from "react";
 import Teamshelper from "./Teamshelper";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 const blog_1= "/images/blog_1.jpeg";
 const c_1=  "/images/Memberlist/SrabastiBanerjee.jpg"
 const c_2=  "/images/Memberlist/Vishal jha.jpg";
@@ -69,20 +71,20 @@ const qzoneTeam = [
   {
     id: 1,
     name: "Subhrojit Hore",
-    role:"Qzone Team",
+    role:"Member",
     image:q_4,
   },
   {
     id: 1,
     name: "Swastik Deb Mojumdar",
-    role:"Qzone Team",
+    role:"Member",
     image: q_5,
   },
 
   {
     id: 1,
     name: "Debanjan Bhattacharjee",
-    role:"Qzone Team",
+    role:"Member",
     image: q_6,
   },
 ];
@@ -109,49 +111,49 @@ const MangementTeam = [
   {
     id: 1,
     name: "Piyush Jha",
-    role:"Management Team",
+    role:"Member",
     image: m_1,
   },
   {
     id: 1,
     name: "Swarnali Banerjee ",
-    role:"Management Team",
+    role:"Member",
     image: m_4,
   },
   {
     id: 1,
     name: "Abhishek Bhattacharya",
-    role:"Management Team",
+    role:"Member",
     image: m_3,
   },
   {
     id: 1,
     name: "Sarvesh Kumar",
-    role:"Management Team",
+    role:"Member",
     image: m_5,
   },
   {
     id: 1,
     name: "Debosmita Bedajna ",
-    role:"Management Team",
+    role:"Member",
     image:  m_6,
   },
   {
     id: 1,
     name: "Aditya Seth",
-    role:"Management Team",
+    role:"Member",
     image:  m_7,
   },
   {
     id: 1,
     name: "Arif Ali",
-    role:"Management Team",
+    role:"Member",
     image:  m_8,
   },
   {
     id: 1,
     name: "Soumydeep Das",
-    role:"Management Team",
+    role:"Member",
     image:  m_10,
   },
 
@@ -160,37 +162,37 @@ const DesignTeam = [
   {
     id: 1,
     name: "Monideepa Maiti",
-    role:"Graphic Team",
+    role:"Member",
     image:  d_1,
   },
   {
     id: 1,
     name: "Sayan Paul",
-    role:"Graphic Team",
+    role:"Member",
     image:  d_2,
   },
   {
     id: 2,
     name: "Aparna Das",
-    role:"Graphic Team",
+    role:"Member",
     image: d_3,
   },
   {
     id: 1,
     name: "Sreejita Mukhopadhyay",
-    role:"Graphic Team",
+    role:"Member",
     image: d_4,
   },
   {
     id: 1,
     name: "Shreya Paul",
-    role:"Graphic Team",
+    role:"Member",
     image:  d_5,
   },
   {
     id: 1,
     name: "Niket Bachhawat",
-    role:"Graphic Team",
+    role:"Member",
     image:  d_6,
   },
 ];
@@ -198,73 +200,73 @@ const ContentTeam = [
   {
     id: 1,
     name: "Arijit Datta",
-    role:"Content Team",
+    role:"Member",
     image:  ct_1,
   },
   {
     id: 1,
     name: "Soham Roy ",
-    role:"Content Team",
+     role:"Member",
     image: ct_2,
   },
   {
     id: 1,
     name: "Atryee Dhar",
-    role:"Content Team",
+     role:"Member",
     image:  ct_3,
   },
   {
     id: 1,
     name: "Anuvab Chakravarty",
-    role:"Content Team",
+     role:"Member",
     image:  ct_4,
   },
   {
     id: 1,
     name: "Ahana Sarkar",
-    role:"Content Team",
+     role:"Member",
     image:  ct_5,
   },
   {
     id: 1,
     name: "Ayush Ghosal",
-    role:"Management Team",
+    role:"Member",
     image:  ct_11,
   },
   {
     id: 1,
     name: "Aman Kumar",
-    role:"Content Team",
+     role:"Member",
     image:  ct_12,
   },
   {
     id: 1,
     name: "Kumar Aditya",
-    role:"Content Team",
+     role:"Member",
     image:  ct_6,
   },
   {
     id: 2,
     name: "Debjit Chatterjee ",
-    role:"Content Team",
+     role:"Member",
     image: ct_7,
   },
   {
     id: 1,
     name: "Sristi Chakraborty",
-    role:"Content Team",
+     role:"Member",
     image:  ct_8,
   },
   {
     id: 1,
     name: "Simron Paul ",
-    role:"Content Team",
+     role:"Member",
     image:  ct_9,
   },
   {
     id: 1,
     name: "Uddipan Maitra",
-    role:"Content Team",
+     role:"Member",
     image:  ct_10,
   },
 ];
@@ -319,9 +321,12 @@ const coreMembers = [
   },
 ];
 
-
-
 const Teams = (props) => {
+  const location = useLocation();
+
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, [location]);
   return (
     <div
       style={{
