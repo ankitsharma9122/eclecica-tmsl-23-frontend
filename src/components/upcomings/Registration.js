@@ -1182,6 +1182,7 @@ const Registration = ({ setRegisterClicked }) => {
                 RuleBook
               </a>
             </div>
+            <div style={{ fontSize: "14px" }}>*If you find any difficulties while filling the form contact: Srabasti , Vishal [ 7718651718 ,7004200029 ]</div>
           </DialogTitle>
           {/* <form> */}
           <DialogContent>
