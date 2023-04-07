@@ -368,7 +368,7 @@ useEffect(() => {
       })}
        </div>
 
-       <h1 style={{  color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)" }}>Graphic Team</h1>
+       <h1 style={{  color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)" }}>Graphics Team</h1>
       <div style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center",flexWrap:"wrap"}}>
       {DesignTeam.map((data)=>{
         return (

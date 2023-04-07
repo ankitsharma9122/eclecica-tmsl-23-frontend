@@ -25,8 +25,8 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import payment_23 from "../images/payment_23.jpg";
-import {fill} from "@cloudinary/url-gen/actions/resize";
-import Cloudinary from '@cloudinary/url-gen';
+import { fill } from "@cloudinary/url-gen/actions/resize";
+import Cloudinary from "@cloudinary/url-gen";
 import { image } from "@cloudinary/url-gen/qualifiers/source";
 import axios from "axios";
 
@@ -69,7 +69,7 @@ const subEventClubs = [
         </ol>
       </>
     ),
-    poc: "srabasti banerjee [ 7718651718 ]",
+    poc: "SRABASTI BANERJEE [ 7718651718 ]",
     amt: 100,
   },
   {
@@ -161,7 +161,7 @@ const subEventClubs = [
   },
   {
     id: 1,
-    Event: "SPOTLIGHT",
+    Event: "SPOTLIGHT (DRAMA)",
     Rules: (
       <>
         <ul style={{ paddingLeft: "16px", marginTop: "10px" }}>
@@ -186,7 +186,14 @@ const subEventClubs = [
         </Typography>
         <ol style={{ paddingLeft: "16px" }}>
           <li>
-            his will be an online round. A group can have a maximum of 7 people.
+            This will be an online round. A group can have a maximum of 7
+            people.
+          </li>
+          <li>
+            The team captain of the group needs to register on our
+            website(Suppose X, Y, and Z are performing. In the name section
+            write it as X+Y+Z. For the rest of the details put a comma and fill
+            it up.)
           </li>
           <li>
             Participants/groups have to create a 10-15-minute video and send it
@@ -235,7 +242,7 @@ const subEventClubs = [
   },
   {
     id: 1,
-    Event: "INQUIZZITIVE INDIA (solo) ",
+    Event: "INQUIZITIVE INDIA (solo) ",
     Rules: (
       <>
         <ul style={{ paddingLeft: "16px", marginTop: "10px" }}>
@@ -261,11 +268,11 @@ const subEventClubs = [
       </>
     ),
     poc: "RITAM ROY, SUPRATICK GHOSH [ 8918503441, 9903473558 ]",
-    amt: 80,
+    amt: 60,
   },
   {
     id: 1,
-    Event: "INQUIZZITIVE INDIA (Duo) ",
+    Event: "INQUIZITIVE INDIA (Duo) ",
     Rules: (
       <>
         <ul style={{ paddingLeft: "16px", marginTop: "10px" }}>
@@ -278,6 +285,11 @@ const subEventClubs = [
         through time and space as you explore the rich cultural heritage and
         diverse traditions of this incredible country. Rules are as follows :
         <ol style={{ paddingLeft: "16px" }}>
+          <li>
+            Only the team captain should register. If X and Y are participating,
+            then the name should be written as (X+Y). For the rest of the boxes
+            give a comma and fill in the details.
+          </li>
           <li>Open only to participants under 25</li>
           <li>
             Teams of 2 members allowed. Lone wolves(1 member teams) are also
@@ -291,7 +303,7 @@ const subEventClubs = [
       </>
     ),
     poc: "RITAM ROY, SUPRATICK GHOSH [ 8918503441, 9903473558 ]",
-    amt: 150,
+    amt: 100,
   },
   {
     id: 1,
@@ -320,7 +332,7 @@ const subEventClubs = [
       </>
     ),
     poc: "SHOUNAK BASU [ 8927968912 ]",
-    amt: 80,
+    amt: 60,
   },
   {
     id: 1,
@@ -337,6 +349,8 @@ const subEventClubs = [
         a vast knowledge base will help you emerge victorious in this ultimate
         test of trivia. Rules are as follows :
         <ol style={{ paddingLeft: "16px" }}>
+          <li>Only the team captain should register. If X and Y are participating, then the name
+           should be written as (X+Y). For the rest of the boxes give a comma and fill in the details.</li>
           <li>It will be an Open General Quiz covering all topics</li>
           <li>
             Teams of 2 members are allowed(Teams of 1 member are also allowed).
@@ -349,7 +363,7 @@ const subEventClubs = [
       </>
     ),
     poc: "SHOUNAK BASU [ 8927968912 ]",
-    amt: 150,
+    amt: 100,
   },
   {
     id: 1,
@@ -395,7 +409,7 @@ const subEventClubs = [
   },
   {
     id: 1,
-    Event: "SNAPSCRIBE",
+    Event: "IMAGE-iNATION (PICTURE STORY)",
     Rules: (
       <>
         <ul style={{ paddingLeft: "16px", marginTop: "10px" }}>
@@ -429,7 +443,7 @@ const subEventClubs = [
       </>
     ),
     poc: "ELEEN DAS, SRABASTI BANERJEE [8371983168, 7718651718]",
-    amt: 120,
+    amt: 60,
   },
   {
     id: 1,
@@ -439,7 +453,7 @@ const subEventClubs = [
         <ul style={{ paddingLeft: "16px", marginTop: "10px" }}>
           <li>
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
-            60 /-
+            150 /-
           </li>
         </ul>
         Register in all 3 events and get 30 Rs off /-
@@ -666,7 +680,7 @@ const subEventClubs = [
         <ul style={{ paddingLeft: "16px", marginTop: "10px" }}>
           <li>
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
-            60 /-
+            120 /-
           </li>
         </ul>
         Register in all 3 events and get 30 Rs off /-
@@ -676,7 +690,7 @@ const subEventClubs = [
       </>
     ),
     poc: "SUPRATICK GHOSH [ 9903473558 ]",
-    amt: 150,
+    amt: 120,
   },
   // Add more sub-event clubs here
 ];
@@ -817,14 +831,23 @@ const subEventonlineClubs = [
               60 /-
             </li>
           </ul>
-          Find inner peace and create stunning, intricate designs in this mesmerizing mandala art event that transports you to a state of mindfulness and tranquility.
-          Rules for Mandala Art :
+          Find inner peace and create stunning, intricate designs in this
+          mesmerizing mandala art event that transports you to a state of
+          mindfulness and tranquility. Rules for Mandala Art :
           <ol style={{ paddingLeft: "16px" }}>
+            <li>Entries should be in the form of Mandala Art.</li>
             <li>
-            Entries should be in the form of Mandala Art.
+              {" "}
+              Only one entry will be accepted per participant. Plagiarism will
+              not be tolerated.
             </li>
-            <li> Only one entry will be accepted per participant. Plagiarism will not be tolerated.</li>
-            <li> The link for submission will be provided after registration. All the participants need to submit their artwork along with their PSD/AI file through a Google form whose link will be provided later.</li>
+            <li>
+              {" "}
+              The link for submission will be provided after registration. All
+              the participants need to submit their artwork along with their
+              PSD/AI file through a Google form whose link will be provided
+              later.
+            </li>
           </ol>
         </>
       </>
@@ -834,23 +857,23 @@ const subEventonlineClubs = [
   },
   {
     id: 1,
-    Event: "INKSPIRATION + ARTISTIC VERSES + THE SPACE COMPANY + PROSIMETRUM + MANDALA  ART",
+    Event: "INKSPIRATION + ARTISTIC VERSES + THE SPACE COMPANY + MANDALA  ART",
     Rules: (
       <>
-      <ul style={{ marginTop: "10px" }}>
-        <li>
-          <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
-          200 /-
-        </li>
-      </ul>
-      Register in all 3 events and get 40 Rs off /-
-      <ol>
-        <li>View the rules of respective Events in th above checkbox.</li>
-      </ol>
-    </>
+        <ul style={{ marginTop: "10px" }}>
+          <li>
+            <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
+            200 /-
+          </li>
+        </ul>
+        Register in all 4 events and get 40 Rs off /-
+        <ol>
+          <li>View the rules of respective Events in th above checkbox.</li>
+        </ol>
+      </>
     ),
     poc: "SUPROTIK PODDAR  [ 8961500285 ]",
-    amt: 60,
+    amt: 200,
   },
   // Add more sub-event clubs here
 ];
@@ -876,7 +899,7 @@ const Registration = ({ setRegisterClicked }) => {
   });
 
   const [checkboxValuesOnline, setCheckboxValuesOnline] = useState([]);
-  const [checkboxValuesOffOnline,setCheckboxValuesOffOnline]=useState([]);
+  const [checkboxValuesOffOnline, setCheckboxValuesOffOnline] = useState([]);
   const [totalAmmount, setTotalAmmount] = useState(0);
   const [screenshot, setScreenshort] = useState(null);
   // const [errorText,setErrorText]=useState()
@@ -897,98 +920,109 @@ const Registration = ({ setRegisterClicked }) => {
   console.log("ankit121", formdata);
   console.log("ankit122", totalAmmount);
 
-  console.log("ankit091",checkboxValuesOnline,checkboxValuesOffOnline);
-  const onsubmitForm=async (e)=>{
+  console.log("ankit091", checkboxValuesOnline, checkboxValuesOffOnline);
+  const onsubmitForm = async (e) => {
     console.log("ankit 081");
     e.preventDefault();
-    try { 
-      if ((!formdata?.name || !formdata?.college || !formdata?.department || !formdata?.email || !formdata?.contact || !formdata?.wp_contact || !formdata?.sec || !formdata.year || !screenshot)) {
-          console.log("ankit80",formdata);
-      }
-      else if(checkboxValuesOnline.length==0 && checkboxValuesOffOnline.lenght==0){
-        console.log("ankit81",formdata);
-      }
-      else {
-        if(!screenshot) {
+    try {
+      if (
+        !formdata?.name ||
+        !formdata?.college ||
+        !formdata?.department ||
+        !formdata?.email ||
+        !formdata?.contact ||
+        !formdata?.wp_contact ||
+        !formdata?.sec ||
+        !formdata.year ||
+        !screenshot
+      ) {
+        console.log("ankit80", formdata);
+      } else if (
+        checkboxValuesOnline.length == 0 &&
+        checkboxValuesOffOnline.lenght == 0
+      ) {
+        console.log("ankit81", formdata);
+      } else {
+        if (!screenshot) {
           alert("attach screensort");
-          return ;
+          return;
         }
         console.log("ankit 082");
-        var imageUrl
+        var imageUrl;
         try {
           imageUrl = await imageuploadHandler(screenshot);
-          console.log("ankit901",imageUrl);
-        }catch(err){
-          console.log("getting err",err);
-        }  
-       axios({
-        method:"POST",
-        url:"https://dull-gold-cow-shoe.cyclic.app/submit-form",
-        data: {
-          name: formdata?.name,
-          college:formdata?.college,
-          department: formdata?.department,
-          year:formdata?.year,
-          sec:formdata?.sec,
-          email: formdata?.email,
-          contact: formdata?.contact,
-          wp_contact : formdata?.wp_contact,
-          online_events :checkboxValuesOnline.toString(),
-          offline_events :checkboxValuesOffOnline.toString(),
-          payment : imageUrl,
+          console.log("ankit901", imageUrl);
+        } catch (err) {
+          console.log("getting err", err);
         }
-      }).then(()=>{
-
-      }).then(()=>{
-
-      })
-    //    await fetch("http://dull-gold-cow-shoe.cyclic.app/submit-form", {
-    //     method: "POST",
-    //     body: JSON.stringify({
-    //     name: formdata?.name,
-    //     college:formdata?.college,
-    //     department: formdata?.department,
-    //     year:formdata?.year,
-    //     sec:formdata?.sec,
-    //     email: formdata?.email,
-    //     contact: formdata?.contact,
-    //     wp_contact : formdata?.wp_contact,
-    //     online_events :checkboxValuesOnline.toString(),
-    //     offline_events :checkboxValuesOffOnline.toString(),
-    //     payment : formdata?.payment,
-    //   }),
-    //    mode: 'no-cors',
-    //    headers: {
-    //     'Access-Control-Allow-Origin' : '*'
-    // },
-    // })
-    //   .then((response) => response.json())
-    //   .then((json) => {
+        axios({
+          method: "POST",
+          url: "https://dull-gold-cow-shoe.cyclic.app/submit-form",
+          data: {
+            name: formdata?.name,
+            college: formdata?.college,
+            department: formdata?.department,
+            year: formdata?.year,
+            sec: formdata?.sec,
+            email: formdata?.email,
+            contact: formdata?.contact,
+            wp_contact: formdata?.wp_contact,
+            online_events: checkboxValuesOnline.toString(),
+            offline_events: checkboxValuesOffOnline.toString(),
+            payment: imageUrl,
+          },
+        })
+          .then(() => {})
+          .then(() => {});
+        //    await fetch("http://dull-gold-cow-shoe.cyclic.app/submit-form", {
+        //     method: "POST",
+        //     body: JSON.stringify({
+        //     name: formdata?.name,
+        //     college:formdata?.college,
+        //     department: formdata?.department,
+        //     year:formdata?.year,
+        //     sec:formdata?.sec,
+        //     email: formdata?.email,
+        //     contact: formdata?.contact,
+        //     wp_contact : formdata?.wp_contact,
+        //     online_events :checkboxValuesOnline.toString(),
+        //     offline_events :checkboxValuesOffOnline.toString(),
+        //     payment : formdata?.payment,
+        //   }),
+        //    mode: 'no-cors',
+        //    headers: {
+        //     'Access-Control-Allow-Origin' : '*'
+        // },
+        // })
+        //   .then((response) => response.json())
+        //   .then((json) => {
         // console.log(json)
         // setBlogPopUp(false);
         // setblogPostSucess(true);
-      // })
+        // })
       }
     } catch (err) {
       console.log(err);
     }
-  }
+  };
   const handleChangeOnline = (event) => {
     const { name, checked } = event.target;
     if (checked) {
       setCheckboxValuesOnline([...checkboxValuesOnline, name]);
-      subEventonlineClubs.forEach((event)=>{
-        if(event.Event==name){
-          setTotalAmmount((pre)=>pre+(event.amt))
+      subEventonlineClubs.forEach((event) => {
+        if (event.Event == name) {
+          setTotalAmmount((pre) => pre + event.amt);
         }
-      })
+      });
     } else {
-      setCheckboxValuesOnline(checkboxValuesOnline.filter((item) => item !== name));
-      subEventonlineClubs.forEach((event)=>{
-        if(event.Event==name && totalAmmount-(event?.amt)>=0){
-          setTotalAmmount((pre)=>pre-(event.amt));
+      setCheckboxValuesOnline(
+        checkboxValuesOnline.filter((item) => item !== name)
+      );
+      subEventonlineClubs.forEach((event) => {
+        if (event.Event == name && totalAmmount - event?.amt >= 0) {
+          setTotalAmmount((pre) => pre - event.amt);
         }
-      })
+      });
     }
   };
   const handleChangeOffOnline = (event) => {
@@ -996,40 +1030,41 @@ const Registration = ({ setRegisterClicked }) => {
     if (checked) {
       setCheckboxValuesOffOnline([...checkboxValuesOffOnline, name]);
       setCheckboxValuesOnline([...checkboxValuesOnline, name]);
-      subEventClubs.forEach((event)=>{
-        if(event.Event===name){
-          setTotalAmmount((pre)=>pre+(event.amt));
-        }
-      })
-    } else {
-      setCheckboxValuesOffOnline(checkboxValuesOffOnline.filter((item) => item !== name));
-      subEventClubs.forEach((event)=>{
-        if(event.Event === name && totalAmmount - (event?.amt) >= 0){
-          setTotalAmmount((pre)=> pre - event.amt);
+      subEventClubs.forEach((event) => {
+        if (event.Event === name) {
+          setTotalAmmount((pre) => pre + event.amt);
         }
       });
-      
+    } else {
+      setCheckboxValuesOffOnline(
+        checkboxValuesOffOnline.filter((item) => item !== name)
+      );
+      subEventClubs.forEach((event) => {
+        if (event.Event === name && totalAmmount - event?.amt >= 0) {
+          setTotalAmmount((pre) => pre - event.amt);
+        }
+      });
     }
   };
-  const imageuploadHandler= async(img)=>{
-    const _data =new FormData();
-    _data.append("file",img);
-    _data.append("upload_preset","xd7ycb4s");
-    _data.append("cloud_name","dbjoksrli");
-    return new Promise(async(resolve, reject) => {
-      try{
+  const imageuploadHandler = async (img) => {
+    const _data = new FormData();
+    _data.append("file", img);
+    _data.append("upload_preset", "xd7ycb4s");
+    _data.append("cloud_name", "dbjoksrli");
+    return new Promise(async (resolve, reject) => {
+      try {
         const { data } = await axios({
-          method:"POST",
-          url:"https://api.cloudinary.com/v1_1/dbjoksrli/image/upload",
-          data : _data,
-         })
-         console.log("ankit90",data?.secure_url)
-         resolve(data.secure_url);
-      }catch(err){
-        reject(err)
+          method: "POST",
+          url: "https://api.cloudinary.com/v1_1/dbjoksrli/image/upload",
+          data: _data,
+        });
+        console.log("ankit90", data?.secure_url);
+        resolve(data.secure_url);
+      } catch (err) {
+        reject(err);
       }
-    })
-  }
+    });
+  };
 
   return (
     <div
@@ -1046,295 +1081,308 @@ const Registration = ({ setRegisterClicked }) => {
       }}
     >
       <form onSubmit={onsubmitForm}>
-      <div>
-        <DialogTitle disableTypography>
-          <IconButton
-            aria-label="close"
-            onClick={() => {
-              setRegisterClicked(false);
-            }}
-            style={{ float: "right" }}
-          >
-            <HighlightOffIcon />
-          </IconButton>
-          <h2>Register For Eclectica'23</h2>
-        </DialogTitle>
-        {/* <form> */}
-        <DialogContent>
-          <DialogContentText>Please fill out the form below</DialogContentText>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                margin="dense"
-                id="name"
-                label="Name"
-                type="text"
-                value={formError?.name}
-                onChange={(e) =>
-                  setFormData((pre) => ({ ...pre, name: e.target.value }))
-                }
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                margin="dense"
-                id="College"
-                label="College"
-                type="text"
-                value={formdata?.college}
-                onChange={(e) =>
-                  setFormData((pre) => ({ ...pre, college: e.target.value }))
-                }
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                margin="dense"
-                id="title"
-                label="Department"
-                type="text"
-                value={formdata?.department}
-                onChange={(e) =>
-                  setFormData((pre) => ({ ...pre, department: e.target.value }))
-                }
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                margin="dense"
-                id="title"
-                type="text"
-                label="Year"
-                onChange={(e) =>
-                  setFormData((pre) => ({ ...pre, year: e.target.value }))
-                }
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <FormControl
-                sx={{ minWidth: 120 }}
-                size="small"
-                style={{ width: "100%" }}
+        <div>
+          <DialogTitle disableTypography>
+            <IconButton
+              aria-label="close"
+              onClick={() => {
+                setRegisterClicked(false);
+              }}
+              style={{ float: "right" }}
+            >
+              <HighlightOffIcon />
+            </IconButton>
+            <h2>Register For Eclectica'23</h2>
+            <div style={{ fontSize: "16px" }}>
+              Download the complete{" "}
+              <a
+                href="/public/WINNER_PAST/Eclectica 2023 Rulebook.pdf"
+                download="sample"
+                target="_blank"
+                rel="noreferrer"
+                style={{ cursor: "pointer", textDecoration: "none" }}
               >
-                <InputLabel id="demo-select-small">section</InputLabel>
-                <Select
-                  labelId="demo-select-small"
-                  id="demo-select-small"
-                  value={formdata?.sec}
+                RuleBook
+              </a>
+            </div>
+          </DialogTitle>
+          {/* <form> */}
+          <DialogContent>
+            <DialogContentText>Please fill up the form below</DialogContentText>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  margin="dense"
+                  id="name"
+                  label="Name"
+                  type="text"
+                  value={formError?.name}
+                  onChange={(e) =>
+                    setFormData((pre) => ({ ...pre, name: e.target.value }))
+                  }
+                  fullWidth
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  margin="dense"
+                  id="College"
+                  label="College"
+                  type="text"
+                  value={formdata?.college}
+                  onChange={(e) =>
+                    setFormData((pre) => ({ ...pre, college: e.target.value }))
+                  }
+                  fullWidth
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  margin="dense"
+                  id="title"
+                  label="Department"
+                  type="text"
+                  value={formdata?.department}
+                  onChange={(e) =>
+                    setFormData((pre) => ({
+                      ...pre,
+                      department: e.target.value,
+                    }))
+                  }
+                  fullWidth
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  margin="dense"
+                  id="title"
+                  type="text"
+                  label="Year"
+                  onChange={(e) =>
+                    setFormData((pre) => ({ ...pre, year: e.target.value }))
+                  }
+                  fullWidth
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  margin="dense"
+                  id="title"
                   label="Section"
+                  type="text"
+                  value={formdata?.sec}
                   onChange={(e) =>
                     setFormData((pre) => ({ ...pre, sec: e.target.value }))
                   }
-                >
-                  <MenuItem value="A">A</MenuItem>
-                  <MenuItem value="B">B</MenuItem>
-                  <MenuItem value="C">C</MenuItem>
-                  <MenuItem value="others">
-                    <em>Others</em>
-                  </MenuItem>
-                </Select>
-              </FormControl>
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                margin="dense"
-                id="email"
-                label="Email"
-                type="email"
-                value={formdata?.email}
-                onChange={(e) =>
-                  setFormData((pre) => ({ ...pre, email: e.target.value }))
-                }
-                fullWidth
-              />
-              {blogErrorEmail && (
-                <div style={{ color: "red" }}>Please Enter a valid Email</div>
-              )}
-            </Grid>
+                  fullWidth
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  margin="dense"
+                  id="email"
+                  label="Email"
+                  type="email"
+                  value={formdata?.email}
+                  onChange={(e) =>
+                    setFormData((pre) => ({ ...pre, email: e.target.value }))
+                  }
+                  fullWidth
+                />
+                {blogErrorEmail && (
+                  <div style={{ color: "red" }}>Please Enter a valid Email</div>
+                )}
+              </Grid>
 
-            <Grid item xs={12}>
-              <TextField
-                margin="dense"
-                id="title"
-                label="Contact No."
-                type="text"
-                value={formdata?.contact}
-                onChange={(e) =>
-                  setFormData((pre) => ({ ...pre, contact: e.target.value }))
-                }
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                margin="dense"
-                id="title"
-                label="WhatsApp No."
-                type="text"
-                value={formdata?.title}
-                onChange={(e) =>
-                  setFormData((pre) => ({ ...pre, wp_contact: e.target.value }))
-                }
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <h3>Registraing for Events</h3>
-              <FormGroup>
-                {subEventClubs.map((event) => {
-                  return (
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                      }}
-                    >
-                      <FormControlLabel
-                        style={{ fontSize: isMobileScreen ? "12px" : "20px" }}
-                        control={
-                          <Checkbox
-                            name={event.Event}
-                            checked={checkboxValuesOffOnline.includes(event.Event)}
-                            onChange={handleChangeOffOnline}
-                          />
-                        }
-                        label={event.Event}
-                      />
+              <Grid item xs={12}>
+                <TextField
+                  margin="dense"
+                  id="title"
+                  label="Contact No."
+                  type="text"
+                  value={formdata?.contact}
+                  onChange={(e) =>
+                    setFormData((pre) => ({ ...pre, contact: e.target.value }))
+                  }
+                  fullWidth
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  margin="dense"
+                  id="title"
+                  label="WhatsApp No."
+                  type="text"
+                  value={formdata?.title}
+                  onChange={(e) =>
+                    setFormData((pre) => ({
+                      ...pre,
+                      wp_contact: e.target.value,
+                    }))
+                  }
+                  fullWidth
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <h3>Registraing for Events</h3>
+                <FormGroup>
+                  {subEventClubs.map((event) => {
+                    return (
                       <div
                         style={{
-                          marginLeft: "10px",
-                          color: "blue",
-                          textDecoration: "underline",
-                          cursor: "pointer",
-                          fontSize: "15px",
-                          marginRight: "10px",
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                          alignItems: "center",
                         }}
-                        onClick={() => handleClubClick(event)}
                       >
-                        Rules
+                        <FormControlLabel
+                          style={{ fontSize: isMobileScreen ? "12px" : "20px" }}
+                          control={
+                            <Checkbox
+                              name={event.Event}
+                              checked={checkboxValuesOffOnline.includes(
+                                event.Event
+                              )}
+                              onChange={handleChangeOffOnline}
+                            />
+                          }
+                          label={event.Event}
+                        />
+                        <div
+                          style={{
+                            marginLeft: "10px",
+                            color: "blue",
+                            textDecoration: "underline",
+                            cursor: "pointer",
+                            fontSize: "15px",
+                            marginRight: "10px",
+                          }}
+                          onClick={() => handleClubClick(event)}
+                        >
+                          Rules
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
-              </FormGroup>
-            </Grid>
-            <Grid item xs={12}>
-              <h3>Registraing for online Events</h3>
-              <FormGroup>
-                {subEventonlineClubs.map((event) => {
-                  return (
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                      }}
-                    >
-                      <FormControlLabel
-                        style={{ fontSize: isMobileScreen ? "12px" : "20px" }}
-                        control={
-                          <Checkbox
-                            name={event.Event}
-                            checked={checkboxValuesOnline.includes(event.Event)}
-                            onChange={handleChangeOnline}
-                          />
-                        }
-                        label={event.Event}
-                      />
+                    );
+                  })}
+                </FormGroup>
+              </Grid>
+              <Grid item xs={12}>
+                <h3>Registration for Online Events</h3>
+                <FormGroup>
+                  {subEventonlineClubs.map((event) => {
+                    return (
                       <div
                         style={{
-                          marginLeft: "10px",
-                          color: "blue",
-                          textDecoration: "underline",
-                          cursor: "pointer",
-                          fontSize: "15px",
-                          marginRight: "10px",
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                          alignItems: "center",
                         }}
-                        onClick={() => handleClubClick(event)}
                       >
-                        Rules
+                        <FormControlLabel
+                          style={{ fontSize: isMobileScreen ? "12px" : "20px" }}
+                          control={
+                            <Checkbox
+                              name={event.Event}
+                              checked={checkboxValuesOnline.includes(
+                                event.Event
+                              )}
+                              onChange={handleChangeOnline}
+                            />
+                          }
+                          label={event.Event}
+                        />
+                        <div
+                          style={{
+                            marginLeft: "10px",
+                            color: "blue",
+                            textDecoration: "underline",
+                            cursor: "pointer",
+                            fontSize: "15px",
+                            marginRight: "10px",
+                          }}
+                          onClick={() => handleClubClick(event)}
+                        >
+                          Rules
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
-              </FormGroup>
-            </Grid>
-            <Grid item xs={12}>
-              <h3>payment: </h3>
-              <div>Please do scan and pay ₹ <strong style={{fontSize:"20px"}}>{totalAmmount}</strong></div>
-            </Grid>
-            <Grid
-              item
-              xs={12}
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <div
+                    );
+                  })}
+                </FormGroup>
+              </Grid>
+              <Grid item xs={12}>
+                <h3>Payment: </h3>
+                <div>
+                  Please do scan and pay ₹{" "}
+                  <strong style={{ fontSize: "20px" }}>{totalAmmount}</strong>
+                </div>
+              </Grid>
+              <Grid
+                item
+                xs={12}
                 style={{
-                  width: "280px",
-                  height: "300px",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
-                <img
-                  style={{ width: "100%", height: "100%" }}
-                  src={payment_23}
+                <div
+                  style={{
+                    width: "280px",
+                    height: "300px",
+                  }}
+                >
+                  <img
+                    style={{ width: "100%", height: "100%" }}
+                    src={payment_23}
+                  />
+                </div>
+              </Grid>
+              <Grid item xs={12} style={{ marginTop: "20px" }}>
+                <h3>Upload: </h3>
+                <div>Please upload the payment proof in *img format</div>
+              </Grid>
+              <Grid item xs={12} style={{ width: "100%" }}>
+                <input
+                  accept="image/*"
+                  id="contained-button-file"
+                  type="file"
+                  style={{ width: "100%" }}
+                  onChange={(e) => setScreenshort(e.target.files[0])}
                 />
-              </div>
+              </Grid>
             </Grid>
-            <Grid item xs={12} style={{marginTop:"20px"}}>
-              <h3>Upload: </h3>
-              <div>Please upload the payment proof in *img format</div>
-            </Grid>
-            <Grid item xs={12} style={{ width: "100%" }}>
-              <input
-                accept="image/*"
-                id="contained-button-file"
-                type="file"
-                style={{ width: "100%" }}
-                onChange={(e)=>setScreenshort(e.target.files[0])}
-              />
-            </Grid>
-          </Grid>
-        </DialogContent>
-      </div>
-      <Grid item xs={12} style={{ width: "90%" }}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "flex-end",
-          }}
-        >
-          <Button
-            variant="text"
-            onClick={() => {
-              setRegisterClicked(false);
+          </DialogContent>
+        </div>
+        <Grid item xs={12} style={{ width: "90%" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "flex-end",
             }}
           >
-            cancel
-          </Button>
-          <Button
-            variant="contained"
-            color="primary"
-            type="submit"
-            className="click-to-know-button"
-            style={{ width: isMobileScreen ? "30%" : "20%" }}
-          >
-            submit
-          </Button>
-        </div>
-      </Grid>
+            <Button
+              variant="text"
+              onClick={() => {
+                setRegisterClicked(false);
+              }}
+            >
+              cancel
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
+              type="submit"
+              className="click-to-know-button"
+              style={{ width: isMobileScreen ? "30%" : "20%" }}
+            >
+              submit
+            </Button>
+          </div>
+        </Grid>
       </form>
       <Dialog open={!!selectedClub} onClose={handleDialogClose}>
         {selectedClub && (

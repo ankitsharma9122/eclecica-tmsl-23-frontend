@@ -26,7 +26,7 @@ const events = [
   {
     title: "ECLECTICA'23",
     date: "January 1, 2023",
-    description: "FIVE FEET DROP an open mic event where participants will present their original pieces.",
+    description: "Join us for an exhilarating celebration of the written word, where imagination knows no bounds and creativity takes center stage. Register now!!",
     image: blog_1,
     pdf:ffd1,
     Eventdate: new Date("4/30/2023"),
