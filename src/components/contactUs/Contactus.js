@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Grid, TextField, Typography, Divider, Box, IconButton
 } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -10,8 +11,40 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import './Contactus.css';
+import axios from 'axios';
+import { useEffect } from 'react';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const Contactus = (props) => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  const [contactus,setcontactUs]=useState({
+    name :"",
+    email:"",
+    contact:"",
+    msg:"",
+  });
+  const [error,setError]=useState(false);
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
   const styles = {
     root: {
       display: 'flex',
@@ -82,6 +115,44 @@ const Contactus = (props) => {
       transform: 'scale(1.2)',
     },
   };
+  useEffect(()=>{
+    if ((contactus?.name && contactus?.email && contactus?.contact && contactus?.msg)) {
+      setError(false);
+    }
+  },[contactus])
+  const sendContactmsg=async ()=>{
+    console.log("ankit 90",contactus);
+    try {
+      await axios({
+        method:"POST",
+        url:"https://dull-gold-cow-shoe.cyclic.app/contact-us",
+        data: {
+          name: contactus?.name,
+          email:contactus?.email,
+          contact: contactus?.contact,
+          message : contactus?.msg,
+        },
+      })
+      .then(({data}) => {
+        console.log("Message sent:", data);
+        // Clear input fields or display success message to user
+        setOpen(true);
+        setcontactUs({
+          name :"",
+          email:"",
+          contact:"",
+          msg:"",
+        });
+      })
+      .catch((err) => {
+        console.error(err);
+        // Display error message to user or retry request
+      });
+      
+    } catch (err) {
+      console.log(err);
+    }
+  }
   return (
     <div style={styles.root}>
       <Grid item xs={12} sm={10} md={8}>
@@ -93,36 +164,54 @@ const Contactus = (props) => {
           <Divider />
           <form>
             <TextField
+              value={contactus?.name}
               label="Name"
               fullWidth
               margin="normal"
               variant="outlined"
+              onChange={(e) =>
+                setcontactUs((pre) => ({ ...pre, name: e.target.value }))
+              }
             />
             <TextField
               label="Email"
+              value={contactus?.email}
               fullWidth
               margin="normal"
               variant="outlined"
+              onChange={(e) =>
+                setcontactUs((pre) => ({ ...pre, email: e.target.value }))
+              }
             />
             <TextField
               label="Phone"
               fullWidth
+              value={contactus?.contact}
               margin="normal"
               variant="outlined"
+              onChange={(e) =>
+                setcontactUs((pre) => ({ ...pre, contact: e.target.value }))
+              }
             />
             <TextField
               label="Message"
               fullWidth
+              value={contactus?.msg}
               margin="normal"
               variant="outlined"
               multiline
               rows={4}
+              onChange={(e) =>
+                setcontactUs((pre) => ({ ...pre, msg: e.target.value }))
+              }
             />
+            {error && <h5 style={{color:"red"}}>*please fill all the detail.</h5>}
             <Button
               variant="contained"
               color="primary"
               style={styles.button}
               className="click-to-know-button"
+              onClick={sendContactmsg}
             >
               Send Message
             </Button>
@@ -185,6 +274,11 @@ const Contactus = (props) => {
           </div>
         </div>
       </div>
+      {<Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+          Thank you for contacting us ! we'll reach out you soon.
+        </Alert>
+      </Snackbar>}
     </div>
   );
 };
