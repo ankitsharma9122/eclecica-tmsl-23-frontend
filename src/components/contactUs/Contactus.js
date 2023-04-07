@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Grid, TextField, Typography, Divider, Box, IconButton
+import { Button, Grid, TextField, Typography, Divider, Box, IconButton ,  CircularProgress,
 } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
@@ -34,6 +34,7 @@ const Contactus = (props) => {
   });
   const [error,setError]=useState(false);
   const [open, setOpen] = React.useState(false);
+  const [loading,setLoading]=useState(false);
 
   const handleClick = () => {
     setOpen(true);
@@ -121,7 +122,12 @@ const Contactus = (props) => {
     }
   },[contactus])
   const sendContactmsg=async ()=>{
+    if ((!contactus?.name || !contactus?.email || !contactus?.contact || !contactus?.msg)) {
+      setError(true);
+      return ;
+    }
     console.log("ankit 90",contactus);
+    setLoading(true);
     try {
       await axios({
         method:"POST",
@@ -143,9 +149,11 @@ const Contactus = (props) => {
           contact:"",
           msg:"",
         });
+        setLoading(false);
       })
       .catch((err) => {
         console.error(err);
+        setLoading(false);
         // Display error message to user or retry request
       });
       
@@ -213,7 +221,11 @@ const Contactus = (props) => {
               className="click-to-know-button"
               onClick={sendContactmsg}
             >
-              Send Message
+              {loading ? (
+                <CircularProgress size={30} style={{ color: "#ed8b08" }} />
+              ) : (
+                "submit"
+              )}
             </Button>
           </form>
         </Box>

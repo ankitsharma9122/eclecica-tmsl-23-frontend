@@ -14,6 +14,7 @@ const g_4  = "/images/gallery/g_4.jpg";
 const g_5  = "/images/gallery/g_5.jpg";
 const g_7  = "/images/gallery/g_7.jpg";
 const g_22 =  "/images/gallery/g_22.jpg";
+const main =  "/images/main_fest_post.jpg";
 const images =[g_7, g_4, g_5];
 const Home = (props) => {
   const location = useLocation();

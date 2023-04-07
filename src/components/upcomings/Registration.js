@@ -10,6 +10,7 @@ import {
   Grid,
   IconButton,
   Typography,
+  CircularProgress,
 } from "@mui/material";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
@@ -29,6 +30,11 @@ import { fill } from "@cloudinary/url-gen/actions/resize";
 import Cloudinary from "@cloudinary/url-gen";
 import { image } from "@cloudinary/url-gen/qualifiers/source";
 import axios from "axios";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert, { AlertProps } from "@mui/material/Alert";
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const subEventClubs = [
   {
@@ -349,8 +355,11 @@ const subEventClubs = [
         a vast knowledge base will help you emerge victorious in this ultimate
         test of trivia. Rules are as follows :
         <ol style={{ paddingLeft: "16px" }}>
-          <li>Only the team captain should register. If X and Y are participating, then the name
-           should be written as (X+Y). For the rest of the boxes give a comma and fill in the details.</li>
+          <li>
+            Only the team captain should register. If X and Y are participating,
+            then the name should be written as (X+Y). For the rest of the boxes
+            give a comma and fill in the details.
+          </li>
           <li>It will be an Open General Quiz covering all topics</li>
           <li>
             Teams of 2 members are allowed(Teams of 1 member are also allowed).
@@ -418,7 +427,7 @@ const subEventClubs = [
             60 /-
           </li>
         </ul>
-        A picture is worth a thousand words, and in our event SNAPSCRIBE, you
+        A picture is worth a thousand words, and in our event IMAGE-iNATION, you
         will have the chance to bring it to life through your unique
         storytelling.
         <ol style={{ paddingLeft: "16px" }}>
@@ -866,7 +875,7 @@ const subEventonlineClubs = [
             200 /-
           </li>
         </ul>
-          Register in all 4 events and get 40 Rs off /-
+        Register in all 4 events and get 40 Rs off /-
         <ol>
           <li>View the rules of respective Events in th above checkbox.</li>
         </ol>
@@ -902,12 +911,35 @@ const Registration = ({ setRegisterClicked }) => {
   const [checkboxValuesOffOnline, setCheckboxValuesOffOnline] = useState([]);
   const [totalAmmount, setTotalAmmount] = useState(0);
   const [screenshot, setScreenshort] = useState(null);
-  // const [errorText,setErrorText]=useState()
+  const [errorText, setErrorText] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [selectedClub, setSelectedClub] = useState(null);
   const [blogErrorEmail, setBlogErrorEmail] = useState(false);
   const [formError, setformError] = useState(false);
+  const [successmsg, setSucessMsg] = useState(false);
+  const [failMsg, setFail] = useState(false);
   const navigate = useNavigate();
   const isMobileScreen = useMediaQuery("(max-width:600px)");
+  const [open, setOpen] = useState(false);
+  const [openFail,setOpenFail]=useState(false);
+
+  console.log("ankit 902",openFail,openFail);
+  console.log("ankit903",successmsg,open)
+  const handleClick = () => {
+    setOpen(true);
+  };
+  const handleCloseFail = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpenFail(false);
+  };
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
 
   const handleClubClick = (club) => {
     setSelectedClub(club);
@@ -921,6 +953,22 @@ const Registration = ({ setRegisterClicked }) => {
   console.log("ankit122", totalAmmount);
 
   console.log("ankit091", checkboxValuesOnline, checkboxValuesOffOnline);
+  useEffect(() => {
+    if (
+      formdata?.name &&
+      formdata?.college &&
+      formdata?.department &&
+      formdata?.email &&
+      formdata?.contact &&
+      formdata?.wp_contact &&
+      formdata?.wp_contact &&
+      formdata?.sec &&
+      formdata.year &&
+      screenshot
+    ) {
+      setErrorText(false);
+    }
+  }, [formdata]);
   const onsubmitForm = async (e) => {
     console.log("ankit 081");
     e.preventDefault();
@@ -936,11 +984,14 @@ const Registration = ({ setRegisterClicked }) => {
         !formdata.year ||
         !screenshot
       ) {
+        setErrorText(true);
         console.log("ankit80", formdata);
+        return;
       } else if (
         checkboxValuesOnline.length == 0 &&
         checkboxValuesOffOnline.lenght == 0
       ) {
+        setErrorText(true);
         console.log("ankit81", formdata);
       } else {
         if (!screenshot) {
@@ -949,11 +1000,15 @@ const Registration = ({ setRegisterClicked }) => {
         }
         console.log("ankit 082");
         var imageUrl;
+        setLoading(true);
         try {
           imageUrl = await imageuploadHandler(screenshot);
           console.log("ankit901", imageUrl);
         } catch (err) {
           console.log("getting err", err);
+          setFail(true);
+          setLoading(false);
+          return;
         }
         axios({
           method: "POST",
@@ -973,7 +1028,27 @@ const Registration = ({ setRegisterClicked }) => {
           },
         })
           .then(() => {})
-          .then(() => {});
+          .then(() => {
+            setLoading(false);
+            setSucessMsg(true);
+            setOpen(true);
+            setFormData({
+              name: "",
+              college: "",
+              department: "",
+              year: "",
+              sec: "",
+              email: "",
+              contact: "",
+              wp_contact: "",
+              offline_events: "",
+              online_events: "",
+              payment: "",
+            });
+            setCheckboxValuesOnline([]);
+            setCheckboxValuesOffOnline([]);
+            setScreenshort(null)
+          });
         //    await fetch("http://dull-gold-cow-shoe.cyclic.app/submit-form", {
         //     method: "POST",
         //     body: JSON.stringify({
@@ -1003,6 +1078,8 @@ const Registration = ({ setRegisterClicked }) => {
       }
     } catch (err) {
       console.log(err);
+      setFail(true);
+      setLoading(false);
     }
   };
   const handleChangeOnline = (event) => {
@@ -1096,8 +1173,8 @@ const Registration = ({ setRegisterClicked }) => {
             <div style={{ fontSize: "16px" }}>
               Download the complete{" "}
               <a
-                href="/public/WINNER_PAST/Eclectica 2023 Rulebook.pdf"
-                download="sample"
+                href="../images/WINNER_PAST/Eclectica 2023 Rulebook.pdf"
+                download="Eclectica_Rule_book_23"
                 target="_blank"
                 rel="noreferrer"
                 style={{ cursor: "pointer", textDecoration: "none" }}
@@ -1116,7 +1193,7 @@ const Registration = ({ setRegisterClicked }) => {
                   id="name"
                   label="Name"
                   type="text"
-                  value={formError?.name}
+                  value={formdata?.name}
                   onChange={(e) =>
                     setFormData((pre) => ({ ...pre, name: e.target.value }))
                   }
@@ -1156,6 +1233,7 @@ const Registration = ({ setRegisterClicked }) => {
                 <TextField
                   margin="dense"
                   id="title"
+                  value={formdata?.year}
                   type="text"
                   label="Year"
                   onChange={(e) =>
@@ -1213,7 +1291,7 @@ const Registration = ({ setRegisterClicked }) => {
                   id="title"
                   label="WhatsApp No."
                   type="text"
-                  value={formdata?.title}
+                  value={formdata?.wp_contact}
                   onChange={(e) =>
                     setFormData((pre) => ({
                       ...pre,
@@ -1224,7 +1302,7 @@ const Registration = ({ setRegisterClicked }) => {
                 />
               </Grid>
               <Grid item xs={12}>
-                <h3>Registraing for Events</h3>
+                <h3>Registration for Offline Events</h3>
                 <FormGroup>
                   {subEventClubs.map((event) => {
                     return (
@@ -1356,6 +1434,11 @@ const Registration = ({ setRegisterClicked }) => {
             </Grid>
           </DialogContent>
         </div>
+        {errorText && (
+          <h5 style={{ color: "red" }}>
+            *please fill all the detail & attach payment screenshot.
+          </h5>
+        )}
         <Grid item xs={12} style={{ width: "90%" }}>
           <div
             style={{
@@ -1366,6 +1449,7 @@ const Registration = ({ setRegisterClicked }) => {
           >
             <Button
               variant="text"
+              style={{ cursor: "pointer" }}
               onClick={() => {
                 setRegisterClicked(false);
               }}
@@ -1376,10 +1460,15 @@ const Registration = ({ setRegisterClicked }) => {
               variant="contained"
               color="primary"
               type="submit"
+              disabled={loading}
               className="click-to-know-button"
               style={{ width: isMobileScreen ? "30%" : "20%" }}
             >
-              submit
+              {loading ? (
+                <CircularProgress size={30} style={{ color: "#ed8b08" }} />
+              ) : (
+                "submit"
+              )}
             </Button>
           </div>
         </Grid>
@@ -1415,6 +1504,25 @@ const Registration = ({ setRegisterClicked }) => {
           </>
         )}
       </Dialog>
+      {successmsg && (
+          <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+            <Alert
+              onClose={handleClose}
+              severity="success"
+              sx={{ width: "100%" }}
+            >
+              Thank you for registering , We'll reach out you soon !
+            </Alert>
+          </Snackbar>
+        )}
+      {failMsg && (
+        <Snackbar open={openFail} autoHideDuration={6000} onClose={handleCloseFail}>
+          <Alert onClose={handleCloseFail} severity="error" sx={{ width: "100%" }}>
+            Sorry the form submission fail , Please try again or contact above
+            Number !
+          </Alert>
+        </Snackbar>
+      )}
     </div>
   );
 };

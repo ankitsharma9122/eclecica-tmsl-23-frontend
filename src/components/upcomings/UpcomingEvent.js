@@ -3,6 +3,7 @@ import UpcomingEventhelper from "./UpcomingEventhelper";
 import Registration from "./Registration";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Typography } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 import blog_1 from "../images/blog_1.jpeg";
 import ffd from "../images/POSTERS/ffd.jpg"
 import dis from "../images/POSTERS/DISPUTATIO.jpg";
@@ -22,12 +23,13 @@ import pic1 from "../images/WINNER_PAST/PICTIONARY_INTRA_WINNER_2023 - Sheet1.pd
 import pos1 from "../images/WINNER_PAST/PROSIMETRUM INTRA 2023 WINNER - Sheet1.pdf";
 import spell1 from "../images/WINNER_PAST/SPELLBEE_WINNER_2023_INTRA - Sheet1.pdf";
 import uno1 from "../images/WINNER_PAST/UNO_WINNER_INTRA_2023 - Sheet1.pdf";
+import main from "../images/POSTERS/main_fest_post_3.jpg"
 const events = [
   {
     title: "ECLECTICA'23",
     date: "January 1, 2023",
     description: "Join us for an exhilarating celebration of the written word, where imagination knows no bounds and creativity takes center stage. Register now!!",
-    image: blog_1,
+    image: main,
     pdf:ffd1,
     Eventdate: new Date("4/30/2023"),
   },
