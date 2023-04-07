@@ -1080,8 +1080,7 @@ const Registration = ({ setRegisterClicked }) => {
               <TextField
                 margin="dense"
                 id="College"
-                label="college
-                "
+                label="College"
                 type="text"
                 value={formdata?.college}
                 onChange={(e) =>
@@ -1283,7 +1282,7 @@ const Registration = ({ setRegisterClicked }) => {
             >
               <div
                 style={{
-                  width: "300px",
+                  width: "280px",
                   height: "300px",
                 }}
               >
@@ -1293,8 +1292,8 @@ const Registration = ({ setRegisterClicked }) => {
                 />
               </div>
             </Grid>
-            <Grid item xs={12}>
-              <h3>upload: </h3>
+            <Grid item xs={12} style={{marginTop:"20px"}}>
+              <h3>Upload: </h3>
               <div>Please upload the payment proof in *img format</div>
             </Grid>
             <Grid item xs={12} style={{ width: "100%" }}>

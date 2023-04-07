@@ -103,7 +103,7 @@ function Footer() {
           <div style={{display:"flex",flexDirection:"row",alignItems:"center",margin:"10px",marginLeft:"0px"}}>
           <RoomIcon style={{ marginRight: "0.5rem",marginTop:"0px",color:"white" }} />
           <p style={{ color: "rgb(242, 242, 242)" }}>
-            Techno main salt Lake, Kolkata
+            Techno Main Salt Lake, Kolkata
           </p>
           </div>
           </a>

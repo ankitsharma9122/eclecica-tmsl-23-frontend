@@ -65,7 +65,7 @@ const qzoneTeam = [
   {
     id: 1,
     name: "Shekhar Raha",
-    role:"Opinionists Head",
+    role:"Member",
     image: q_3,
   },
   {
@@ -298,7 +298,7 @@ const coreMembers = [
   {
     id: 1,
     name: "Suprotik Poddar",
-    role:"Treasurer",
+    role:"Treasurer & Graphic Head",
     image:  c_5,
   },
   {
@@ -338,8 +338,8 @@ useEffect(() => {
       }}
     >
       <div style={{ margin: "10px" }}>
-        <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)" }}>Team Eclectica</h1>
-        <div style={{ color: props?.theme === "light" ? "black" : "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px" }} className="small-font">
+        <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(41 200 255)", }}>Team Eclectica</h1>
+        <div style={{ color: props?.theme === "light" ? "black" : "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px" ,textAlign:"justify", }} className="small-font">
         Team Eclectica is a dynamic group passionate about literature, creativity, & community building. Our team brings diverse skills & commitment to excellence. Join us to experience unforgettable literary events & meaningful connections. Redefine the literary landscape with us!
         </div>
       </div>

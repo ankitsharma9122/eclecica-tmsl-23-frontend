@@ -34,7 +34,7 @@ const events = [
   {
     title: "FIVE FEET DROP",
     date: "January 1, 2023",
-    description: "FIVE FEET DROP an open mic event where participants will present their original pieces.",
+    description: "FIVE FEET DROP : An open mic event where participants will present their original pieces.",
     image: ffd,
     pdf:ffd1,
     Eventdate: new Date("1/06/2023"),
@@ -42,7 +42,7 @@ const events = [
   {
     title: "DISPUTATIO",
     date: "January 1, 2023",
-    description: "Express your voice in Disputatio, the ultimate debate competition.",
+    description: "DISPUTATIO : Express your voice in Disputatio, the ultimate debate competition.",
     image:dis,
     pdf:dis1,
     Eventdate: new Date("1/06/2023"),
@@ -50,7 +50,7 @@ const events = [
   {
     title: "TRIVIA QUIZ",
     date: "January 1, 2023",
-    description: "Trivia Quiz : questions on interesting topics",
+    description: "Trivia Quiz : Questions on interesting topics",
     image: tq,
     pdf:tq1,
     Eventdate: new Date("1/06/2023"),
@@ -58,7 +58,7 @@ const events = [
   {
     title: "GENERAL QUIZ",
     date: "January 1, 2023",
-    description: "Test of knowledge and skill with the General Quiz competition",
+    description: "GENERAL QUIZ :Test of knowledge and skill with the General Quiz competition",
     image: gq,
     pdf:gq1,
     Eventdate: new Date("1/06/2023"),
@@ -66,7 +66,7 @@ const events = [
   {
     title: "SPELLBEE",
     date: "January 1, 2023",
-    description: "spellbees are a popular and effective tool for promoting literacy and improving spelling skills",
+    description: "SPELLBEE :Spellbees are a popular and effective tool for promoting literacy and improving spelling skills.",
     image: spell,
     pdf:spell1,
     Eventdate: new Date("1/06/2023"),
@@ -74,7 +74,7 @@ const events = [
   {
     title: "UNO",
     date: "January 1, 2023",
-    description: "UNO : multi-player card game.",
+    description: "UNO : Multi-Player card game.",
     image: uno,
     pdf:uno1,
     Eventdate: new Date("1/06/2023"),
@@ -82,7 +82,7 @@ const events = [
   {
     title: "PICTIONARY",
     date: "January 1, 2023",
-    description: "A game packed with enthuse and fascination sprinkled with a dash of vying and your favourite- GUESSING",
+    description: "A game packed with enthuse and fascination sprinkled with a dash of vying and your favourite- GUESSING.",
     image: pic,
     pdf:pic1,
     Eventdate: new Date("1/06/2023"),
@@ -90,7 +90,7 @@ const events = [
   {
     title: "PALETTE",
     date: "January 1, 2023",
-    description: "An event where you can narrate your anecdote with your illustration skills to broad-ranging onlookers",
+    description: "PALETTE : An event where you can narrate your anecdote with your illustration skills to broad-ranging onlookers.",
     image: pal,
     pdf:pa1,
     Eventdate: new Date("1/06/2023"),
@@ -98,7 +98,7 @@ const events = [
   {
     title: "PROSIMETRUM",
     date: "January 1, 2023",
-    description: "Content writing event, PROSIMETRUM, bringing you ideas to explore and  endless possibilitie",
+    description: "PROSIMETRUM :Content writing event, PROSIMETRUM, bringing you ideas to explore and  endless possibilitie",
     image:pos,
     pdf:pos1,
     Eventdate: new Date("1/06/2023"),
@@ -130,7 +130,7 @@ const UpcomingEvent = (props) => {
           <div style={{ margin: "20px" }}>
             <h1
               style={{
-                color: props?.theme == "light" ? "black" : "rgb(247, 158, 2)",
+                color: props?.theme == "light" ? "black" : "rgb(41 200 255)",
               }}
             >
               {" "}
@@ -142,6 +142,7 @@ const UpcomingEvent = (props) => {
                 letterSpacing: "0.6px",
                 lineHeight: "1.4",
                 fontSize: "18px",
+                textAlign:"justify" ,
               }}
               className="small-font"
             >
@@ -170,7 +171,7 @@ const UpcomingEvent = (props) => {
           <div style={{ margin: "20px" }}>
             <h1
               style={{
-                color: props?.theme == "light" ? "black" : "rgb(247, 158, 2)",
+                color: props?.theme == "light" ? "black" : "rgb(41 200 255)",
               }}
             >
               View Result for Past Events
@@ -181,6 +182,8 @@ const UpcomingEvent = (props) => {
                 letterSpacing: "0.6px",
                 lineHeight: "1.4",
                 fontSize: "18px",
+                textAlign:"justify",
+                fontFamily:"system-ui"
               }}
               className="small-font"
             >

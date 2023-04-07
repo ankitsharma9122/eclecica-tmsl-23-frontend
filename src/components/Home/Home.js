@@ -117,9 +117,10 @@ const Home = (props) => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                color: props?.theme == "light" ? "black" : "rgb(253 165 118)",
+                color: props?.theme == "light" ? "black" : "white",
                 margin: "10px",
                 textAlign: "center",
+                fontFamily:"monospace",
               }}
               className="div-quates"
             >
@@ -133,7 +134,7 @@ const Home = (props) => {
               <div
                 className="about-us-div-parent-child"
               >
-                <h1 style={{ color: props?.theme == "light" ? "black" : "#f79e02" , textAlign: "center", }}>About us</h1>
+                <h1 style={{ color: props?.theme == "light" ? "black" : "rgb(41 200 255)" , textAlign: "center" }}>About us</h1>
                 <div style={{ color: props?.theme == "light" ? "black" : "white", textAlign: "justify",fontSize:"18px",letterSpacing:"0.6px",marginTop:"10px",lineHeight:"1.4", width:isMobile ? "90%" : "100%"}} className="small-font">
                 Team Eclectica–the literary committee of Techno Main Salt Lake, is a student-governed organization dedicated to building a healthy community receptive to works of literature. Throughout the year Team Eclectica organizes seminars, holds webinars, hosts competitions and grooms students through workshops. The sole purpose behind its inception was to ensure that the spirit of artistry, spoken and written expression, debating, drama and quizzing is sustained in society in general and our members and followers in particular. To accomplish these goals, apart from contests and workshops, we also maintain an online presence through our official blog to encourage students to post their original content for the world to view. Through our year-long activities, members of the community get to discover new avenues of interest and explore their creativity in ways manifold.
                 </div>
@@ -164,9 +165,9 @@ const Home = (props) => {
                 }}>
             <h1
               style={{
-                color: props?.theme === "light" ? "black" : "#f79e02",
+                color: props?.theme === "light" ? "black" : "rgb(41 200 255)",
                 margin: "auto",
-                textAlign: "center"
+                textAlign: "center",
               }}
             >
               Past Event Guests

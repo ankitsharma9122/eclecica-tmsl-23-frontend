@@ -17,7 +17,7 @@ const blog_1 = "/images/blog_1.jpeg"
 const ffd= "/images/POSTERS/ffd.jpg"
 const dis= "/images/POSTERS/DISPUTATIO.jpg";
 const op ="/images/POSTERS/opinionist.jpg";
-const om= "/images/POSTER/open_mic.jpg"
+const om = "/images/POSTERS/openmic.jpg"
 const gq ="/images/POSTERS/general_quiz.jpg";
 const tq ="/images/POSTERS/trivia_quiz.png";
 const pal= "/images/POSTERS/Palette.png";
@@ -140,7 +140,7 @@ const Registration = (props) => {
   return (
   <div  style={{display:"flex",flexDirection:"row",flexWrap:"wrap",marginTop:"80px",justifyContent:"center"}}>
        <div style={{margin:"10px"}}>
-    <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)"}}>Sub Clubs Under Eclectica</h1>
+    <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(41 200 255)"}}>Sub Clubs Under Eclectica</h1>
     <div style={{color: props?.theme === "light" ? "black" : "white",letterSpacing:"0.6px",lineHeight:"1.4",fontSize:"18px"}} className="small-font"> Explore your creativity with Team Eclectica's sub-clubs: Open Mic, QZone, Moksha, and Opinionist. Connect with like-minded individuals and learn from the best in the business. Join now and unleash your full potential.
    </div>
     </div>

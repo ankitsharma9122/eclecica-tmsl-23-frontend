@@ -42,7 +42,7 @@ const navItems = [
     url: "events",
   },
   {
-    item: "subclub",
+    item: "Subclub",
     icon: <AppRegistrationIcon />,
     url: "sub-club",
   },
