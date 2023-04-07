@@ -332,7 +332,7 @@ const subEventClubs = [
       </>
     ),
     poc: "SHOUNAK BASU [ 8927968912 ]",
-    amt: 60,
+    amt: 70,
   },
   {
     id: 1,
@@ -363,7 +363,7 @@ const subEventClubs = [
       </>
     ),
     poc: "SHOUNAK BASU [ 8927968912 ]",
-    amt: 100,
+    amt: 120,
   },
   {
     id: 1,
@@ -447,7 +447,7 @@ const subEventClubs = [
   },
   {
     id: 1,
-    Event: "BITS AND PIECES + PROSIMETRUM + SNAPSCRIBE",
+    Event: "BITS AND PIECES + PROSIMETRUM + IMAGE-iNATION",
     Rules: (
       <>
         <ul style={{ paddingLeft: "16px", marginTop: "10px" }}>
@@ -866,7 +866,7 @@ const subEventonlineClubs = [
             200 /-
           </li>
         </ul>
-        Register in all 4 events and get 40 Rs off /-
+          Register in all 4 events and get 40 Rs off /-
         <ol>
           <li>View the rules of respective Events in th above checkbox.</li>
         </ol>

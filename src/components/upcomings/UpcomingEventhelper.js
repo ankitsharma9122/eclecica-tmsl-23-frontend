@@ -17,7 +17,7 @@ const UpcomingEventhelper = ({ event,theme,setRegisterClicked }) => {
   const handleLeave = () => {
     setIsHovered(false);
   };
-  console.log("ankit98",theme);
+
   const overlayStyle = {
     position: 'absolute',
     top: 0,
@@ -92,8 +92,6 @@ const UpcomingEventhelper = ({ event,theme,setRegisterClicked }) => {
           Register
         </Button>
         }
-        
-      {/* </CardActions> */}
       </CardContent>
     </Card>
   );

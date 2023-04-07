@@ -343,7 +343,7 @@ useEffect(() => {
         Team Eclectica is a dynamic group passionate about literature, creativity, & community building. Our team brings diverse skills & commitment to excellence. Join us to experience unforgettable literary events & meaningful connections. Redefine the literary landscape with us!
         </div>
       </div>
-      <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)" }}>Core Members</h1>
+      <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(41 200 255)" }}>Core Members</h1>
       <div style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center",flexWrap:"wrap"}}>
       {coreMembers.map((data)=>{
         return (
@@ -355,7 +355,7 @@ useEffect(() => {
         )
       })}
        </div>
-       <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)"}}>Content Team</h1>
+       <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(41 200 255)"}}>Content Team</h1>
       <div style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center",flexWrap:"wrap"}}>
       {ContentTeam.map((data)=>{
         return (
@@ -368,7 +368,7 @@ useEffect(() => {
       })}
        </div>
 
-       <h1 style={{  color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)" }}>Graphics Team</h1>
+       <h1 style={{  color: props?.theme === "light" ? "black" : "rgb(41 200 255)" }}>Graphics Team</h1>
       <div style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center",flexWrap:"wrap"}}>
       {DesignTeam.map((data)=>{
         return (
@@ -380,7 +380,7 @@ useEffect(() => {
         )
       })}
        </div>
-       <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)" }}>Mangement Team</h1>
+       <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(41 200 255)" }}>Mangement Team</h1>
       <div style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center",flexWrap:"wrap"}}>
       {MangementTeam.map((data)=>{
         return (
@@ -392,7 +392,7 @@ useEffect(() => {
         )
       })}
        </div>
-       <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(247, 158, 2)" }}>Qzone Team</h1>
+       <h1 style={{ color: props?.theme === "light" ? "black" : "rgb(41 200 255)" }}>Qzone Team</h1>
       <div style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center",flexWrap:"wrap"}}>
       {qzoneTeam.map((data)=>{
         return (
