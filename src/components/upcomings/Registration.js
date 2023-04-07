@@ -25,6 +25,10 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import payment_23 from "../images/payment_23.jpg";
+import {fill} from "@cloudinary/url-gen/actions/resize";
+import Cloudinary from '@cloudinary/url-gen';
+import { image } from "@cloudinary/url-gen/qualifiers/source";
+import axios from "axios";
 
 const subEventClubs = [
   {
@@ -871,11 +875,11 @@ const Registration = ({ setRegisterClicked }) => {
     payment: "",
   });
 
-  // const [checkboxValuesoffOnline, setCheckboxValuesoffOnline] = useState({});
   const [checkboxValuesOnline, setCheckboxValuesOnline] = useState([]);
   const [checkboxValuesOffOnline,setCheckboxValuesOffOnline]=useState([]);
   const [totalAmmount, setTotalAmmount] = useState(0);
-
+  const [screenshot, setScreenshort] = useState(null);
+  // const [errorText,setErrorText]=useState()
   const [selectedClub, setSelectedClub] = useState(null);
   const [blogErrorEmail, setBlogErrorEmail] = useState(false);
   const [formError, setformError] = useState(false);
@@ -895,41 +899,75 @@ const Registration = ({ setRegisterClicked }) => {
 
   console.log("ankit091",checkboxValuesOnline,checkboxValuesOffOnline);
   const onsubmitForm=async (e)=>{
+    console.log("ankit 081");
     e.preventDefault();
-    try {
-        
-      if (!(formdata?.name && formdata?.college && formdata?.department && formdata?.email && formdata?.contact && formdata?.wp_contact && formdata?.sec && formdata.year && formdata?.payment)) {
+    try { 
+      if ((!formdata?.name || !formdata?.college || !formdata?.department || !formdata?.email || !formdata?.contact || !formdata?.wp_contact || !formdata?.sec || !formdata.year || !screenshot)) {
+          console.log("ankit80",formdata);
       }
       else if(checkboxValuesOnline.length==0 && checkboxValuesOffOnline.lenght==0){
-           
+        console.log("ankit81",formdata);
       }
       else {
-       await fetch("http://dull-gold-cow-shoe.cyclic.app/submit-form", {
-         method: "POST",
-        body: JSON.stringify({
-        name: formdata?.name,
-        college:formdata?.college,
-        department: formdata?.department,
-        year:formdata?.year,
-        sec:formdata?.sec,
-        email: formdata?.email,
-        contact: formdata?.contact,
-        wp_contact : formdata?.wp_contact,
-        online_events :checkboxValuesOnline.toString(),
-        offline_events :checkboxValuesOffOnline.toString(),
-        payment : formdata?.payment,
-      }),
-       mode: 'no-cors',
-       headers: {
-        'Access-Control-Allow-Origin' : '*'
-    },
-    })
-      .then((response) => response.json())
-      .then((json) => {
+        if(!screenshot) {
+          alert("attach screensort");
+          return ;
+        }
+        console.log("ankit 082");
+        var imageUrl
+        try {
+          imageUrl = await imageuploadHandler(screenshot);
+          console.log("ankit901",imageUrl);
+        }catch(err){
+          console.log("getting err",err);
+        }  
+       axios({
+        method:"POST",
+        url:"https://dull-gold-cow-shoe.cyclic.app/submit-form",
+        data: {
+          name: formdata?.name,
+          college:formdata?.college,
+          department: formdata?.department,
+          year:formdata?.year,
+          sec:formdata?.sec,
+          email: formdata?.email,
+          contact: formdata?.contact,
+          wp_contact : formdata?.wp_contact,
+          online_events :checkboxValuesOnline.toString(),
+          offline_events :checkboxValuesOffOnline.toString(),
+          payment : imageUrl,
+        }
+      }).then(()=>{
+
+      }).then(()=>{
+
+      })
+    //    await fetch("http://dull-gold-cow-shoe.cyclic.app/submit-form", {
+    //     method: "POST",
+    //     body: JSON.stringify({
+    //     name: formdata?.name,
+    //     college:formdata?.college,
+    //     department: formdata?.department,
+    //     year:formdata?.year,
+    //     sec:formdata?.sec,
+    //     email: formdata?.email,
+    //     contact: formdata?.contact,
+    //     wp_contact : formdata?.wp_contact,
+    //     online_events :checkboxValuesOnline.toString(),
+    //     offline_events :checkboxValuesOffOnline.toString(),
+    //     payment : formdata?.payment,
+    //   }),
+    //    mode: 'no-cors',
+    //    headers: {
+    //     'Access-Control-Allow-Origin' : '*'
+    // },
+    // })
+    //   .then((response) => response.json())
+    //   .then((json) => {
         // console.log(json)
         // setBlogPopUp(false);
         // setblogPostSucess(true);
-      })
+      // })
       }
     } catch (err) {
       console.log(err);
@@ -973,6 +1011,25 @@ const Registration = ({ setRegisterClicked }) => {
       
     }
   };
+  const imageuploadHandler= async(img)=>{
+    const _data =new FormData();
+    _data.append("file",img);
+    _data.append("upload_preset","xd7ycb4s");
+    _data.append("cloud_name","dbjoksrli");
+    return new Promise(async(resolve, reject) => {
+      try{
+        const { data } = await axios({
+          method:"POST",
+          url:"https://api.cloudinary.com/v1_1/dbjoksrli/image/upload",
+          data : _data,
+         })
+         console.log("ankit90",data?.secure_url)
+         resolve(data.secure_url);
+      }catch(err){
+        reject(err)
+      }
+    })
+  }
 
   return (
     <div
@@ -1246,9 +1303,7 @@ const Registration = ({ setRegisterClicked }) => {
                 id="contained-button-file"
                 type="file"
                 style={{ width: "100%" }}
-                onChange={(e) =>
-                  setFormData((pre) => ({ ...pre, payment: e.target.value }))
-                }
+                onChange={(e)=>setScreenshort(e.target.files[0])}
               />
             </Grid>
           </Grid>

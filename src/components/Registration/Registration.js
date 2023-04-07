@@ -28,6 +28,7 @@ const uno= "/images/POSTERS/UNO.png";
 const mk ="/images/POSTERS/moksha.jpg";
 const qzone = "/images/POSTERS/qzone.jpg";
 
+
 const subEventClubs = [
   {
     id: 1,
