@@ -1106,7 +1106,7 @@ const Registration = ({ setRegisterClicked }) => {
     const { name, checked } = event.target;
     if (checked) {
       setCheckboxValuesOffOnline([...checkboxValuesOffOnline, name]);
-      setCheckboxValuesOnline([...checkboxValuesOnline, name]);
+      // setCheckboxValuesOnline([...checkboxValuesOnline, name]);
       subEventClubs.forEach((event) => {
         if (event.Event === name) {
           setTotalAmmount((pre) => pre + event.amt);
