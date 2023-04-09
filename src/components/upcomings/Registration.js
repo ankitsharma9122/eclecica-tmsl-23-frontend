@@ -1006,7 +1006,7 @@ const Registration = ({ setRegisterClicked }) => {
           console.log("ankit901", imageUrl);
         } catch (err) {
           console.log("getting err", err);
-          setFail(true);
+          setOpenFail(true);
           setLoading(false);
           return;
         }
@@ -1078,7 +1078,8 @@ const Registration = ({ setRegisterClicked }) => {
       }
     } catch (err) {
       console.log(err);
-      setFail(true);
+      // setFail(true);
+      setOpenFail(true);
       setLoading(false);
     }
   };
@@ -1516,7 +1517,7 @@ const Registration = ({ setRegisterClicked }) => {
             </Alert>
           </Snackbar>
         )}
-      {failMsg && (
+      {openFail && (
         <Snackbar open={openFail} autoHideDuration={6000} onClose={handleCloseFail}>
           <Alert onClose={handleCloseFail} severity="error" sx={{ width: "100%" }}>
             Sorry the form submission fail , Please try again or contact above

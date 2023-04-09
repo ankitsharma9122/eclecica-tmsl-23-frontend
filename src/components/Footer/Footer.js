@@ -52,7 +52,7 @@ function Footer() {
           <h3 style={{ color: "white" }}>Eclectica</h3>
           <p style={{ color: "rgb(242, 242, 242)", marginTop: "1rem" }}>
             Eclectica - The 
-            official Literary Committee of Techno Main Salt lake Kolkata , is a student - governed organization dedicated to building a healthy community receptive to works of literature.
+            official Literary Committee of Techno Main Salt lake Kolkata , is a student - governed committee dedicated to building a healthy community receptive to works of literature.
           </p>
         </Grid>
         <Grid item xs={12} sm={4}>
