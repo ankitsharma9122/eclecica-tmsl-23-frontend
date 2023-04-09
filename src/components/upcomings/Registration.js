@@ -898,7 +898,6 @@ const Registration = ({ setRegisterClicked }) => {
     college: "",
     department: "",
     year: "",
-    sec: "",
     email: "",
     contact: "",
     wp_contact: "",
@@ -962,7 +961,6 @@ const Registration = ({ setRegisterClicked }) => {
       formdata?.contact &&
       formdata?.wp_contact &&
       formdata?.wp_contact &&
-      formdata?.sec &&
       formdata.year &&
       screenshot
     ) {
@@ -980,7 +978,6 @@ const Registration = ({ setRegisterClicked }) => {
         !formdata?.email ||
         !formdata?.contact ||
         !formdata?.wp_contact ||
-        !formdata?.sec ||
         !formdata.year ||
         !screenshot
       ) {
@@ -1018,7 +1015,6 @@ const Registration = ({ setRegisterClicked }) => {
             college: formdata?.college,
             department: formdata?.department,
             year: formdata?.year,
-            sec: formdata?.sec,
             email: formdata?.email,
             contact: formdata?.contact,
             wp_contact: formdata?.wp_contact,
@@ -1037,7 +1033,6 @@ const Registration = ({ setRegisterClicked }) => {
               college: "",
               department: "",
               year: "",
-              sec: "",
               email: "",
               contact: "",
               wp_contact: "",
@@ -1244,7 +1239,7 @@ const Registration = ({ setRegisterClicked }) => {
                   fullWidth
                 />
               </Grid>
-              <Grid item xs={12}>
+              {/* <Grid item xs={12}>
                 <TextField
                   margin="dense"
                   id="title"
@@ -1256,7 +1251,7 @@ const Registration = ({ setRegisterClicked }) => {
                   }
                   fullWidth
                 />
-              </Grid>
+              </Grid> */}
               <Grid item xs={12}>
                 <TextField
                   margin="dense"
