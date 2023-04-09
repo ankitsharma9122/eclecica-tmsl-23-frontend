@@ -816,7 +816,6 @@ const subEventonlineClubs = [
               Participants will be judged based on their content, literary
               prowess, and relevance to a given topic.
             </li>
-            <li>The word limit for the event is 70 words</li>
             <li>
               Submission will be through a Google form that will be provided to
               all participants after registering for the event.
@@ -957,7 +956,6 @@ const Registration = ({ setRegisterClicked }) => {
     if (
       formdata?.name &&
       formdata?.college &&
-      formdata?.department &&
       formdata?.email &&
       formdata?.contact &&
       formdata?.wp_contact &&
@@ -975,7 +973,6 @@ const Registration = ({ setRegisterClicked }) => {
       if (
         !formdata?.name ||
         !formdata?.college ||
-        !formdata?.department ||
         !formdata?.email ||
         !formdata?.contact ||
         !formdata?.wp_contact ||
@@ -1014,7 +1011,7 @@ const Registration = ({ setRegisterClicked }) => {
           data: {
             name: formdata?.name,
             college: formdata?.college,
-            department: formdata?.department,
+            department: formdata?.department || "N/A",
             year: formdata?.year,
             email: formdata?.email,
             contact: formdata?.contact,
@@ -1203,7 +1200,7 @@ const Registration = ({ setRegisterClicked }) => {
                 <TextField
                   margin="dense"
                   id="College"
-                  label="College"
+                  label="College / Organization"
                   type="text"
                   value={formdata?.college}
                   onChange={(e) =>
@@ -1216,7 +1213,7 @@ const Registration = ({ setRegisterClicked }) => {
                 <TextField
                   margin="dense"
                   id="title"
-                  label="Department"
+                  label="Department (if applicable)"
                   type="text"
                   value={formdata?.department}
                   onChange={(e) =>
