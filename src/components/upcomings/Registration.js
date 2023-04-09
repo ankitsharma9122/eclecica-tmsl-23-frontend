@@ -886,6 +886,7 @@ const subEventonlineClubs = [
   },
   // Add more sub-event clubs here
 ];
+
 const closeButtonStyle = {
   position: "absolute",
   top: "8px",
@@ -1042,6 +1043,7 @@ const Registration = ({ setRegisterClicked }) => {
             });
             setCheckboxValuesOnline([]);
             setCheckboxValuesOffOnline([]);
+            setTotalAmmount(0);
             setScreenshort(null)
           });
         //    await fetch("http://dull-gold-cow-shoe.cyclic.app/submit-form", {
