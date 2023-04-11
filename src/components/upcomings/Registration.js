@@ -742,6 +742,7 @@ const subEventonlineClubs = [
             the link provided by Eclectica in the form of a Google form. The
             uploaded document must be a PNG/JPG file.
           </li>
+          <li>Submission should be in the form of PSD/AI file or a Canva link.</li>
         </ol>
       </>
     ),
@@ -851,10 +852,7 @@ const subEventonlineClubs = [
             </li>
             <li>
               {" "}
-              The link for submission will be provided after registration. All
-              the participants need to submit their artwork along with their
-              PSD/AI file through a Google form whose link will be provided
-              later.
+              The link for submission will be provided after registration. All the participants need to submit their hand-drawn artwork through a Google form whose link will be provided later.  4. Participants must film a video in the process of making the mandala art and upload that as asked further.
             </li>
           </ol>
         </>
