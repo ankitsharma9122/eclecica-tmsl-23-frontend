@@ -11,6 +11,7 @@ const c_5=  "/images/Memberlist/Suprotik poddar.jpg";
 const c_6=  "/images/Memberlist/Eleen das.jpg";
 const c_7=  "/images/Memberlist/Ashish Kashyap.jpg";
 const c_8=  "/images/Memberlist/Astha jha.jpg";
+const c_9= "/images//Memberlist/priyank.jpg"
 const ct_1= "/images/Memberlist/Arijit Datta.jpg";
 const ct_2= "/images/Memberlist/Soham Roy.jpg";
 const ct_3= "/images/Memberlist/Atryee dhar.jpg";
@@ -318,6 +319,12 @@ const coreMembers = [
     name: "Astha Jha",
     role:"Management head",
     image:  c_8,
+  },
+  {
+    id: 1,
+    name: "Priyanka Kumari",
+    role:"Public Relations Head",
+    image:  c_9,
   },
 ];
 
