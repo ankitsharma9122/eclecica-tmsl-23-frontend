@@ -47,6 +47,9 @@ const subEventClubs = [
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             100 /-
           </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> G-Series ( 2 PM- 5 PM of 27th April 2023 )
+          </li>
         </ul>
         Step into the limelight and share your voice with the world in our
         electrifying open mic event, FIVE FEET DROP which celebrates the power
@@ -87,6 +90,9 @@ const subEventClubs = [
           <li>
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             100 /-
+          </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> Conference Hall ( 10 AM- 1 PM of 28th April 2023 )
           </li>
         </ul>
         The air crackles with intellectual energy as passionate minds collide
@@ -175,6 +181,9 @@ const subEventClubs = [
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             400 per Team /-
           </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> G-Series ( 10 AM - 1 PM of 28th April 2023 )
+          </li>
         </ul>
         From heart-wrenching monologues to thrilling plot twists, our drama
         event, SPOTLIGHT will be a rollercoaster of emotions that will leave you
@@ -256,6 +265,9 @@ const subEventClubs = [
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             60 /-
           </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th floor, 5002 ( 2 PM- 5 PM of 27th April 2023 )
+          </li>
         </ul>
         Our India-themed quiz event, INQUIZITIVE INDIA will transport you
         through time and space as you explore the rich cultural heritage and
@@ -285,6 +297,9 @@ const subEventClubs = [
           <li>
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             100 /-
+          </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th floor, 5002 ( 2 PM- 5 PM of 27th April 2023 )
           </li>
         </ul>
         Our India-themed quiz event, INQUIZITIVE INDIA will transport you
@@ -321,6 +336,9 @@ const subEventClubs = [
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             70 /-
           </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> G-Series ( 2 PM- 5 PM of 28th April 2023 )
+          </li>
         </ul>
         The open general quiz event is a battle of wits where quick thinking and
         a vast knowledge base will help you emerge victorious in this ultimate
@@ -349,6 +367,9 @@ const subEventClubs = [
           <li>
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             120 /-
+          </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> G-Series ( 2 PM- 5 PM of 28th April 2023 )
           </li>
         </ul>
         The open general quiz event is a battle of wits where quick thinking and
@@ -383,6 +404,9 @@ const subEventClubs = [
           <li>
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             60 /-
+          </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th Floor, 5002 ( 10 AM- 10.45 PM of 28th April 2023 )
           </li>
         </ul>
         Unlock your imagination and let your creativity soar as you weave a tale
@@ -426,6 +450,9 @@ const subEventClubs = [
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             60 /-
           </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th Floor, 5002 ( 11 AM- 12 PM of 28th April 2023 )
+          </li>
         </ul>
         A picture is worth a thousand words, and in our event IMAGE-iNATION, you
         will have the chance to bring it to life through your unique
@@ -464,6 +491,9 @@ const subEventClubs = [
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             150 /-
           </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> Check Respective Checkbox for Time & Venue.
+          </li>
         </ul>
         Register in all 3 events and get 30 Rs off /-
         <ol>
@@ -483,6 +513,9 @@ const subEventClubs = [
           <li>
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             60 /-
+          </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th Floor, 5002 ( 2 PM-  3 PM of 28th April 2023 )
           </li>
         </ul>
         Release your inner artist and let your imagination run wild at our
@@ -518,6 +551,9 @@ const subEventClubs = [
           <li>
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             100 /-
+          </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> G-Series ( 5 PM- 7 PM of 27th April 2023 )
           </li>
         </ul>
         In our electrifying rap event, RAPSODY, talented wordsmiths take the
@@ -557,6 +593,9 @@ const subEventClubs = [
           <li>
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             50 /-
+          </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th Floor,5002 ( 3 PM- 4 PM of 28th April 2023 )
           </li>
         </ul>
         Get ready to dive down the rabbit hole and navigate the vast maze of
@@ -602,6 +641,9 @@ const subEventClubs = [
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             50 /-
           </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong>3rd Floor , HUMANITIES LAB , 4002 ( 12 PM- 1 PM of 28th April 2023 )
+          </li>
         </ul>
         Challenge your mind and test your vocabulary in this exciting crossword
         event where every answer is a step closer to completing the puzzle.
@@ -638,6 +680,9 @@ const subEventClubs = [
           <li>
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             50 /-
+          </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong>4th Floor , 5002 ( 4 PM- 5 PM of 28th April 2023 )
           </li>
         </ul>
         Put your sleuthing skills to the test in our heart-racing
@@ -691,6 +736,9 @@ const subEventClubs = [
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             120 /-
           </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> Check Respective Checkbox for Time & Venue.
+          </li>
         </ul>
         Register in all 3 events and get 30 Rs off /-
         <ol>
@@ -713,6 +761,12 @@ const subEventonlineClubs = [
           <li>
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             60 /-
+          </li>
+           <li>
+            <strong style={{ color: "yellow" }}>TOPIC RELEASE :</strong> 27th of April 2023.
+          </li>
+          <li>
+            <strong style={{ color: "yellow" }}>SUBMISSION :</strong> Before 11:59 PM on 28th of April 2023. 
           </li>
         </ul>
         Unlock your creativity and bring words to life through art in our event,
@@ -759,6 +813,12 @@ const subEventonlineClubs = [
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             60 /-
           </li>
+          <li>
+            <strong style={{ color: "yellow" }}>TOPIC RELEASE :</strong> 27th of April 2023.
+          </li>
+          <li>
+            <strong style={{ color: "yellow" }}>SUBMISSION :</strong> Before 11:59 PM on 28th of April 2023. 
+          </li>
         </ul>
         Let your imagination soar to the cosmos and beyond as you create
         stunning digital art inspired by the wonders of space in our event, THE
@@ -797,6 +857,12 @@ const subEventonlineClubs = [
               <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
               60 /-
             </li>
+            <li>
+            <strong style={{ color: "yellow" }}>TOPIC RELEASE :</strong> 27th of April 2023.
+          </li>
+          <li>
+            <strong style={{ color: "yellow" }}>SUBMISSION :</strong> Before 11:59 PM on 28th of April 2023. 
+          </li>
           </ul>
           Unleash your storytelling prowess and embark on a literary journey as
           you craft a captivating long-form tale inspired by the given topic in
@@ -839,6 +905,12 @@ const subEventonlineClubs = [
               <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
               60 /-
             </li>
+            <li>
+            <strong style={{ color: "yellow" }}>TOPIC RELEASE :</strong> 27th of April 2023.
+          </li>
+          <li>
+            <strong style={{ color: "yellow" }}>SUBMISSION :</strong> Before 11:59 PM on 28th of April 2023. 
+          </li>
           </ul>
           Find inner peace and create stunning, intricate designs in this
           mesmerizing mandala art event that transports you to a state of
@@ -870,6 +942,9 @@ const subEventonlineClubs = [
           <li>
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             200 /-
+          </li>
+          <li>
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> Check Respective Checkbox for Time , Venue & submission.
           </li>
         </ul>
         Register in all 4 events and get 40 Rs off /-
