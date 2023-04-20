@@ -48,7 +48,8 @@ const subEventClubs = [
             100 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> G-Series ( 2 PM- 5 PM of 27th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong>{" "}
+            G-Series ( 2 PM- 5 PM of 27th April 2023 )
           </li>
         </ul>
         Step into the limelight and share your voice with the world in our
@@ -92,7 +93,8 @@ const subEventClubs = [
             100 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> Conference Hall ( 10 AM- 1 PM of 28th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong>{" "}
+            Conference Hall ( 10 AM- 1 PM of 28th April 2023 )
           </li>
         </ul>
         The air crackles with intellectual energy as passionate minds collide
@@ -182,7 +184,8 @@ const subEventClubs = [
             400 per Team /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> G-Series ( 10 AM - 1 PM of 28th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong>{" "}
+            G-Series ( 10 AM - 1 PM of 28th April 2023 )
           </li>
         </ul>
         From heart-wrenching monologues to thrilling plot twists, our drama
@@ -266,7 +269,8 @@ const subEventClubs = [
             60 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th floor, 5002 ( 2 PM- 5 PM of 27th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th
+            floor, 5002 ( 2 PM- 5 PM of 27th April 2023 )
           </li>
         </ul>
         Our India-themed quiz event, INQUIZITIVE INDIA will transport you
@@ -299,7 +303,8 @@ const subEventClubs = [
             100 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th floor, 5002 ( 2 PM- 5 PM of 27th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th
+            floor, 5002 ( 2 PM- 5 PM of 27th April 2023 )
           </li>
         </ul>
         Our India-themed quiz event, INQUIZITIVE INDIA will transport you
@@ -337,7 +342,8 @@ const subEventClubs = [
             70 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> G-Series ( 2 PM- 5 PM of 28th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong>{" "}
+            G-Series ( 2 PM- 5 PM of 28th April 2023 )
           </li>
         </ul>
         The open general quiz event is a battle of wits where quick thinking and
@@ -369,7 +375,8 @@ const subEventClubs = [
             120 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> G-Series ( 2 PM- 5 PM of 28th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong>{" "}
+            G-Series ( 2 PM- 5 PM of 28th April 2023 )
           </li>
         </ul>
         The open general quiz event is a battle of wits where quick thinking and
@@ -406,7 +413,8 @@ const subEventClubs = [
             60 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th Floor, 5002 ( 10 AM- 10.45 PM of 28th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th
+            Floor, 5002 ( 10 AM- 10.45 PM of 28th April 2023 )
           </li>
         </ul>
         Unlock your imagination and let your creativity soar as you weave a tale
@@ -451,7 +459,8 @@ const subEventClubs = [
             60 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th Floor, 5002 ( 11 AM- 12 PM of 28th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th
+            Floor, 5002 ( 11 AM- 12 PM of 28th April 2023 )
           </li>
         </ul>
         A picture is worth a thousand words, and in our event IMAGE-iNATION, you
@@ -492,7 +501,8 @@ const subEventClubs = [
             150 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> Check Respective Checkbox for Time & Venue.
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> Check
+            Respective Checkbox for Time & Venue.
           </li>
         </ul>
         Register in all 3 events and get 30 Rs off /-
@@ -515,7 +525,8 @@ const subEventClubs = [
             60 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th Floor, 5002 ( 2 PM-  3 PM of 28th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th
+            Floor, 5002 ( 2 PM- 3 PM of 28th April 2023 )
           </li>
         </ul>
         Release your inner artist and let your imagination run wild at our
@@ -553,7 +564,8 @@ const subEventClubs = [
             100 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> G-Series ( 5 PM- 7 PM of 27th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong>{" "}
+            G-Series ( 5 PM- 7 PM of 27th April 2023 )
           </li>
         </ul>
         In our electrifying rap event, RAPSODY, talented wordsmiths take the
@@ -595,7 +607,8 @@ const subEventClubs = [
             50 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th Floor,5002 ( 3 PM- 4 PM of 28th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> 4th
+            Floor,5002 ( 3 PM- 4 PM of 28th April 2023 )
           </li>
         </ul>
         Get ready to dive down the rabbit hole and navigate the vast maze of
@@ -642,7 +655,8 @@ const subEventClubs = [
             50 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong>3rd Floor , HUMANITIES LAB , 4002 ( 12 PM- 1 PM of 28th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong>3rd
+            Floor , HUMANITIES LAB , 4002 ( 12 PM- 1 PM of 28th April 2023 )
           </li>
         </ul>
         Challenge your mind and test your vocabulary in this exciting crossword
@@ -682,7 +696,8 @@ const subEventClubs = [
             50 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong>4th Floor , 5002 ( 4 PM- 5 PM of 28th April 2023 )
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong>4th
+            Floor , 5002 ( 4 PM- 5 PM of 28th April 2023 )
           </li>
         </ul>
         Put your sleuthing skills to the test in our heart-racing
@@ -737,7 +752,8 @@ const subEventClubs = [
             120 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> Check Respective Checkbox for Time & Venue.
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> Check
+            Respective Checkbox for Time & Venue.
           </li>
         </ul>
         Register in all 3 events and get 30 Rs off /-
@@ -762,11 +778,13 @@ const subEventonlineClubs = [
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             60 /-
           </li>
-           <li>
-            <strong style={{ color: "yellow" }}>TOPIC RELEASE :</strong> 27th of April 2023.
+          <li>
+            <strong style={{ color: "yellow" }}>TOPIC RELEASE :</strong> 27th of
+            April 2023.
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>SUBMISSION :</strong> Before 11:59 PM on 28th of April 2023. 
+            <strong style={{ color: "yellow" }}>SUBMISSION :</strong> Before
+            11:59 PM on 28th of April 2023.
           </li>
         </ul>
         Unlock your creativity and bring words to life through art in our event,
@@ -796,7 +814,9 @@ const subEventonlineClubs = [
             the link provided by Eclectica in the form of a Google form. The
             uploaded document must be a PNG/JPG file.
           </li>
-          <li>Submission should be in the form of PSD/AI file or a Canva link.</li>
+          <li>
+            Submission should be in the form of PSD/AI file or a Canva link.
+          </li>
         </ol>
       </>
     ),
@@ -814,10 +834,12 @@ const subEventonlineClubs = [
             60 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>TOPIC RELEASE :</strong> 27th of April 2023.
+            <strong style={{ color: "yellow" }}>TOPIC RELEASE :</strong> 27th of
+            April 2023.
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>SUBMISSION :</strong> Before 11:59 PM on 28th of April 2023. 
+            <strong style={{ color: "yellow" }}>SUBMISSION :</strong> Before
+            11:59 PM on 28th of April 2023.
           </li>
         </ul>
         Let your imagination soar to the cosmos and beyond as you create
@@ -858,11 +880,13 @@ const subEventonlineClubs = [
               60 /-
             </li>
             <li>
-            <strong style={{ color: "yellow" }}>TOPIC RELEASE :</strong> 27th of April 2023.
-          </li>
-          <li>
-            <strong style={{ color: "yellow" }}>SUBMISSION :</strong> Before 11:59 PM on 28th of April 2023. 
-          </li>
+              <strong style={{ color: "yellow" }}>TOPIC RELEASE :</strong> 27th
+              of April 2023.
+            </li>
+            <li>
+              <strong style={{ color: "yellow" }}>SUBMISSION :</strong> Before
+              11:59 PM on 28th of April 2023.
+            </li>
           </ul>
           Unleash your storytelling prowess and embark on a literary journey as
           you craft a captivating long-form tale inspired by the given topic in
@@ -906,11 +930,13 @@ const subEventonlineClubs = [
               60 /-
             </li>
             <li>
-            <strong style={{ color: "yellow" }}>TOPIC RELEASE :</strong> 27th of April 2023.
-          </li>
-          <li>
-            <strong style={{ color: "yellow" }}>SUBMISSION :</strong> Before 11:59 PM on 28th of April 2023. 
-          </li>
+              <strong style={{ color: "yellow" }}>TOPIC RELEASE :</strong> 27th
+              of April 2023.
+            </li>
+            <li>
+              <strong style={{ color: "yellow" }}>SUBMISSION :</strong> Before
+              11:59 PM on 28th of April 2023.
+            </li>
           </ul>
           Find inner peace and create stunning, intricate designs in this
           mesmerizing mandala art event that transports you to a state of
@@ -924,7 +950,11 @@ const subEventonlineClubs = [
             </li>
             <li>
               {" "}
-              The link for submission will be provided after registration. All the participants need to submit their hand-drawn artwork through a Google form whose link will be provided later.  4. Participants must film a video in the process of making the mandala art and upload that as asked further.
+              The link for submission will be provided after registration. All
+              the participants need to submit their hand-drawn artwork through a
+              Google form whose link will be provided later. 4. Participants
+              must film a video in the process of making the mandala art and
+              upload that as asked further.
             </li>
           </ol>
         </>
@@ -944,7 +974,8 @@ const subEventonlineClubs = [
             200 /-
           </li>
           <li>
-            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> Check Respective Checkbox for Time , Venue & submission.
+            <strong style={{ color: "yellow" }}>Venue & Timing :</strong> Check
+            Respective Checkbox for Time , Venue & submission.
           </li>
         </ul>
         Register in all 4 events and get 40 Rs off /-
@@ -993,10 +1024,10 @@ const Registration = () => {
   const navigate = useNavigate();
   const isMobileScreen = useMediaQuery("(max-width:600px)");
   const [open, setOpen] = useState(false);
-  const [openFail,setOpenFail]=useState(false);
+  const [openFail, setOpenFail] = useState(false);
 
-  console.log("ankit 902",openFail,openFail);
-  console.log("ankit903",successmsg,open)
+  console.log("ankit 902", openFail, openFail);
+  console.log("ankit903", successmsg, open);
   const handleClick = () => {
     setOpen(true);
   };
@@ -1096,6 +1127,26 @@ const Registration = () => {
         })
           .then(() => {})
           .then(() => {
+            var emailname = formdata?.name;
+            var emailEmail = formdata?.email;
+            var emailEventOffline = checkboxValuesOffOnline;
+            var emailEventOnline = checkboxValuesOnline;
+            let allEvent = emailEventOnline.concat(emailEventOffline);
+            axios({
+              method: "POST",
+              url: "https://dull-gold-cow-shoe.cyclic.app/send-email",
+              data: {
+                name: emailname,
+                email : emailEmail,
+                event : allEvent,
+              },
+            })
+              .then((res) => {
+                console.log("Email sent successful");
+              })
+              .catch((err) => {
+                console.log("Email sent Fail", err);
+              });
             setLoading(false);
             setSucessMsg(true);
             setOpen(true);
@@ -1114,34 +1165,8 @@ const Registration = () => {
             setCheckboxValuesOnline([]);
             setCheckboxValuesOffOnline([]);
             setTotalAmmount(0);
-            setScreenshort(null)
+            setScreenshort(null);
           });
-        //    await fetch("http://dull-gold-cow-shoe.cyclic.app/submit-form", {
-        //     method: "POST",
-        //     body: JSON.stringify({
-        //     name: formdata?.name,
-        //     college:formdata?.college,
-        //     department: formdata?.department,
-        //     year:formdata?.year,
-        //     sec:formdata?.sec,
-        //     email: formdata?.email,
-        //     contact: formdata?.contact,
-        //     wp_contact : formdata?.wp_contact,
-        //     online_events :checkboxValuesOnline.toString(),
-        //     offline_events :checkboxValuesOffOnline.toString(),
-        //     payment : formdata?.payment,
-        //   }),
-        //    mode: 'no-cors',
-        //    headers: {
-        //     'Access-Control-Allow-Origin' : '*'
-        // },
-        // })
-        //   .then((response) => response.json())
-        //   .then((json) => {
-        // console.log(json)
-        // setBlogPopUp(false);
-        // setblogPostSucess(true);
-        // })
       }
     } catch (err) {
       console.log(err);
@@ -1222,12 +1247,15 @@ const Registration = () => {
         alignItems: "center",
         height: "100%",
         margin: "0 auto",
-       
       }}
     >
-      <form onSubmit={onsubmitForm} 
-        style={{ marginTop: isMobileScreen ? "53px" : "70px",
-        marginBottom: "30px",}}>
+      <form
+        onSubmit={onsubmitForm}
+        style={{
+          marginTop: isMobileScreen ? "53px" : "70px",
+          marginBottom: "30px",
+        }}
+      >
         <div>
           <DialogTitle disableTypography>
             <IconButton
@@ -1252,7 +1280,10 @@ const Registration = () => {
                 RuleBook
               </a>
             </div>
-            <div style={{ fontSize: "14px" }}>*If you find any difficulties while filling the form contact: Srabasti , Vishal [ 7718651718 ,7004200029 ]</div>
+            <div style={{ fontSize: "14px" }}>
+              *If you find any difficulties while filling the form contact:
+              Srabasti , Vishal [ 7718651718 ,7004200029 ]
+            </div>
           </DialogTitle>
           {/* <form> */}
           <DialogContent>
@@ -1576,19 +1607,27 @@ const Registration = () => {
         )}
       </Dialog>
       {successmsg && (
-          <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-            <Alert
-              onClose={handleClose}
-              severity="success"
-              sx={{ width: "100%" }}
-            >
-              Thank you for registering , We'll reach out you soon !
-            </Alert>
-          </Snackbar>
-        )}
+        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+          <Alert
+            onClose={handleClose}
+            severity="success"
+            sx={{ width: "100%" }}
+          >
+            Thank you for registering , We'll reach out you soon !
+          </Alert>
+        </Snackbar>
+      )}
       {openFail && (
-        <Snackbar open={openFail} autoHideDuration={6000} onClose={handleCloseFail}>
-          <Alert onClose={handleCloseFail} severity="error" sx={{ width: "100%" }}>
+        <Snackbar
+          open={openFail}
+          autoHideDuration={6000}
+          onClose={handleCloseFail}
+        >
+          <Alert
+            onClose={handleCloseFail}
+            severity="error"
+            sx={{ width: "100%" }}
+          >
             Sorry the form submission fail , Please try again or contact above
             Number !
           </Alert>
