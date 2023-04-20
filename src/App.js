@@ -8,6 +8,7 @@ import UpcomingEvent from "./components/upcomings/UpcomingEvent";
 import Teams from "./components/Teams/Teams";
 import Contactus from "./components/contactUs/Contactus";
 import Registration from "./components/Registration/Registration";
+import RegistrationEvent from "./components/upcomings/Registration";
 import Footer from "./components/Footer/Footer";
 import Home from "../src/components/Home/Home";
 import Auth from "./components/Login/Auth";
@@ -70,6 +71,7 @@ function App() {
             />
             {/* <Route path="/blogs" element={<Blog theme={theme} />} /> */}
             <Route path="/sub-club" element={<Registration theme={theme}  />} />
+            <Route path="/register" element={<RegistrationEvent theme={theme}/>}/>
             <Route path="/gallery" element={<Gallery theme={theme} />} />
             <Route path="/eclecticateams" element={<Teams theme={theme} />} />
             <Route path="/contact" element={<Contactus theme={theme} />} />

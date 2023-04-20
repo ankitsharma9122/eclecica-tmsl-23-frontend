@@ -3,8 +3,10 @@ import { Card, CardContent, CardActions, CardMedia, Typography, Button } from '@
 import { Margin } from '@mui/icons-material';
 import "./UpcomingEventhelper.css"
 import sample from "../images/sample.pdf";
+import { useNavigate } from 'react-router-dom';
 
 const UpcomingEventhelper = ({ event,theme,setRegisterClicked }) => {
+  const navigate=useNavigate();
   const [isHovered, setIsHovered] = useState(false);
   const [currentDate,setCurrentDate]=useState(new Date())
   
@@ -88,7 +90,7 @@ const UpcomingEventhelper = ({ event,theme,setRegisterClicked }) => {
         {currentDate>event?.Eventdate ? <a href={event?.pdf} download="sample" target='_blank' rel='noreferrer' style={{cursor:"pointer",textDecoration:"none"}}><Button variant="contained" color="primary" className="click-to-know-button">
           View Result
         </Button></a> 
-        : <Button variant="contained" color="primary" className="click-to-know-button" onClick={()=>{setRegisterClicked(true)}}>
+        : <Button variant="contained" color="primary" className="click-to-know-button" onClick={()=>{navigate("/register")}}>
           Register
         </Button>
         }

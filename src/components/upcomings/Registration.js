@@ -965,7 +965,7 @@ const closeButtonStyle = {
   right: "8px",
 };
 
-const Registration = ({ setRegisterClicked }) => {
+const Registration = () => {
   const [formdata, setFormData] = useState({
     name: "",
     college: "",
@@ -1220,18 +1220,20 @@ const Registration = ({ setRegisterClicked }) => {
         justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
-        marginTop: isMobileScreen ? "53px" : "70px",
         height: "100%",
-        marginBottom: "30px",
+        margin: "0 auto",
+       
       }}
     >
-      <form onSubmit={onsubmitForm}>
+      <form onSubmit={onsubmitForm} 
+        style={{ marginTop: isMobileScreen ? "53px" : "70px",
+        marginBottom: "30px",}}>
         <div>
           <DialogTitle disableTypography>
             <IconButton
               aria-label="close"
               onClick={() => {
-                setRegisterClicked(false);
+                navigate("/");
               }}
               style={{ float: "right" }}
             >
@@ -1520,7 +1522,7 @@ const Registration = ({ setRegisterClicked }) => {
               variant="text"
               style={{ cursor: "pointer" }}
               onClick={() => {
-                setRegisterClicked(false);
+                navigate("/");
               }}
             >
               cancel

@@ -6,6 +6,7 @@ import { useMediaQuery, Button, Typography } from "@mui/material";
 import Registration from "../upcomings/Registration";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { useNavigate } from 'react-router-dom';
 import "./Home.css";
 import ReactPlayer from "react-player/lazy";
 import trailer from "../images/trailer.mp4";
@@ -17,6 +18,7 @@ const g_22 =  "/images/gallery/g_22.jpg";
 const main =  "/images/main_fest_post.jpg";
 const images =[g_7, g_4, g_5];
 const Home = (props) => {
+  const navigate=useNavigate();
   const location = useLocation();
   
   useEffect(() => {
@@ -25,7 +27,6 @@ const Home = (props) => {
 
   const [activeIndex, setActiveIndex] = useState(0);
   const theme = useTheme();
-  const {registerClicked ,setRegisterClicked }=props;
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const handleDotButtonClick = (index) => {
@@ -44,7 +45,6 @@ const Home = (props) => {
         width: "100wv",
       }}
     >
-      {!registerClicked ?
             <>
                   <Carousel
         autoPlay={true}
@@ -145,7 +145,9 @@ const Home = (props) => {
                     color="primary"
                     // style={styles.button}
                     className="click-to-know-button"
-                    onClick={()=>{setRegisterClicked(true)}}
+                    onClick={()=>{
+                      navigate("/register")
+                    }}
                   >
                    REGISTER FOR THE MAIN EVENT
                   </Button>
@@ -179,18 +181,7 @@ const Home = (props) => {
              <OurpastGuest theme={props.theme}/>
             </div>
             <div></div>
-            </> :
-            <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "center",
-            }}
-          >
-            {" "}
-            <Registration setRegisterClicked={setRegisterClicked}/>
-          </div>}
+            </> 
     </div>
   );
 };

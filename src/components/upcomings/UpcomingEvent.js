@@ -117,7 +117,7 @@ const UpcomingEvent = (props) => {
 
   return (
     <>
-      {!registerClicked ? (
+    
         <div
           style={{
             display: "flex",
@@ -208,19 +208,6 @@ const UpcomingEvent = (props) => {
             )}
           </div>
         </div>
-      ) : (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-        >
-          {" "}
-          <Registration setRegisterClicked={setRegisterClicked}/>
-        </div>
-      )}
     </>
   );
 };
