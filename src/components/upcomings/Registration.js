@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import blog_1 from "../images/blog_1.jpeg";
 import FormGroup from "@mui/material/FormGroup";
@@ -519,7 +519,7 @@ const subEventClubs = [
     Event: "INKSPIRATION",
     Rules: (
       <>
-        <ul style={{ marginTop: "10px" }}>
+        <ul  style={{ paddingLeft: "16px", marginTop: "10px" }}>
           <li>
             <strong style={{ color: "yellow" }}>Registration Fee :</strong> Rs
             60 /-
@@ -534,19 +534,17 @@ const subEventClubs = [
         canvas.
         <ol style={{ paddingLeft: "16px" }}>
           <li>
-            The topic for the event will be released to the participants on
-            spot.
+          It is an offline event.
           </li>
           <li>
-            Participants must bring their drawing tools. Sharing pens, pencils,
-            colored markers, etc is not allowed.
+          The topic for the event will be released to the participants on spot.
           </li>
-          <li> Drawing sheets will be provided by the organizing committee.</li>
-          <li>Only one entry per participant is allowed.</li>
+          <li>Participants must bring their drawing tools. Sharing pens, pencils, colored markers, etc is not allowed.</li>
+          <li>Drawing sheets will be provided by the organizing committee.</li>
           <li>
-            All submissions will be judged based on their creativity, artistic
-            skills, technique, and relevance to the topic.
+          Only one entry per participant is allowed.
           </li>
+          <li>All submissions will be judged based on their creativity, artistic skills, technique, and relevance to the topic.</li>
         </ol>
       </>
     ),
@@ -792,30 +790,26 @@ const subEventonlineClubs = [
         interpretation of a poem or story
         <ol style={{ paddingLeft: "16px" }}>
           <li>
-            Participants have to choose a short poem (English/ Hindi/ Bengali) &
-            make a poster based on that
+          Participants have to choose a short poem (English/ Hindi/ Bengali) & make a digital poster based on that.
           </li>
           <li>
-            Participants have to put the name of the poem & the poet on the
-            poster. It may vary based on the designs.
+          Participants have to put the name of the poem & the poet on the poster. It may vary based on the designs.
           </li>
           <li>Entries should be in the form of posters.</li>
           <li>
-            The posters should be able to illustrate the meaning of the chosen
-            poem, and should not be a poster depicting just the title of the
-            poem.
+          The posters should be able to illustrate the meaning of the chosen poem, and should not be a poster depicting just the title of the poem.
           </li>
           <li>
-            Judgment will be based on creativity, level of understanding,
-            interpretation of the poem & its representation.
+          Judgement will be based on creativity, level of understanding, interpretation of the poem & its representation
           </li>
           <li>
-            Plagiarism will not be condoned. Submission is to be done through
-            the link provided by Eclectica in the form of a Google form. The
-            uploaded document must be a PNG/JPG file.
+          Plagiarism will not be condoned.
           </li>
           <li>
-            Submission should be in the form of PSD/AI file or a Canva link.
+          Submission is to be done through the link provided by Eclectica in the form of a Google form.
+          </li>
+          <li>
+          The uploaded document must be a PNG/JPG file along with the original PSD/AI file or a canva link for verification.
           </li>
         </ol>
       </>
@@ -847,20 +841,15 @@ const subEventonlineClubs = [
         SPACE COMPANY
         <ol style={{ paddingLeft: "16px" }}>
           <li>
-            The participants need to create digital art based on the theme:
-            “Space”.
+          The participants need to create digital art based on the theme: “Space”.
           </li>
           <li> AI-generated art will not be accepted.</li>
           <li>
-            Participants should provide the original PSD/AI file for correction.
+          Participants should provide the original PSD/AI file for verification of the originality of the submission.
           </li>
-          <li>Beautification of quotations through digital art is accepted.</li>
+          <li>Participants must refrain from using unfair means during the event.</li>
           <li>
-            Participants must refrain from using unfair means during the event.
-          </li>
-          <li>
-            Submissions will be judged based on imagination, creativity,
-            expression, and love for space.
+          Submissions will be judged based on imagination, creativity, expression, and love for space.
           </li>
         </ol>
       </>
@@ -942,20 +931,17 @@ const subEventonlineClubs = [
           mesmerizing mandala art event that transports you to a state of
           mindfulness and tranquility. Rules for Mandala Art :
           <ol style={{ paddingLeft: "16px" }}>
-            <li>Entries should be in the form of Mandala Art.</li>
+            <li>Entries should be in the form of hand drawn Mandala Art.</li>
             <li>
               {" "}
-              Only one entry will be accepted per participant. Plagiarism will
-              not be tolerated.
+              Only one entry will be accepted per participant. Plagiarism will not be tolerated.
             </li>
             <li>
               {" "}
-              The link for submission will be provided after registration. All
-              the participants need to submit their hand-drawn artwork through a
-              Google form whose link will be provided later. 4. Participants
-              must film a video in the process of making the mandala art and
-              upload that as asked further.
+              Participants can use colours and pens, no restricted on it.
             </li>
+            <li>The link for submission will be provided after registration. All the participants need to submit the image (png/jpg/jpeg) of their hand-drawn artwork through a Google form whose link will be provided later.</li>
+            <li>Participants must film a video (30 seconds) in the process of making the mandala art and submit it.</li>
           </ol>
         </>
       </>
@@ -1009,7 +995,11 @@ const Registration = () => {
     online_events: "",
     payment: "",
   });
-
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   const [checkboxValuesOnline, setCheckboxValuesOnline] = useState([]);
   const [checkboxValuesOffOnline, setCheckboxValuesOffOnline] = useState([]);
   const [totalAmmount, setTotalAmmount] = useState(0);
