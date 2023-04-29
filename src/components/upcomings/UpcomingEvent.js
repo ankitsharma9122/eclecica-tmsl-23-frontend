@@ -128,7 +128,7 @@ const UpcomingEvent = (props) => {
           }}
         >
           {/* <Typography variant="h5"style={{ fontFamily: 'Arial, sans-serif',fontWeight: 'bold',fontSize: '30px',color: 'rgb(247, 158, 2)',textAlign: 'center',marginBottom: '24px', float:"left"}}>Register in upcoming Event's</Typography> */}
-
+{/* 
           <div style={{ margin: "20px" }}>
             <h1
               style={{
@@ -168,7 +168,7 @@ const UpcomingEvent = (props) => {
                   />
                 )
             )}
-          </div>
+          </div> */}
 
           <div style={{ margin: "20px" }}>
             <h1

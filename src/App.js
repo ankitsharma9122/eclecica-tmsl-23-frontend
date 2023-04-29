@@ -71,7 +71,7 @@ function App() {
             />
             {/* <Route path="/blogs" element={<Blog theme={theme} />} /> */}
             <Route path="/sub-club" element={<Registration theme={theme}  />} />
-            <Route path="/register" element={<RegistrationEvent theme={theme}/>}/>
+            {/* <Route path="/register" element={<RegistrationEvent theme={theme}/>}/> */}
             <Route path="/gallery" element={<Gallery theme={theme} />} />
             <Route path="/eclecticateams" element={<Teams theme={theme} />} />
             <Route path="/contact" element={<Contactus theme={theme} />} />

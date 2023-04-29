@@ -140,7 +140,7 @@ const Home = (props) => {
                 Team Eclectica–the literary committee of Techno Main Salt Lake, is a student-governed committee guided by an experienced group of faculty members, dedicated to building a healthy community receptive to works of literature. Throughout the year Team Eclectica organizes seminars, holds webinars, hosts competitions and grooms students through workshops. The sole purpose behind its inception was to ensure that the spirit of artistry, spoken and written expression, debating, drama and quizzing is sustained in society in general and our members and followers in particular. To accomplish these goals, apart from contests and workshops, we also maintain an online presence through our official blog to encourage students to post their original content for the world to view. Through our year-long activities, members of the community get to discover new avenues of interest and explore their creativity in ways manifold.
                 </div>
                 <div style={{width:"100%",display:"flex",flexDirection:"row",justifyContent:isMobile? "center" : "flex-start",marginTop:"10px"}}>
-                <Button
+                {/* <Button
                     variant="contained"
                     color="primary"
                     // style={styles.button}
@@ -150,7 +150,7 @@ const Home = (props) => {
                     }}
                   >
                    REGISTER FOR THE MAIN EVENT
-                  </Button>
+                  </Button> */}
               </div>
               </div>
               <div
