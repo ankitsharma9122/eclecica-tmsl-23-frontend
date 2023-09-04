@@ -1,0 +1,57 @@
+.dialog-content-dev-1{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bgImg.svg");
+    color: white;
+    background-size: cover;
+    background-repeat: none;
+}
+.dialog-content-dev-1-light{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/trail_2.gif");
+    color: white;
+    background-size: cover;
+    background-repeat: none;
+}
+.div-card-subclub{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bgImg.svg");
+    color: rgb(224, 133, 21);
+    background-size: cover;
+    background-repeat: none;
+    text-align: center;
+}
+.div-card-subclub-light{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/trail_2.gif");
+    color: rgb(224, 133, 21);
+    background-size: cover;
+    background-repeat: none;
+}
+.dialog-content-dev{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bgImg.svg");
+    color: rgb(224, 133, 21);
+    background-size: cover;
+    background-repeat: none;
+}
+.dialog-content-dev-light{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/trail_2.gif");
+    color: rgb(224, 133, 21);
+    background-size: cover;
+    background-repeat: none;
+}
+.click-to-know-button{
+    background-color:#0090af !important;
+    border-radius: 40px !important;
+    font-family: serif !important;
+    color: white !important;
+    margin-left: 10px !important;
+    margin-bottom: 10px !important;
+}

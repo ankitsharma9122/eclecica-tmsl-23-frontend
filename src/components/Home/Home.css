@@ -1,0 +1,45 @@
+.css-1m9128y{
+    display: none;
+}
+.about-us-div-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.about-us-div-parent-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 44%;
+    margin: 3%;
+}
+.about-us-div-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 47%;
+    height: 350px;
+}
+@media screen and (max-width: 480px) {
+    .about-us-div-parent{
+        flex-direction: column;
+    }
+    .about-us-div-parent-child{
+        width: 100%;
+        margin: 20px !important;
+    }
+    .about-us-div-video{
+    width: 330px;
+        height: 200px !important;
+    }
+    .div-quates{
+        font-size: 20px;
+    }
+    .small-font{
+        font-size: 14px !important;
+    }
+  }

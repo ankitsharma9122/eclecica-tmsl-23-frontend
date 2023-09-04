@@ -1,0 +1,5 @@
+@media screen and (max-width: 480px) {
+  .snakbar-otp{
+    width: 100% !important;
+  }
+}

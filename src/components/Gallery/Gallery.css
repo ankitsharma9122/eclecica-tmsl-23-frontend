@@ -1,0 +1,21 @@
+
+.about-us-div-video-gal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    width: 96%;
+    height: 350px;
+    margin:2%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+@media screen and (max-width: 480px) {
+.about-us-div-video-gal{
+    flex-direction: column;
+    width: 330px ;
+    margin:3%;
+    height: 200px !important;
+    }
+  }

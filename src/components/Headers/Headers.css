@@ -1,0 +1,23 @@
+.nav-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* .css-5poeop{
+    background-color: #263441 !important ;
+  }
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root{
+  background-color: #263441 !important ;
+} */
+
+@media screen and (max-width: 480px) {
+    .MuiPaper-root  .MuiToolbar-root{
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        justify-content: space-between !important;
+    }
+    .logo-img{
+      width: 99px !important;
+      height: 33px !important;
+    }
+}
